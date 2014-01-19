@@ -15,11 +15,9 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	//_TCHAR str[10] = _T("abcd");
 	//cout <<wcslen(str) <<endl;
-	//cout <<sizeof(str) <<endl;
 	//
 	//_TCHAR* dest = new _TCHAR[wcslen(str)];
 	//wcsncpy(dest, str, wcslen(str));
-	//wcout <<"haha: " <<str <<". " <<dest <<endl;
 
 	//delete[] dest;
     //assert(false, "haha");

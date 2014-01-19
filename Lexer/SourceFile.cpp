@@ -40,7 +40,7 @@ void SourceFile::ParseFile()
         // new token found, add it;
         const int maxCharCountInToken = 128;
         _TCHAR tokenChars[maxCharCountInToken] = { 0 };
-        fileStr.copy(tokenChars, endPos - beginPos + 1, beginPos);
+        fileStr.copy(tokenChars, endPos - beginPos, beginPos);
         Token* newToken = new Token(tokenChars);
         this->tokens.push_back(newToken);
         wcout <<tokenChars <<endl;
