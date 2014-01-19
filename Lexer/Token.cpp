@@ -2,13 +2,16 @@
 #include "TokenKind.h"
 
 Token::Token(const _TCHAR* data)
+    : str(data)
 {
-    int length = wcslen(data);
-    wcsncpy(this->data, data, length);
     this->ParseKind();
 }
 
 Token::~Token()
 {
-    delete[] this->data;
+}
+
+void Token::ParseKind()
+{
+    this->kind = TokenMatcher::GetMe().Match(this->str.c_str());
 }

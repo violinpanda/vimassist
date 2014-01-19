@@ -1,6 +1,7 @@
 #ifndef __TOKEN_H__
 #define __TOKEN_H__
 #include <Basic\Common.h>
+#include <string>
 enum TokenKind;
 
 class Token
@@ -16,7 +17,7 @@ private:
     Token* next;
     Token* prev;
     TokenKind kind;
-    _TCHAR* data;
+    wstring str;
 };
 
 #endif

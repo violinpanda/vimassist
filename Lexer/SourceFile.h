@@ -2,13 +2,14 @@
 #define __SOURCE_FILE_H__
 #include "Basic\Common.h"
 #include <vector>
+#include <string>
 
 class Token;
 
 class SourceFile
 {
 public:
-	SourceFile(const _TCHAR* path);
+	SourceFile(const string path);
 	~SourceFile();
 
     void ParseFile();
@@ -16,7 +17,7 @@ public:
     const Token* MoveToPrev();
 
 private:
-    const char* path;
+    const string path;
     vector<Token*> tokens;
     int currentIndex;
 };

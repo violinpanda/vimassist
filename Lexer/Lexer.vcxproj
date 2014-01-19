@@ -82,6 +82,7 @@
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="SourceFile.cpp" />
     <ClCompile Include="Token.cpp" />
+    <ClCompile Include="TokenKind.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Basic\Common.h" />
