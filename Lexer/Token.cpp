@@ -13,5 +13,5 @@ Token::~Token()
 
 void Token::ParseKind()
 {
-    this->kind = TokenMatcher::GetMe().Match(this->str.c_str());
+    this->kind = TokenMatcher::GetMe().GetTokenKind(this->str.c_str());
 }

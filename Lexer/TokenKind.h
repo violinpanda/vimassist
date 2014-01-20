@@ -43,6 +43,10 @@ enum TokenKind
     LBrace,
     RBrace,
 
+    LineCommenter,
+    BlockCommenterBegin,
+    BlockCommenterEnd,
+
     Plus,
     Minus,
     Multiple,
@@ -54,9 +58,9 @@ enum TokenKind
     And,
     Or,
     DelimiterEnd = Or,
+    // delimiter end;
     AndAnd,
     OrOr,
-    // delimiter end;
 
     Identifier,
 
@@ -71,8 +75,9 @@ public:
     static void Release();
 
     ~TokenMatcher();
-    TokenKind Match(const _TCHAR* token) const;
-    bool IsDelimiterChar(_TCHAR c) const;
+    TokenKind GetTokenKind(const _TCHAR* token) const;
+    TokenKind GetTokenKind(_TCHAR token) const;
+    bool IsDelimiterToken(TokenKind tokenKind) const;
 
 private:
     TokenMatcher();

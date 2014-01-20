@@ -25,13 +25,14 @@ void SourceFile::ParseFile()
     for (int beginPos, endPos = 0; endPos < fileStr.size();)
     {
         beginPos = endPos;
-        if (tokenMatcher.IsDelimiterChar(fileStr[beginPos]))
+        TokenKind beginPosTokenKind = tokenMatcher.GetTokenKind(fileStr[beginPos]);
+        if (tokenMatcher.IsDelimiterToken(beginPosTokenKind))
         {
             endPos++;
         }
         else
         {
-            while (!tokenMatcher.IsDelimiterChar(fileStr[endPos]))
+            while (!tokenMatcher.IsDelimiterToken(tokenMatcher.GetTokenKind(fileStr[endPos])))
             {
                 endPos++;
             }

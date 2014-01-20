@@ -68,6 +68,9 @@ void TokenMatcher::BuildTokenKind2TokenMap()
     this->tokenKind2TokenMap[RBracket] = _T("]");
     this->tokenKind2TokenMap[LBrace] = _T("{");
     this->tokenKind2TokenMap[RBrace] = _T("}");
+    this->tokenKind2TokenMap[LineCommenter] = _T("//");
+    this->tokenKind2TokenMap[BlockCommenterBegin] = _T("/*");
+    this->tokenKind2TokenMap[BlockCommenterEnd] = _T("*/");
 }
 
 void TokenMatcher::BuildToken2TokenKindMap()
@@ -85,7 +88,7 @@ void TokenMatcher::BuildToken2TokenKindMap()
     }
 }
 
-TokenKind TokenMatcher::Match(const _TCHAR* token) const
+TokenKind TokenMatcher::GetTokenKind(const _TCHAR* token) const
 {
     map<wstring, TokenKind>::const_iterator it = this->token2TokenKindMap.find(token);
     if (it != this->token2TokenKindMap.cend())
@@ -98,15 +101,14 @@ TokenKind TokenMatcher::Match(const _TCHAR* token) const
     }
 }
 
-bool TokenMatcher::IsDelimiterChar(_TCHAR c) const
+TokenKind TokenMatcher::GetTokenKind(_TCHAR token) const
 {
-    for (int i = DelimiterStart; i <= DelimiterEnd; i++)
-    {
-        if (this->tokenKind2TokenMap[i][0] == c)
-        {
-            return true;
-        }
-    }
-
-    return false;
+    TCHAR tokenStr[2] = { token, 0 };
+    return this->GetTokenKind(tokenStr);
 }
+
+bool TokenMatcher::IsDelimiterToken(TokenKind tokenKind) const
+{
+    return (tokenKind >= DelimiterStart && tokenKind <= DelimiterEnd);
+}
+
