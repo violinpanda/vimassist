@@ -9,16 +9,27 @@ enum TokenKind
 {
     TokenKindStart,
 
+    // flow control;
     If,
     Else,
     While,
     Do,
 
+    // accessibility;
     Public,
     Private,
     Protected,
-    Const,
 
+    // 
+    Const,
+    Static,
+
+    // pre-processors;
+    IfnDef,
+    Define,
+    EndIf,
+
+    // types;
     Typedef,
     Int,
     Long,
@@ -27,7 +38,6 @@ enum TokenKind
     Class,
     Struct,
 
-    Sharp,
     // delimiter start;
     DelimiterStart,
     Comma = DelimiterStart,
@@ -36,12 +46,17 @@ enum TokenKind
     Space,
     Tab,
     NewLine,
-    LParenthesis,
-    RParenthesis,
-    LBracket,
-    RBracket,
-    LBrace,
-    RBrace,
+    LSmallBrace,
+    RSmallBrace,
+    LMiddleBrace,
+    RMiddleBrace,
+    LLargeBrace,
+    RLargeBrace,
+    Sharp,
+    BackSlash,
+    Colon,
+    DoubleQuota,
+    SingleQuota,
 
     LineCommenter,
     BlockCommenterBegin,
@@ -59,6 +74,7 @@ enum TokenKind
     Or,
     DelimiterEnd = Or,
     // delimiter end;
+
     AndAnd,
     OrOr,
 

@@ -17,6 +17,7 @@ public:
     const Token* MoveToPrev();
 
 private:
+    void SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount);
     const string path;
     vector<Token*> tokens;
     int currentIndex;

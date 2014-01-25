@@ -87,6 +87,7 @@
   <ItemGroup>
     <ClInclude Include="..\Basic\Common.h" />
     <ClInclude Include="SourceFile.h" />
+    <ClInclude Include="SourceLocation.h" />
     <ClInclude Include="Token.h" />
     <ClInclude Include="TokenKind.h" />
   </ItemGroup>

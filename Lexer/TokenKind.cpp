@@ -62,15 +62,23 @@ void TokenMatcher::BuildTokenKind2TokenMap()
     this->tokenKind2TokenMap[Or] = _T("|");
     this->tokenKind2TokenMap[AndAnd] = _T("&&");
     this->tokenKind2TokenMap[OrOr] = _T("||");
-    this->tokenKind2TokenMap[LParenthesis] = _T("(");
-    this->tokenKind2TokenMap[RParenthesis] = _T(")");
-    this->tokenKind2TokenMap[LBracket] = _T("[");
-    this->tokenKind2TokenMap[RBracket] = _T("]");
-    this->tokenKind2TokenMap[LBrace] = _T("{");
-    this->tokenKind2TokenMap[RBrace] = _T("}");
+    this->tokenKind2TokenMap[LSmallBrace] = _T("(");
+    this->tokenKind2TokenMap[RSmallBrace] = _T(")");
+    this->tokenKind2TokenMap[LMiddleBrace] = _T("[");
+    this->tokenKind2TokenMap[RMiddleBrace] = _T("]");
+    this->tokenKind2TokenMap[LLargeBrace] = _T("{");
+    this->tokenKind2TokenMap[RLargeBrace] = _T("}");
+    this->tokenKind2TokenMap[BackSlash] = _T("\\");
     this->tokenKind2TokenMap[LineCommenter] = _T("//");
     this->tokenKind2TokenMap[BlockCommenterBegin] = _T("/*");
     this->tokenKind2TokenMap[BlockCommenterEnd] = _T("*/");
+    this->tokenKind2TokenMap[Static] = _T("static");
+    this->tokenKind2TokenMap[IfnDef] = _T("ifndef");
+    this->tokenKind2TokenMap[Define] = _T("define");
+    this->tokenKind2TokenMap[EndIf] = _T("endif");
+    this->tokenKind2TokenMap[Colon] = _T(":");
+    this->tokenKind2TokenMap[DoubleQuota] = _T("\"");
+    this->tokenKind2TokenMap[SingleQuota] = _T("\'");
 }
 
 void TokenMatcher::BuildToken2TokenKindMap()
