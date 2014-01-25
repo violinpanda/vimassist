@@ -6,6 +6,7 @@ class TopLevelStmt : public Stmt
 {
 public:
     TopLevelStmt();
+    ~TopLevelStmt();
     void AddChild(Stmt *);
 
 public:

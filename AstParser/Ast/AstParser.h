@@ -7,11 +7,12 @@ class AstParser
 public:
     AstParser(const wstring file);
     ~AstParser();
-    const AstTree* Parse();
+    const AstTree& Parse();
 
 private:
     const Stmt* OnSharpMet();
     SourceFile sourceFile;
+    AstTree astTree;
 };
 
 #endif

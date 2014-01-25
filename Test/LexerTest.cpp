@@ -9,6 +9,6 @@
 void LexerTest()
 {
 #define VaDebug
-    SourceFile srcFile("Test.cpp");
+    SourceFile srcFile(_T("Test.cpp"));
 }
 

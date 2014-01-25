@@ -10,6 +10,9 @@ public:
     AstTree();
     ~AstTree();
 
+public:
+    void Print() const;
+
 private:
     TopLevelStmt topLevelStmt;
 };

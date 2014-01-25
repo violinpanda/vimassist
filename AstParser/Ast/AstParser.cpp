@@ -6,10 +6,12 @@
 
 AstParser::AstParser(const wstring file)
     : sourceFile(file)
-{
-}
+{}
 
-const AstTree* AstParser::Parse()
+AstParser::~AstParser()
+{}
+
+const AstTree& AstParser::Parse()
 {
     this->sourceFile.GotoStart();
     const Token *token = sourceFile.GetCurrentToken();
@@ -33,6 +35,8 @@ const AstTree* AstParser::Parse()
         // get next token;
         token = sourceFile.MoveToNextToken();
     }
+
+    return this->astTree;
 }
 
 const Stmt* AstParser::OnSharpMet()
