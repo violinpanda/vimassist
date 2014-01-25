@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lexer", "Lexer\Lexer.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{37184610-8F42-4815-AA6B-AFA68AB8384A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AstParser", "AstParser\AstParser.vcxproj", "{9FD21C13-35D5-48C1-8B29-C2D5ACADF852}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -19,6 +21,10 @@ Global
 		{37184610-8F42-4815-AA6B-AFA68AB8384A}.Debug|Win32.Build.0 = Debug|Win32
 		{37184610-8F42-4815-AA6B-AFA68AB8384A}.Release|Win32.ActiveCfg = Release|Win32
 		{37184610-8F42-4815-AA6B-AFA68AB8384A}.Release|Win32.Build.0 = Release|Win32
+		{9FD21C13-35D5-48C1-8B29-C2D5ACADF852}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9FD21C13-35D5-48C1-8B29-C2D5ACADF852}.Debug|Win32.Build.0 = Debug|Win32
+		{9FD21C13-35D5-48C1-8B29-C2D5ACADF852}.Release|Win32.ActiveCfg = Release|Win32
+		{9FD21C13-35D5-48C1-8B29-C2D5ACADF852}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

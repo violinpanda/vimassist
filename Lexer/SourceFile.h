@@ -9,16 +9,21 @@ class Token;
 class SourceFile
 {
 public:
-	SourceFile(const string path);
+	SourceFile(const wstring path);
 	~SourceFile();
 
     void ParseFile();
-    const Token* MoveToNext();
-    const Token* MoveToPrev();
+    const Token* GotoStart();
+    const Token* GetCurrentToken();
+    const Token* GetNextToken();
+    const Token* GetPrevToken();
+    const Token* MoveToNextToken();
+    const Token* MoveToPrevToken();
 
 private:
     void SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount);
-    const string path;
+    const Token* GetToken(int index);
+    const wstring path;
     vector<Token*> tokens;
     int currentIndex;
 };

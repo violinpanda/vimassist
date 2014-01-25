@@ -4,10 +4,10 @@
 #include "TokenKind.h"
 #include "SourceLocation.h"
 
-SourceFile::SourceFile(const string path)
-    :path(path)
+SourceFile::SourceFile(const wstring path)
+    :path(path), currentIndex(0)
 {
-    this-> ParseFile();
+    this->ParseFile();
 }
 
 SourceFile::~SourceFile(void)
@@ -16,6 +16,51 @@ SourceFile::~SourceFile(void)
     {
         delete this->tokens[i];
     }
+}
+
+const Token* SourceFile::GotoStart()
+{
+    this->currentIndex = 0;
+    return this->GetToken(this->currentIndex);
+}
+
+const Token* SourceFile::GetCurrentToken()
+{
+    return this->GetToken(this->currentIndex);
+}
+
+const Token* SourceFile::GetNextToken()
+{
+    return this->GetToken(this->currentIndex + 1);
+}
+
+const Token* SourceFile::GetPrevToken()
+{
+    return this->GetToken(this->currentIndex - 1);
+}
+
+const Token* SourceFile::GetToken(int index)
+{
+    if (index < 0 || index >= this->tokens.size())
+    {
+        return NULL;
+    }
+    else
+    {
+        return this->tokens[index];
+    }
+}
+
+const Token* SourceFile::MoveToNextToken()
+{
+    this->currentIndex++;
+    return this->GetCurrentToken();
+}
+
+const Token* SourceFile::MoveToPrevToken()
+{
+    this->currentIndex--;
+    return this->GetCurrentToken();
 }
 
 void SourceFile::ParseFile()
@@ -60,7 +105,9 @@ void SourceFile::ParseFile()
         fileStr.copy(tokenChars, endPos - beginPos, beginPos);
         Token *newToken = new Token(tokenChars, SourceLocation(tokenRow, tokenColumn));
         this->tokens.push_back(newToken);
-        wcout <<"[" << tokenRow <<", " <<tokenColumn <<"]" <<"\t" <<tokenChars <<endl;
+#ifdef VaDebug
+        wcout <<"[" << tokenRow <<", " <<tokenColumn <<"]" <<"\t\t" <<tokenChars <<endl;
+#endif
         tokenColumn = tokenColumn + (endPos - beginPos);
 
         if (isNewLineHit)

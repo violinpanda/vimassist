@@ -15,37 +15,40 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Lexer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SourceFile.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Token.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TokenKind.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Basic\Common.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Basic\Common.h">
+    <ClInclude Include="Ast\AstParser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SourceFile.h">
+    <ClInclude Include="Ast\AstTree.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Token.h">
+    <ClInclude Include="Stmt\IncludeStmt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TokenKind.h">
+    <ClInclude Include="Stmt\Stmt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SourceLocation.h">
+    <ClInclude Include="Stmt\TopLevelStmt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TypeModule\Type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeModule\TypeTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Stmt\Stmt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stmt\TopLevelStmt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ast\AstParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

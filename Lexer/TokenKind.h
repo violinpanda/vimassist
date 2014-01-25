@@ -28,6 +28,7 @@ enum TokenKind
     IfnDef,
     Define,
     EndIf,
+    Include,
 
     // types;
     Typedef,

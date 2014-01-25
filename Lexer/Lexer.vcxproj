@@ -79,6 +79,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Basic\Common.cpp" />
     <ClCompile Include="Lexer.cpp" />
     <ClCompile Include="SourceFile.cpp" />
     <ClCompile Include="Token.cpp" />

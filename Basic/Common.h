@@ -8,4 +8,8 @@
 
 using namespace std;
 
+extern const _TCHAR* NewLineStr;
+extern const _TCHAR NewLineChar;
+//const _TCHAR* NewLineStr = _T("\n");
+//const _TCHAR NewLineChar = '\n';
 #endif

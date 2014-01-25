@@ -5,9 +5,10 @@
 #include <fstream>
 #include <streambuf>
 #include "Lexer\SourceFile.h"
-extern void LexerTest();
 
-int _tmain(int argc, _TCHAR* argv[])
+void LexerTest()
 {
-    SourceFile srcFile(_T("Test.cpp"));
+#define VaDebug
+    SourceFile srcFile("Test.cpp");
 }
+

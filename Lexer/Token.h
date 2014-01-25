@@ -12,13 +12,12 @@ public:
     Token(const _TCHAR *content, SourceLocation location);
 	~Token();
     SourceLocation Location;
+    TokenKind GetKind() const;
 
 private:
     void ParseKind();
 
 private:
-    Token* next;
-    Token* prev;
     TokenKind kind;
     wstring content;
 };

@@ -79,6 +79,7 @@ void TokenMatcher::BuildTokenKind2TokenMap()
     this->tokenKind2TokenMap[Colon] = _T(":");
     this->tokenKind2TokenMap[DoubleQuota] = _T("\"");
     this->tokenKind2TokenMap[SingleQuota] = _T("\'");
+    this->tokenKind2TokenMap[Include] = _T("include");
 }
 
 void TokenMatcher::BuildToken2TokenKindMap()

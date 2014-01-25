@@ -22,3 +22,9 @@ void Token::ParseKind()
 {
     this->kind = TokenMatcher::GetMe().GetTokenKind(this->content.c_str());
 }
+
+TokenKind Token::GetKind() const
+{
+    return this->kind;
+}
+
