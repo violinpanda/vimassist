@@ -4,11 +4,11 @@
 #include <string>
 #include <fstream>
 #include <streambuf>
-#include "Lexer\SourceFile.h"
+#include "Lexer\TokenStream.h"
 
 void LexerTest()
 {
 #define VaDebug
-    SourceFile srcFile(_T("Test.cpp"));
+    TokenStream srcFile(_T("Test.cpp"));
 }
 

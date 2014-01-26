@@ -1,17 +1,15 @@
 #ifndef __TOKEN_H__
 #define __TOKEN_H__
-#include <Basic\Common.h>
-#include <string>
-#include "SourceLocation.h"
+#include "Basic\Common.h"
+#include "Basic\Location.h"
 enum TokenKind;
 
 class Token
 {
 public:
 	Token(const _TCHAR*);
-    Token(const _TCHAR *content, SourceLocation location);
+    Token(const _TCHAR *content, Location location);
 	~Token();
-    SourceLocation Location;
     TokenKind GetKind() const;
 
 private:
@@ -19,6 +17,7 @@ private:
 
 private:
     TokenKind kind;
+    Location location;
     wstring content;
 };
 

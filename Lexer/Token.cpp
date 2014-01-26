@@ -1,5 +1,6 @@
-#include "Token.h"
-#include "TokenKind.h"
+#include "Lexer\TokenKind.h"
+#include "Lexer\TokenStream.h"
+#include "Lexer\Token.h"
 
 Token::Token(const _TCHAR* content)
     : content(content)
@@ -7,11 +8,11 @@ Token::Token(const _TCHAR* content)
     this->ParseKind();
 }
 
-Token::Token(const _TCHAR *content, SourceLocation location)
+Token::Token(const _TCHAR *content, Location location)
     : content(content)
 {
     this->ParseKind();
-    this->Location = location;
+    this->location = location;
 }
 
 Token::~Token()
