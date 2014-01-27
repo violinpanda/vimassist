@@ -4,27 +4,27 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+AddChild	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^void TopLevelStmt::AddChild(Stmt* child)$/;"	kind:f	line:15	language:C++	class:TopLevelStmt	signature:(Stmt* child)
+AddChild	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    void AddChild(Stmt *);$/;"	kind:p	line:11	language:C++	class:TopLevelStmt	access:public	signature:(Stmt *)
 And	.\Lexer\TokenKind.h	/^    And,$/;"	kind:e	line:74	language:C++	enum:TokenKind
 AndAnd	.\Lexer\TokenKind.h	/^    AndAnd,$/;"	kind:e	line:79	language:C++	enum:TokenKind
-AstParser	.\AstParser\Ast\AstParser.cpp	/^AstParser::AstParser(wstring file)$/;"	kind:f	line:4	language:C++	class:AstParser	signature:(wstring file)
-AstParser	.\AstParser\Ast\AstParser.h	/^    AstParser(wstring file);$/;"	kind:p	line:7	language:C++	class:AstParser	access:public	signature:(wstring file)
-AstParser	.\AstParser\Ast\AstParser.h	/^class AstParser$/;"	kind:c	line:4	language:C++
-AstParser.cpp	.\AstParser\Ast\AstParser.cpp	1;"	kind:F	line:1	language:C++
-AstParser.h	.\AstParser\Ast\AstParser.h	1;"	kind:F	line:1	language:C++
-AstParser::AstParser	.\AstParser\Ast\AstParser.cpp	/^AstParser::AstParser(wstring file)$/;"	kind:f	line:4	language:C++	class:AstParser	signature:(wstring file)
-AstParser::AstParser	.\AstParser\Ast\AstParser.h	/^    AstParser(wstring file);$/;"	kind:p	line:7	language:C++	class:AstParser	access:public	signature:(wstring file)
-AstParser::OnSharpMet	.\AstParser\Ast\AstParser.cpp	/^const Stmt* AstParser::OnSharpMet(SourceFile &sourceFile)$/;"	kind:f	line:34	language:C++	class:AstParser	signature:(SourceFile &sourceFile)
-AstParser::OnSharpMet	.\AstParser\Ast\AstParser.h	/^    const Stmt* OnSharpMet();$/;"	kind:p	line:12	language:C++	class:AstParser	access:private	signature:()
-AstParser::Parse	.\AstParser\Ast\AstParser.cpp	/^AstTree* AstParser::Parse(wstring file)$/;"	kind:f	line:9	language:C++	class:AstParser	signature:(wstring file)
-AstParser::Parse	.\AstParser\Ast\AstParser.h	/^    const AstTree* Parse();$/;"	kind:p	line:9	language:C++	class:AstParser	access:public	signature:()
-AstParser::sourceFile	.\AstParser\Ast\AstParser.h	/^    SourceFile sourceFile;$/;"	kind:m	line:13	language:C++	class:AstParser	access:private
-AstParser::~AstParser	.\AstParser\Ast\AstParser.h	/^    ~AstParser();$/;"	kind:p	line:8	language:C++	class:AstParser	access:public	signature:()
-AstTree	.\AstParser\Ast\AstTree.h	/^    AstTree();$/;"	kind:p	line:7	language:C++	class:AstTree	access:public	signature:()
-AstTree	.\AstParser\Ast\AstTree.h	/^class AstTree$/;"	kind:c	line:4	language:C++
-AstTree.h	.\AstParser\Ast\AstTree.h	1;"	kind:F	line:1	language:C++
-AstTree::AstTree	.\AstParser\Ast\AstTree.h	/^    AstTree();$/;"	kind:p	line:7	language:C++	class:AstTree	access:public	signature:()
-AstTree::children	.\AstParser\Ast\AstTree.h	/^    vector<Stmt*> children;$/;"	kind:m	line:11	language:C++	class:AstTree	access:private
-AstTree::~AstTree	.\AstParser\Ast\AstTree.h	/^    ~AstTree();$/;"	kind:p	line:8	language:C++	class:AstTree	access:public	signature:()
+AstParser	.\SyntaxParser\Ast\AstParser.cpp	/^AstParser::AstParser(const wstring file)$/;"	kind:f	line:7	language:C++	class:AstParser	signature:(const wstring file)
+AstParser	.\SyntaxParser\Ast\AstParser.h	/^    AstParser(const wstring file);$/;"	kind:p	line:8	language:C++	class:AstParser	access:public	signature:(const wstring file)
+AstParser	.\SyntaxParser\Ast\AstParser.h	/^class AstParser$/;"	kind:c	line:5	language:C++
+AstParser.cpp	.\SyntaxParser\Ast\AstParser.cpp	1;"	kind:F	line:1	language:C++
+AstParser.h	.\SyntaxParser\Ast\AstParser.h	1;"	kind:F	line:1	language:C++
+AstParser::AstParser	.\SyntaxParser\Ast\AstParser.cpp	/^AstParser::AstParser(const wstring file)$/;"	kind:f	line:7	language:C++	class:AstParser	signature:(const wstring file)
+AstParser::AstParser	.\SyntaxParser\Ast\AstParser.h	/^    AstParser(const wstring file);$/;"	kind:p	line:8	language:C++	class:AstParser	access:public	signature:(const wstring file)
+AstParser::OnSharpMet	.\SyntaxParser\Ast\AstParser.cpp	/^const Stmt* AstParser::OnSharpMet()$/;"	kind:f	line:42	language:C++	class:AstParser	signature:()
+AstParser::OnSharpMet	.\SyntaxParser\Ast\AstParser.h	/^    const Stmt* OnSharpMet();$/;"	kind:p	line:13	language:C++	class:AstParser	access:private	signature:()
+AstParser::Parse	.\SyntaxParser\Ast\AstParser.cpp	/^const TopLevelStmt& AstParser::Parse()$/;"	kind:f	line:14	language:C++	class:AstParser	signature:()
+AstParser::Parse	.\SyntaxParser\Ast\AstParser.h	/^    const TopLevelStmt& Parse();$/;"	kind:p	line:10	language:C++	class:AstParser	access:public	signature:()
+AstParser::TokenStream	.\SyntaxParser\Ast\AstParser.h	/^    TokenStream TokenStream;$/;"	kind:m	line:14	language:C++	class:AstParser	access:private
+AstParser::topLevelStmt	.\SyntaxParser\Ast\AstParser.h	/^    TopLevelStmt* topLevelStmt;$/;"	kind:m	line:15	language:C++	class:AstParser	access:private
+AstParser::~AstParser	.\SyntaxParser\Ast\AstParser.cpp	/^AstParser::~AstParser()$/;"	kind:f	line:11	language:C++	class:AstParser	signature:()
+AstParser::~AstParser	.\SyntaxParser\Ast\AstParser.h	/^    ~AstParser();$/;"	kind:p	line:9	language:C++	class:AstParser	access:public	signature:()
+AstParserTest	.\Test\AstParserTest.cpp	/^void AstParserTest()$/;"	kind:f	line:9	language:C++	signature:()
+AstParserTest.cpp	.\Test\AstParserTest.cpp	1;"	kind:F	line:1	language:C++
 BackSlash	.\Lexer\TokenKind.h	/^    BackSlash,$/;"	kind:e	line:57	language:C++	enum:TokenKind
 Bang	.\Lexer\TokenKind.h	/^    Bang,$/;"	kind:e	line:73	language:C++	enum:TokenKind
 BlockCommenterBegin	.\Lexer\TokenKind.h	/^    BlockCommenterBegin,$/;"	kind:e	line:63	language:C++	enum:TokenKind
@@ -35,8 +35,9 @@ BuildTokenKind2TokenMap	.\Lexer\TokenKind.cpp	/^void TokenMatcher::BuildTokenKin
 BuildTokenKind2TokenMap	.\Lexer\TokenKind.h	/^    void BuildTokenKind2TokenMap();$/;"	kind:p	line:101	language:C++	class:TokenMatcher	access:private	signature:()
 Class	.\Lexer\TokenKind.h	/^    Class,$/;"	kind:e	line:39	language:C++	enum:TokenKind
 Colon	.\Lexer\TokenKind.h	/^    Colon,$/;"	kind:e	line:58	language:C++	enum:TokenKind
-Column	.\Lexer\SourceLocation.h	/^    int Column;$/;"	kind:m	line:19	language:C++	class:SourceLocation	access:public
+Column	.\Basic\Location.h	/^    int Column;$/;"	kind:m	line:19	language:C++	class:Location	access:public
 Comma	.\Lexer\TokenKind.h	/^    Comma = DelimiterStart,$/;"	kind:e	line:44	language:C++	enum:TokenKind
+Common.cpp	.\Basic\Common.cpp	1;"	kind:F	line:1	language:C++
 Common.h	.\Basic\Common.h	1;"	kind:F	line:1	language:C++
 Const	.\Lexer\TokenKind.h	/^    Const,$/;"	kind:e	line:24	language:C++	enum:TokenKind
 Define	.\Lexer\TokenKind.h	/^    Define,$/;"	kind:e	line:29	language:C++	enum:TokenKind
@@ -48,66 +49,84 @@ Dot	.\Lexer\TokenKind.h	/^    Dot,$/;"	kind:e	line:46	language:C++	enum:TokenKin
 DoubleQuota	.\Lexer\TokenKind.h	/^    DoubleQuota,$/;"	kind:e	line:59	language:C++	enum:TokenKind
 Else	.\Lexer\TokenKind.h	/^    Else,$/;"	kind:e	line:14	language:C++	enum:TokenKind
 EndIf	.\Lexer\TokenKind.h	/^    EndIf,$/;"	kind:e	line:30	language:C++	enum:TokenKind
-GetCurrentToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::GetCurrentToken()$/;"	kind:f	line:21	language:C++	class:SourceFile	signature:()
-GetCurrentToken	.\Lexer\SourceFile.h	/^    const Token* GetCurrentToken();$/;"	kind:p	line:16	language:C++	class:SourceFile	access:public	signature:()
-GetId	.\AstParser\TypeModule\Type.h	/^    const wstring GetId();$/;"	kind:p	line:10	language:C++	class:Type	access:public	signature:()
-GetKind	.\Lexer\Token.cpp	/^TokenKind Token::GetKind() const$/;"	kind:f	line:26	language:C++	class:Token	signature:() const
-GetKind	.\Lexer\Token.h	/^    TokenKind GetKind() const;$/;"	kind:p	line:15	language:C++	class:Token	access:public	signature:() const
-GetMe	.\AstParser\TypeModule\TypeTable.h	/^    static TypeTable& GetMe();$/;"	kind:p	line:7	language:C++	class:TypeTable	access:public	signature:()
+GetCurrentToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GetCurrentToken()$/;"	kind:f	line:27	language:C++	class:TokenStream	signature:()
+GetCurrentToken	.\Lexer\TokenStream.h	/^    const Token* GetCurrentToken();$/;"	kind:p	line:17	language:C++	class:TokenStream	access:public	signature:()
+GetId	.\SyntaxParser\Symbol\Symbol.h	/^    const wstring GetId();$/;"	kind:p	line:10	language:C++	class:Type	access:public	signature:()
+GetKind	.\Lexer\Token.cpp	/^TokenKind Token::GetKind() const$/;"	kind:f	line:27	language:C++	class:Token	signature:() const
+GetKind	.\Lexer\Token.h	/^    TokenKind GetKind() const;$/;"	kind:p	line:13	language:C++	class:Token	access:public	signature:() const
 GetMe	.\Lexer\TokenKind.cpp	/^const TokenMatcher& TokenMatcher::GetMe()$/;"	kind:f	line:5	language:C++	class:TokenMatcher	signature:()
 GetMe	.\Lexer\TokenKind.h	/^    static const TokenMatcher& GetMe();$/;"	kind:p	line:91	language:C++	class:TokenMatcher	access:public	signature:()
-GetName	.\AstParser\TypeModule\Type.h	/^    const wstring GetName();$/;"	kind:p	line:9	language:C++	class:Type	access:public	signature:()
-GetNextToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::GetNextToken()$/;"	kind:f	line:26	language:C++	class:SourceFile	signature:()
-GetNextToken	.\Lexer\SourceFile.h	/^    const Token* GetNextToken();$/;"	kind:p	line:17	language:C++	class:SourceFile	access:public	signature:()
-GetPrevToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::GetPrevToken()$/;"	kind:f	line:31	language:C++	class:SourceFile	signature:()
-GetPrevToken	.\Lexer\SourceFile.h	/^    const Token* GetPrevToken();$/;"	kind:p	line:18	language:C++	class:SourceFile	access:public	signature:()
-GetToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::GetToken(int index)$/;"	kind:f	line:36	language:C++	class:SourceFile	signature:(int index)
-GetToken	.\Lexer\SourceFile.h	/^    const Token* GetToken(int index);$/;"	kind:p	line:24	language:C++	class:SourceFile	access:private	signature:(int index)
+GetMe	.\SyntaxParser\Symbol\SymbolTable.h	/^    static TypeTable& GetMe();$/;"	kind:p	line:7	language:C++	class:TypeTable	access:public	signature:()
+GetName	.\SyntaxParser\Symbol\Symbol.h	/^    const wstring GetName();$/;"	kind:p	line:9	language:C++	class:Type	access:public	signature:()
+GetNextToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GetNextToken()$/;"	kind:f	line:32	language:C++	class:TokenStream	signature:()
+GetNextToken	.\Lexer\TokenStream.h	/^    const Token* GetNextToken();$/;"	kind:p	line:18	language:C++	class:TokenStream	access:public	signature:()
+GetPrevToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GetPrevToken()$/;"	kind:f	line:37	language:C++	class:TokenStream	signature:()
+GetPrevToken	.\Lexer\TokenStream.h	/^    const Token* GetPrevToken();$/;"	kind:p	line:19	language:C++	class:TokenStream	access:public	signature:()
+GetToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GetToken(int index)$/;"	kind:f	line:42	language:C++	class:TokenStream	signature:(int index)
+GetToken	.\Lexer\TokenStream.h	/^    const Token* GetToken(int index);$/;"	kind:p	line:25	language:C++	class:TokenStream	access:private	signature:(int index)
 GetTokenKind	.\Lexer\TokenKind.cpp	/^TokenKind TokenMatcher::GetTokenKind(_TCHAR token) const$/;"	kind:f	line:113	language:C++	class:TokenMatcher	signature:(_TCHAR token) const
 GetTokenKind	.\Lexer\TokenKind.cpp	/^TokenKind TokenMatcher::GetTokenKind(const _TCHAR* token) const$/;"	kind:f	line:100	language:C++	class:TokenMatcher	signature:(const _TCHAR* token) const
 GetTokenKind	.\Lexer\TokenKind.h	/^    TokenKind GetTokenKind(_TCHAR token) const;$/;"	kind:p	line:96	language:C++	class:TokenMatcher	access:public	signature:(_TCHAR token) const
 GetTokenKind	.\Lexer\TokenKind.h	/^    TokenKind GetTokenKind(const _TCHAR* token) const;$/;"	kind:p	line:95	language:C++	class:TokenMatcher	access:public	signature:(const _TCHAR* token) const
+GotoStart	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GotoStart()$/;"	kind:f	line:21	language:C++	class:TokenStream	signature:()
+GotoStart	.\Lexer\TokenStream.h	/^    const Token* GotoStart();$/;"	kind:p	line:16	language:C++	class:TokenStream	access:public	signature:()
+GotoStart	.\SyntaxParser\Ast\AstParser.cpp	/^    this->TokenStream.GotoStart();$/;"	kind:p	line:16	language:C++	file:	signature:()
 Gt	.\Lexer\TokenKind.h	/^    Gt,$/;"	kind:e	line:70	language:C++	enum:TokenKind
 Identifier	.\Lexer\TokenKind.h	/^    Identifier,$/;"	kind:e	line:82	language:C++	enum:TokenKind
 If	.\Lexer\TokenKind.h	/^    If,$/;"	kind:e	line:13	language:C++	enum:TokenKind
 IfnDef	.\Lexer\TokenKind.h	/^    IfnDef,$/;"	kind:e	line:28	language:C++	enum:TokenKind
 Include	.\Lexer\TokenKind.h	/^    Include,$/;"	kind:e	line:31	language:C++	enum:TokenKind
-IncludeStmt	.\AstParser\Stmt\IncludeStmt.h	/^    IncludeStmt();$/;"	kind:p	line:7	language:C++	class:IncludeStmt	access:public	signature:()
-IncludeStmt	.\AstParser\Stmt\IncludeStmt.h	/^class IncludeStmt : public Stmt$/;"	kind:c	line:4	language:C++	inherits:Stmt
-IncludeStmt.h	.\AstParser\Stmt\IncludeStmt.h	1;"	kind:F	line:1	language:C++
-IncludeStmt::IncludeStmt	.\AstParser\Stmt\IncludeStmt.h	/^    IncludeStmt();$/;"	kind:p	line:7	language:C++	class:IncludeStmt	access:public	signature:()
+IncludeStmt	.\SyntaxParser\Stmt\IncludeStmt.cpp	/^IncludeStmt::IncludeStmt(TokenStream& tokenStream)$/;"	kind:f	line:3	language:C++	class:IncludeStmt	signature:(TokenStream& tokenStream)
+IncludeStmt	.\SyntaxParser\Stmt\IncludeStmt.h	/^    IncludeStmt(TokenStream &TokenStream);$/;"	kind:p	line:9	language:C++	class:IncludeStmt	access:public	signature:(TokenStream &TokenStream)
+IncludeStmt	.\SyntaxParser\Stmt\IncludeStmt.h	/^class IncludeStmt : public Stmt$/;"	kind:c	line:6	language:C++	inherits:Stmt
+IncludeStmt.cpp	.\SyntaxParser\Stmt\IncludeStmt.cpp	1;"	kind:F	line:1	language:C++
+IncludeStmt.h	.\SyntaxParser\Stmt\IncludeStmt.h	1;"	kind:F	line:1	language:C++
+IncludeStmt::IncludeStmt	.\SyntaxParser\Stmt\IncludeStmt.cpp	/^IncludeStmt::IncludeStmt(TokenStream& tokenStream)$/;"	kind:f	line:3	language:C++	class:IncludeStmt	signature:(TokenStream& tokenStream)
+IncludeStmt::IncludeStmt	.\SyntaxParser\Stmt\IncludeStmt.h	/^    IncludeStmt(TokenStream &TokenStream);$/;"	kind:p	line:9	language:C++	class:IncludeStmt	access:public	signature:(TokenStream &TokenStream)
 Int	.\Lexer\TokenKind.h	/^    Int,$/;"	kind:e	line:35	language:C++	enum:TokenKind
 IsDelimiterToken	.\Lexer\TokenKind.cpp	/^bool TokenMatcher::IsDelimiterToken(TokenKind tokenKind) const$/;"	kind:f	line:119	language:C++	class:TokenMatcher	signature:(TokenKind tokenKind) const
 IsDelimiterToken	.\Lexer\TokenKind.h	/^    bool IsDelimiterToken(TokenKind tokenKind) const;$/;"	kind:p	line:97	language:C++	class:TokenMatcher	access:public	signature:(TokenKind tokenKind) const
 LLargeBrace	.\Lexer\TokenKind.h	/^    LLargeBrace,$/;"	kind:e	line:54	language:C++	enum:TokenKind
 LMiddleBrace	.\Lexer\TokenKind.h	/^    LMiddleBrace,$/;"	kind:e	line:52	language:C++	enum:TokenKind
 LSmallBrace	.\Lexer\TokenKind.h	/^    LSmallBrace,$/;"	kind:e	line:50	language:C++	enum:TokenKind
-Lexer.cpp	.\Lexer\Lexer.cpp	1;"	kind:F	line:1	language:C++
 LexerTest	.\Test\LexerTest.cpp	/^void LexerTest()$/;"	kind:f	line:9	language:C++	signature:()
-LexerTest	.\Test\Test.cpp	/^extern void LexerTest();$/;"	kind:p	line:8	language:C++	file:	signature:()
 LexerTest.cpp	.\Test\LexerTest.cpp	1;"	kind:F	line:1	language:C++
 LineCommenter	.\Lexer\TokenKind.h	/^    LineCommenter,$/;"	kind:e	line:62	language:C++	enum:TokenKind
-Location	.\Lexer\Token.h	/^    SourceLocation Location;$/;"	kind:m	line:14	language:C++	class:Token	access:public
+Location	.\Basic\Location.h	/^    Location()$/;"	kind:f	line:13	language:C++	class:Location	access:public	signature:()
+Location	.\Basic\Location.h	/^    Location(int row, int column)$/;"	kind:f	line:7	language:C++	class:Location	access:public	signature:(int row, int column)
+Location	.\Basic\Location.h	/^class Location$/;"	kind:c	line:4	language:C++
+Location.h	.\Basic\Location.h	1;"	kind:F	line:1	language:C++
+Location::Column	.\Basic\Location.h	/^    int Column;$/;"	kind:m	line:19	language:C++	class:Location	access:public
+Location::Location	.\Basic\Location.h	/^    Location()$/;"	kind:f	line:13	language:C++	class:Location	access:public	signature:()
+Location::Location	.\Basic\Location.h	/^    Location(int row, int column)$/;"	kind:f	line:7	language:C++	class:Location	access:public	signature:(int row, int column)
+Location::Row	.\Basic\Location.h	/^    int Row;$/;"	kind:m	line:18	language:C++	class:Location	access:public
 Long	.\Lexer\TokenKind.h	/^    Long,$/;"	kind:e	line:36	language:C++	enum:TokenKind
 Lt	.\Lexer\TokenKind.h	/^    Lt,$/;"	kind:e	line:71	language:C++	enum:TokenKind
 Minus	.\Lexer\TokenKind.h	/^    Minus,$/;"	kind:e	line:67	language:C++	enum:TokenKind
-MoveToNextToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::MoveToNextToken()$/;"	kind:f	line:48	language:C++	class:SourceFile	signature:()
-MoveToNextToken	.\Lexer\SourceFile.h	/^    const Token* MoveToNextToken();$/;"	kind:p	line:19	language:C++	class:SourceFile	access:public	signature:()
-MoveToPrevToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::MoveToPrevToken()$/;"	kind:f	line:54	language:C++	class:SourceFile	signature:()
-MoveToPrevToken	.\Lexer\SourceFile.h	/^    const Token* MoveToPrevToken();$/;"	kind:p	line:20	language:C++	class:SourceFile	access:public	signature:()
+MoveToNextToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::MoveToNextToken()$/;"	kind:f	line:54	language:C++	class:TokenStream	signature:()
+MoveToNextToken	.\Lexer\TokenStream.h	/^    const Token* MoveToNextToken();$/;"	kind:p	line:20	language:C++	class:TokenStream	access:public	signature:()
+MoveToPrevToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::MoveToPrevToken()$/;"	kind:f	line:60	language:C++	class:TokenStream	signature:()
+MoveToPrevToken	.\Lexer\TokenStream.h	/^    const Token* MoveToPrevToken();$/;"	kind:p	line:21	language:C++	class:TokenStream	access:public	signature:()
 Multiple	.\Lexer\TokenKind.h	/^    Multiple,$/;"	kind:e	line:68	language:C++	enum:TokenKind
 NewLine	.\Lexer\TokenKind.h	/^    NewLine,$/;"	kind:e	line:49	language:C++	enum:TokenKind
-OnSharpMet	.\AstParser\Ast\AstParser.cpp	/^const Stmt* AstParser::OnSharpMet(SourceFile &sourceFile)$/;"	kind:f	line:34	language:C++	class:AstParser	signature:(SourceFile &sourceFile)
-OnSharpMet	.\AstParser\Ast\AstParser.h	/^    const Stmt* OnSharpMet();$/;"	kind:p	line:12	language:C++	class:AstParser	access:private	signature:()
+NewLineChar	.\Basic\Common.cpp	/^const _TCHAR NewLineChar = '\\n';$/;"	kind:v	line:4	language:C++
+NewLineChar	.\Basic\Common.h	/^extern const _TCHAR NewLineChar;$/;"	kind:x	line:13	language:C++
+NewLineStr	.\Basic\Common.cpp	/^const _TCHAR* NewLineStr = _T("\\n");$/;"	kind:v	line:3	language:C++
+NewLineStr	.\Basic\Common.h	/^extern const _TCHAR* NewLineStr;$/;"	kind:x	line:12	language:C++
+OnSharpMet	.\SyntaxParser\Ast\AstParser.cpp	/^const Stmt* AstParser::OnSharpMet()$/;"	kind:f	line:42	language:C++	class:AstParser	signature:()
+OnSharpMet	.\SyntaxParser\Ast\AstParser.h	/^    const Stmt* OnSharpMet();$/;"	kind:p	line:13	language:C++	class:AstParser	access:private	signature:()
 Or	.\Lexer\TokenKind.h	/^    Or,$/;"	kind:e	line:75	language:C++	enum:TokenKind
 OrOr	.\Lexer\TokenKind.h	/^    OrOr,$/;"	kind:e	line:80	language:C++	enum:TokenKind
-Parse	.\AstParser\Ast\AstParser.cpp	/^AstTree* AstParser::Parse(wstring file)$/;"	kind:f	line:9	language:C++	class:AstParser	signature:(wstring file)
-Parse	.\AstParser\Ast\AstParser.h	/^    const AstTree* Parse();$/;"	kind:p	line:9	language:C++	class:AstParser	access:public	signature:()
-ParseFile	.\Lexer\SourceFile.cpp	/^void SourceFile::ParseFile()$/;"	kind:f	line:60	language:C++	class:SourceFile	signature:()
-ParseFile	.\Lexer\SourceFile.h	/^    void ParseFile();$/;"	kind:p	line:15	language:C++	class:SourceFile	access:public	signature:()
-ParseKind	.\Lexer\Token.cpp	/^void Token::ParseKind()$/;"	kind:f	line:21	language:C++	class:Token	signature:()
-ParseKind	.\Lexer\Token.h	/^    void ParseKind();$/;"	kind:p	line:18	language:C++	class:Token	access:private	signature:()
+Parse	.\SyntaxParser\Ast\AstParser.cpp	/^const TopLevelStmt& AstParser::Parse()$/;"	kind:f	line:14	language:C++	class:AstParser	signature:()
+Parse	.\SyntaxParser\Ast\AstParser.h	/^    const TopLevelStmt& Parse();$/;"	kind:p	line:10	language:C++	class:AstParser	access:public	signature:()
+ParseFile	.\Lexer\TokenStream.cpp	/^void TokenStream::ParseFile()$/;"	kind:f	line:66	language:C++	class:TokenStream	signature:()
+ParseFile	.\Lexer\TokenStream.h	/^    void ParseFile();$/;"	kind:p	line:15	language:C++	class:TokenStream	access:public	signature:()
+ParseKind	.\Lexer\Token.cpp	/^void Token::ParseKind()$/;"	kind:f	line:22	language:C++	class:Token	signature:()
+ParseKind	.\Lexer\Token.h	/^    void ParseKind();$/;"	kind:p	line:16	language:C++	class:Token	access:private	signature:()
 Plus	.\Lexer\TokenKind.h	/^    Plus,$/;"	kind:e	line:66	language:C++	enum:TokenKind
+Print	.\SyntaxParser\Stmt\Stmt.h	/^    virtual const wstring Print(int level) const$/;"	kind:f	line:12	language:C++	class:Stmt	access:public	implementation:virtual	signature:(int level) const
+Print	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^const wstring TopLevelStmt::Print(int level) const$/;"	kind:f	line:20	language:C++	class:TopLevelStmt	signature:(int level) const
+Print	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    virtual const wstring Print(int level) const;$/;"	kind:p	line:14	language:C++	class:TopLevelStmt	access:public	implementation:virtual	signature:(int level) const
 Private	.\Lexer\TokenKind.h	/^    Private,$/;"	kind:e	line:20	language:C++	enum:TokenKind
 Protected	.\Lexer\TokenKind.h	/^    Protected,$/;"	kind:e	line:21	language:C++	enum:TokenKind
 Public	.\Lexer\TokenKind.h	/^    Public,$/;"	kind:e	line:19	language:C++	enum:TokenKind
@@ -115,81 +134,57 @@ QuestionMark	.\Lexer\TokenKind.h	/^    QuestionMark,$/;"	kind:e	line:72	language
 RLargeBrace	.\Lexer\TokenKind.h	/^    RLargeBrace,$/;"	kind:e	line:55	language:C++	enum:TokenKind
 RMiddleBrace	.\Lexer\TokenKind.h	/^    RMiddleBrace,$/;"	kind:e	line:53	language:C++	enum:TokenKind
 RSmallBrace	.\Lexer\TokenKind.h	/^    RSmallBrace,$/;"	kind:e	line:51	language:C++	enum:TokenKind
-Release	.\AstParser\TypeModule\TypeTable.h	/^    static void Release();$/;"	kind:p	line:8	language:C++	class:TypeTable	access:public	signature:()
 Release	.\Lexer\TokenKind.cpp	/^void TokenMatcher::Release()$/;"	kind:f	line:15	language:C++	class:TokenMatcher	signature:()
 Release	.\Lexer\TokenKind.h	/^    static void Release();$/;"	kind:p	line:92	language:C++	class:TokenMatcher	access:public	signature:()
-Row	.\Lexer\SourceLocation.h	/^    int Row;$/;"	kind:m	line:18	language:C++	class:SourceLocation	access:public
+Release	.\SyntaxParser\Symbol\SymbolTable.h	/^    static void Release();$/;"	kind:p	line:8	language:C++	class:TypeTable	access:public	signature:()
+Row	.\Basic\Location.h	/^    int Row;$/;"	kind:m	line:18	language:C++	class:Location	access:public
 Semicolon	.\Lexer\TokenKind.h	/^    Semicolon,$/;"	kind:e	line:45	language:C++	enum:TokenKind
 Sharp	.\Lexer\TokenKind.h	/^    Sharp,$/;"	kind:e	line:56	language:C++	enum:TokenKind
 Short	.\Lexer\TokenKind.h	/^    Short,$/;"	kind:e	line:37	language:C++	enum:TokenKind
 SingleQuota	.\Lexer\TokenKind.h	/^    SingleQuota,$/;"	kind:e	line:60	language:C++	enum:TokenKind
-SkipWhitespaces	.\Lexer\SourceFile.cpp	/^void SourceFile::SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount)$/;"	kind:f	line:115	language:C++	class:SourceFile	signature:(const wstring &stream, int &pos, int &spaceCount, int &tabCount)
-SkipWhitespaces	.\Lexer\SourceFile.h	/^    void SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount);$/;"	kind:p	line:23	language:C++	class:SourceFile	access:private	signature:(const wstring &stream, int &pos, int &spaceCount, int &tabCount)
-SourceFile	.\Lexer\SourceFile.cpp	/^SourceFile::SourceFile(const string path)$/;"	kind:f	line:7	language:C++	class:SourceFile	signature:(const string path)
-SourceFile	.\Lexer\SourceFile.h	/^	SourceFile(const string path);$/;"	kind:p	line:12	language:C++	class:SourceFile	access:public	signature:(const string path)
-SourceFile	.\Lexer\SourceFile.h	/^class SourceFile$/;"	kind:c	line:9	language:C++
-SourceFile.cpp	.\Lexer\SourceFile.cpp	1;"	kind:F	line:1	language:C++
-SourceFile.h	.\Lexer\SourceFile.h	1;"	kind:F	line:1	language:C++
-SourceFile::GetCurrentToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::GetCurrentToken()$/;"	kind:f	line:21	language:C++	class:SourceFile	signature:()
-SourceFile::GetCurrentToken	.\Lexer\SourceFile.h	/^    const Token* GetCurrentToken();$/;"	kind:p	line:16	language:C++	class:SourceFile	access:public	signature:()
-SourceFile::GetNextToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::GetNextToken()$/;"	kind:f	line:26	language:C++	class:SourceFile	signature:()
-SourceFile::GetNextToken	.\Lexer\SourceFile.h	/^    const Token* GetNextToken();$/;"	kind:p	line:17	language:C++	class:SourceFile	access:public	signature:()
-SourceFile::GetPrevToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::GetPrevToken()$/;"	kind:f	line:31	language:C++	class:SourceFile	signature:()
-SourceFile::GetPrevToken	.\Lexer\SourceFile.h	/^    const Token* GetPrevToken();$/;"	kind:p	line:18	language:C++	class:SourceFile	access:public	signature:()
-SourceFile::GetToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::GetToken(int index)$/;"	kind:f	line:36	language:C++	class:SourceFile	signature:(int index)
-SourceFile::GetToken	.\Lexer\SourceFile.h	/^    const Token* GetToken(int index);$/;"	kind:p	line:24	language:C++	class:SourceFile	access:private	signature:(int index)
-SourceFile::MoveToNextToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::MoveToNextToken()$/;"	kind:f	line:48	language:C++	class:SourceFile	signature:()
-SourceFile::MoveToNextToken	.\Lexer\SourceFile.h	/^    const Token* MoveToNextToken();$/;"	kind:p	line:19	language:C++	class:SourceFile	access:public	signature:()
-SourceFile::MoveToPrevToken	.\Lexer\SourceFile.cpp	/^const Token* SourceFile::MoveToPrevToken()$/;"	kind:f	line:54	language:C++	class:SourceFile	signature:()
-SourceFile::MoveToPrevToken	.\Lexer\SourceFile.h	/^    const Token* MoveToPrevToken();$/;"	kind:p	line:20	language:C++	class:SourceFile	access:public	signature:()
-SourceFile::ParseFile	.\Lexer\SourceFile.cpp	/^void SourceFile::ParseFile()$/;"	kind:f	line:60	language:C++	class:SourceFile	signature:()
-SourceFile::ParseFile	.\Lexer\SourceFile.h	/^    void ParseFile();$/;"	kind:p	line:15	language:C++	class:SourceFile	access:public	signature:()
-SourceFile::SkipWhitespaces	.\Lexer\SourceFile.cpp	/^void SourceFile::SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount)$/;"	kind:f	line:115	language:C++	class:SourceFile	signature:(const wstring &stream, int &pos, int &spaceCount, int &tabCount)
-SourceFile::SkipWhitespaces	.\Lexer\SourceFile.h	/^    void SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount);$/;"	kind:p	line:23	language:C++	class:SourceFile	access:private	signature:(const wstring &stream, int &pos, int &spaceCount, int &tabCount)
-SourceFile::SourceFile	.\Lexer\SourceFile.cpp	/^SourceFile::SourceFile(const string path)$/;"	kind:f	line:7	language:C++	class:SourceFile	signature:(const string path)
-SourceFile::SourceFile	.\Lexer\SourceFile.h	/^	SourceFile(const string path);$/;"	kind:p	line:12	language:C++	class:SourceFile	access:public	signature:(const string path)
-SourceFile::currentIndex	.\Lexer\SourceFile.h	/^    int currentIndex;$/;"	kind:m	line:27	language:C++	class:SourceFile	access:private
-SourceFile::path	.\Lexer\SourceFile.h	/^    const string path;$/;"	kind:m	line:25	language:C++	class:SourceFile	access:private
-SourceFile::tokens	.\Lexer\SourceFile.h	/^    vector<Token*> tokens;$/;"	kind:m	line:26	language:C++	class:SourceFile	access:private
-SourceFile::~SourceFile	.\Lexer\SourceFile.cpp	/^SourceFile::~SourceFile(void)$/;"	kind:f	line:13	language:C++	class:SourceFile	signature:(void)
-SourceFile::~SourceFile	.\Lexer\SourceFile.h	/^	~SourceFile();$/;"	kind:p	line:13	language:C++	class:SourceFile	access:public	signature:()
-SourceLocation	.\Lexer\SourceLocation.h	/^    SourceLocation()$/;"	kind:f	line:13	language:C++	class:SourceLocation	access:public	signature:()
-SourceLocation	.\Lexer\SourceLocation.h	/^    SourceLocation(int row, int column)$/;"	kind:f	line:7	language:C++	class:SourceLocation	access:public	signature:(int row, int column)
-SourceLocation	.\Lexer\SourceLocation.h	/^class SourceLocation$/;"	kind:c	line:4	language:C++
-SourceLocation.h	.\Lexer\SourceLocation.h	1;"	kind:F	line:1	language:C++
-SourceLocation::Column	.\Lexer\SourceLocation.h	/^    int Column;$/;"	kind:m	line:19	language:C++	class:SourceLocation	access:public
-SourceLocation::Row	.\Lexer\SourceLocation.h	/^    int Row;$/;"	kind:m	line:18	language:C++	class:SourceLocation	access:public
-SourceLocation::SourceLocation	.\Lexer\SourceLocation.h	/^    SourceLocation()$/;"	kind:f	line:13	language:C++	class:SourceLocation	access:public	signature:()
-SourceLocation::SourceLocation	.\Lexer\SourceLocation.h	/^    SourceLocation(int row, int column)$/;"	kind:f	line:7	language:C++	class:SourceLocation	access:public	signature:(int row, int column)
+SkipWhitespaces	.\Lexer\TokenStream.cpp	/^void TokenStream::SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount)$/;"	kind:f	line:121	language:C++	class:TokenStream	signature:(const wstring &stream, int &pos, int &spaceCount, int &tabCount)
+SkipWhitespaces	.\Lexer\TokenStream.h	/^    void SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount);$/;"	kind:p	line:24	language:C++	class:TokenStream	access:private	signature:(const wstring &stream, int &pos, int &spaceCount, int &tabCount)
 Space	.\Lexer\TokenKind.h	/^    Space,$/;"	kind:e	line:47	language:C++	enum:TokenKind
 Static	.\Lexer\TokenKind.h	/^    Static,$/;"	kind:e	line:25	language:C++	enum:TokenKind
-Stmt	.\AstParser\Stmt\Stmt.h	/^class Stmt$/;"	kind:c	line:4	language:C++
-Stmt.h	.\AstParser\Stmt\Stmt.h	1;"	kind:F	line:1	language:C++
+Stmt	.\SyntaxParser\Stmt\Stmt.cpp	/^Stmt::Stmt(TokenStream &TokenStream)$/;"	kind:f	line:3	language:C++	class:Stmt	signature:(TokenStream &TokenStream)
+Stmt	.\SyntaxParser\Stmt\Stmt.h	/^    Stmt(TokenStream &TokenStream);$/;"	kind:p	line:8	language:C++	class:Stmt	access:public	signature:(TokenStream &TokenStream)
+Stmt	.\SyntaxParser\Stmt\Stmt.h	/^class Stmt$/;"	kind:c	line:5	language:C++
+Stmt.cpp	.\SyntaxParser\Stmt\Stmt.cpp	1;"	kind:F	line:1	language:C++
+Stmt.h	.\SyntaxParser\Stmt\Stmt.h	1;"	kind:F	line:1	language:C++
+Stmt::Print	.\SyntaxParser\Stmt\Stmt.h	/^    virtual const wstring Print(int level) const$/;"	kind:f	line:12	language:C++	class:Stmt	access:public	implementation:virtual	signature:(int level) const
+Stmt::Stmt	.\SyntaxParser\Stmt\Stmt.cpp	/^Stmt::Stmt(TokenStream &TokenStream)$/;"	kind:f	line:3	language:C++	class:Stmt	signature:(TokenStream &TokenStream)
+Stmt::Stmt	.\SyntaxParser\Stmt\Stmt.h	/^    Stmt(TokenStream &TokenStream);$/;"	kind:p	line:8	language:C++	class:Stmt	access:public	signature:(TokenStream &TokenStream)
+Stmt::ToString	.\SyntaxParser\Stmt\Stmt.h	/^    virtual const wstring ToString() const$/;"	kind:f	line:17	language:C++	class:Stmt	access:public	implementation:virtual	signature:() const
 Struct	.\Lexer\TokenKind.h	/^    Struct,$/;"	kind:e	line:40	language:C++	enum:TokenKind
+Symbol.h	.\SyntaxParser\Symbol\Symbol.h	1;"	kind:F	line:1	language:C++
+SymbolTable.h	.\SyntaxParser\Symbol\SymbolTable.h	1;"	kind:F	line:1	language:C++
 Tab	.\Lexer\TokenKind.h	/^    Tab,$/;"	kind:e	line:48	language:C++	enum:TokenKind
 Test.cpp	.\Test\Test.cpp	1;"	kind:F	line:1	language:C++
-Token	.\Lexer\SourceFile.h	/^class Token;$/;"	kind:x	line:7	language:C++
-Token	.\Lexer\Token.cpp	/^Token::Token(const _TCHAR *content, SourceLocation location)$/;"	kind:f	line:10	language:C++	class:Token	signature:(const _TCHAR *content, SourceLocation location)
-Token	.\Lexer\Token.cpp	/^Token::Token(const _TCHAR* content)$/;"	kind:f	line:4	language:C++	class:Token	signature:(const _TCHAR* content)
-Token	.\Lexer\Token.h	/^	Token(const _TCHAR*);$/;"	kind:p	line:11	language:C++	class:Token	access:public	signature:(const _TCHAR*)
-Token	.\Lexer\Token.h	/^    Token(const _TCHAR *content, SourceLocation location);$/;"	kind:p	line:12	language:C++	class:Token	access:public	signature:(const _TCHAR *content, SourceLocation location)
-Token	.\Lexer\Token.h	/^class Token$/;"	kind:c	line:8	language:C++
+ToString	.\SyntaxParser\Stmt\Stmt.h	/^    virtual const wstring ToString() const$/;"	kind:f	line:17	language:C++	class:Stmt	access:public	implementation:virtual	signature:() const
+ToString	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^const wstring TopLevelStmt::ToString() const$/;"	kind:f	line:34	language:C++	class:TopLevelStmt	signature:() const
+ToString	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    virtual const wstring ToString() const;$/;"	kind:p	line:15	language:C++	class:TopLevelStmt	access:public	implementation:virtual	signature:() const
+Token	.\Lexer\Token.cpp	/^Token::Token(const _TCHAR *content, Location location)$/;"	kind:f	line:11	language:C++	class:Token	signature:(const _TCHAR *content, Location location)
+Token	.\Lexer\Token.cpp	/^Token::Token(const _TCHAR* content)$/;"	kind:f	line:5	language:C++	class:Token	signature:(const _TCHAR* content)
+Token	.\Lexer\Token.h	/^	Token(const _TCHAR*);$/;"	kind:p	line:10	language:C++	class:Token	access:public	signature:(const _TCHAR*)
+Token	.\Lexer\Token.h	/^    Token(const _TCHAR *content, Location location);$/;"	kind:p	line:11	language:C++	class:Token	access:public	signature:(const _TCHAR *content, Location location)
+Token	.\Lexer\Token.h	/^class Token$/;"	kind:c	line:7	language:C++
+Token	.\Lexer\TokenStream.h	/^class Token;$/;"	kind:x	line:7	language:C++
 Token.cpp	.\Lexer\Token.cpp	1;"	kind:F	line:1	language:C++
 Token.h	.\Lexer\Token.h	1;"	kind:F	line:1	language:C++
-Token::GetKind	.\Lexer\Token.cpp	/^TokenKind Token::GetKind() const$/;"	kind:f	line:26	language:C++	class:Token	signature:() const
-Token::GetKind	.\Lexer\Token.h	/^    TokenKind GetKind() const;$/;"	kind:p	line:15	language:C++	class:Token	access:public	signature:() const
-Token::Location	.\Lexer\Token.h	/^    SourceLocation Location;$/;"	kind:m	line:14	language:C++	class:Token	access:public
-Token::ParseKind	.\Lexer\Token.cpp	/^void Token::ParseKind()$/;"	kind:f	line:21	language:C++	class:Token	signature:()
-Token::ParseKind	.\Lexer\Token.h	/^    void ParseKind();$/;"	kind:p	line:18	language:C++	class:Token	access:private	signature:()
-Token::Token	.\Lexer\Token.cpp	/^Token::Token(const _TCHAR *content, SourceLocation location)$/;"	kind:f	line:10	language:C++	class:Token	signature:(const _TCHAR *content, SourceLocation location)
-Token::Token	.\Lexer\Token.cpp	/^Token::Token(const _TCHAR* content)$/;"	kind:f	line:4	language:C++	class:Token	signature:(const _TCHAR* content)
-Token::Token	.\Lexer\Token.h	/^	Token(const _TCHAR*);$/;"	kind:p	line:11	language:C++	class:Token	access:public	signature:(const _TCHAR*)
-Token::Token	.\Lexer\Token.h	/^    Token(const _TCHAR *content, SourceLocation location);$/;"	kind:p	line:12	language:C++	class:Token	access:public	signature:(const _TCHAR *content, SourceLocation location)
-Token::content	.\Lexer\Token.h	/^    wstring content;$/;"	kind:m	line:22	language:C++	class:Token	access:private
-Token::kind	.\Lexer\Token.h	/^    TokenKind kind;$/;"	kind:m	line:21	language:C++	class:Token	access:private
-Token::~Token	.\Lexer\Token.cpp	/^Token::~Token()$/;"	kind:f	line:17	language:C++	class:Token	signature:()
-Token::~Token	.\Lexer\Token.h	/^	~Token();$/;"	kind:p	line:13	language:C++	class:Token	access:public	signature:()
-TokenKind	.\Lexer\Token.h	/^enum TokenKind;$/;"	kind:x	line:6	language:C++
+Token::GetKind	.\Lexer\Token.cpp	/^TokenKind Token::GetKind() const$/;"	kind:f	line:27	language:C++	class:Token	signature:() const
+Token::GetKind	.\Lexer\Token.h	/^    TokenKind GetKind() const;$/;"	kind:p	line:13	language:C++	class:Token	access:public	signature:() const
+Token::ParseKind	.\Lexer\Token.cpp	/^void Token::ParseKind()$/;"	kind:f	line:22	language:C++	class:Token	signature:()
+Token::ParseKind	.\Lexer\Token.h	/^    void ParseKind();$/;"	kind:p	line:16	language:C++	class:Token	access:private	signature:()
+Token::Token	.\Lexer\Token.cpp	/^Token::Token(const _TCHAR *content, Location location)$/;"	kind:f	line:11	language:C++	class:Token	signature:(const _TCHAR *content, Location location)
+Token::Token	.\Lexer\Token.cpp	/^Token::Token(const _TCHAR* content)$/;"	kind:f	line:5	language:C++	class:Token	signature:(const _TCHAR* content)
+Token::Token	.\Lexer\Token.h	/^	Token(const _TCHAR*);$/;"	kind:p	line:10	language:C++	class:Token	access:public	signature:(const _TCHAR*)
+Token::Token	.\Lexer\Token.h	/^    Token(const _TCHAR *content, Location location);$/;"	kind:p	line:11	language:C++	class:Token	access:public	signature:(const _TCHAR *content, Location location)
+Token::content	.\Lexer\Token.h	/^    wstring content;$/;"	kind:m	line:21	language:C++	class:Token	access:private
+Token::kind	.\Lexer\Token.h	/^    TokenKind kind;$/;"	kind:m	line:19	language:C++	class:Token	access:private
+Token::location	.\Lexer\Token.h	/^    Location location;$/;"	kind:m	line:20	language:C++	class:Token	access:private
+Token::~Token	.\Lexer\Token.cpp	/^Token::~Token()$/;"	kind:f	line:18	language:C++	class:Token	signature:()
+Token::~Token	.\Lexer\Token.h	/^	~Token();$/;"	kind:p	line:12	language:C++	class:Token	access:public	signature:()
+TokenKind	.\Lexer\Token.h	/^enum TokenKind;$/;"	kind:x	line:5	language:C++
 TokenKind	.\Lexer\TokenKind.h	/^enum TokenKind$/;"	kind:g	line:8	language:C++
 TokenKind.cpp	.\Lexer\TokenKind.cpp	1;"	kind:F	line:1	language:C++
 TokenKind.h	.\Lexer\TokenKind.h	1;"	kind:F	line:1	language:C++
@@ -220,87 +215,139 @@ TokenMatcher::token2TokenKindMap	.\Lexer\TokenKind.h	/^    map<wstring, TokenKin
 TokenMatcher::tokenKind2TokenMap	.\Lexer\TokenKind.h	/^    wstring tokenKind2TokenMap[TokenKindEnd];$/;"	kind:m	line:104	language:C++	class:TokenMatcher	access:private
 TokenMatcher::~TokenMatcher	.\Lexer\TokenKind.cpp	/^TokenMatcher::~TokenMatcher()$/;"	kind:f	line:26	language:C++	class:TokenMatcher	signature:()
 TokenMatcher::~TokenMatcher	.\Lexer\TokenKind.h	/^    ~TokenMatcher();$/;"	kind:p	line:94	language:C++	class:TokenMatcher	access:public	signature:()
-Type	.\AstParser\TypeModule\Type.h	/^    Type();$/;"	kind:p	line:7	language:C++	class:Type	access:public	signature:()
-Type	.\AstParser\TypeModule\Type.h	/^class Type$/;"	kind:c	line:4	language:C++
-Type.h	.\AstParser\TypeModule\Type.h	1;"	kind:F	line:1	language:C++
-Type::GetId	.\AstParser\TypeModule\Type.h	/^    const wstring GetId();$/;"	kind:p	line:10	language:C++	class:Type	access:public	signature:()
-Type::GetName	.\AstParser\TypeModule\Type.h	/^    const wstring GetName();$/;"	kind:p	line:9	language:C++	class:Type	access:public	signature:()
-Type::Type	.\AstParser\TypeModule\Type.h	/^    Type();$/;"	kind:p	line:7	language:C++	class:Type	access:public	signature:()
-Type::name	.\AstParser\TypeModule\Type.h	/^    wstring name;$/;"	kind:m	line:14	language:C++	class:Type	access:private
-Type::parentScope	.\AstParser\TypeModule\Type.h	/^    Type *parentScope;$/;"	kind:m	line:13	language:C++	class:Type	access:private
-Type::~Type	.\AstParser\TypeModule\Type.h	/^    ~Type();$/;"	kind:p	line:8	language:C++	class:Type	access:public	signature:()
-TypeTable	.\AstParser\TypeModule\TypeTable.h	/^    TypeTable();$/;"	kind:p	line:11	language:C++	class:TypeTable	access:private	signature:()
-TypeTable	.\AstParser\TypeModule\TypeTable.h	/^class TypeTable$/;"	kind:c	line:4	language:C++
-TypeTable.h	.\AstParser\TypeModule\TypeTable.h	1;"	kind:F	line:1	language:C++
-TypeTable::GetMe	.\AstParser\TypeModule\TypeTable.h	/^    static TypeTable& GetMe();$/;"	kind:p	line:7	language:C++	class:TypeTable	access:public	signature:()
-TypeTable::Release	.\AstParser\TypeModule\TypeTable.h	/^    static void Release();$/;"	kind:p	line:8	language:C++	class:TypeTable	access:public	signature:()
-TypeTable::TypeTable	.\AstParser\TypeModule\TypeTable.h	/^    TypeTable();$/;"	kind:p	line:11	language:C++	class:TypeTable	access:private	signature:()
-TypeTable::table	.\AstParser\TypeModule\TypeTable.h	/^    map<wstring, Type> table;$/;"	kind:m	line:12	language:C++	class:TypeTable	access:private
+TokenStream	.\Lexer\TokenStream.cpp	/^TokenStream::TokenStream(const wstring path)$/;"	kind:f	line:7	language:C++	class:TokenStream	signature:(const wstring path)
+TokenStream	.\Lexer\TokenStream.h	/^	TokenStream(const wstring path);$/;"	kind:p	line:12	language:C++	class:TokenStream	access:public	signature:(const wstring path)
+TokenStream	.\Lexer\TokenStream.h	/^class TokenStream$/;"	kind:c	line:9	language:C++
+TokenStream	.\SyntaxParser\Ast\AstParser.h	/^    TokenStream TokenStream;$/;"	kind:m	line:14	language:C++	class:AstParser	access:private
+TokenStream.cpp	.\Lexer\TokenStream.cpp	1;"	kind:F	line:1	language:C++
+TokenStream.h	.\Lexer\TokenStream.h	1;"	kind:F	line:1	language:C++
+TokenStream::GetCurrentToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GetCurrentToken()$/;"	kind:f	line:27	language:C++	class:TokenStream	signature:()
+TokenStream::GetCurrentToken	.\Lexer\TokenStream.h	/^    const Token* GetCurrentToken();$/;"	kind:p	line:17	language:C++	class:TokenStream	access:public	signature:()
+TokenStream::GetNextToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GetNextToken()$/;"	kind:f	line:32	language:C++	class:TokenStream	signature:()
+TokenStream::GetNextToken	.\Lexer\TokenStream.h	/^    const Token* GetNextToken();$/;"	kind:p	line:18	language:C++	class:TokenStream	access:public	signature:()
+TokenStream::GetPrevToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GetPrevToken()$/;"	kind:f	line:37	language:C++	class:TokenStream	signature:()
+TokenStream::GetPrevToken	.\Lexer\TokenStream.h	/^    const Token* GetPrevToken();$/;"	kind:p	line:19	language:C++	class:TokenStream	access:public	signature:()
+TokenStream::GetToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GetToken(int index)$/;"	kind:f	line:42	language:C++	class:TokenStream	signature:(int index)
+TokenStream::GetToken	.\Lexer\TokenStream.h	/^    const Token* GetToken(int index);$/;"	kind:p	line:25	language:C++	class:TokenStream	access:private	signature:(int index)
+TokenStream::GotoStart	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GotoStart()$/;"	kind:f	line:21	language:C++	class:TokenStream	signature:()
+TokenStream::GotoStart	.\Lexer\TokenStream.h	/^    const Token* GotoStart();$/;"	kind:p	line:16	language:C++	class:TokenStream	access:public	signature:()
+TokenStream::MoveToNextToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::MoveToNextToken()$/;"	kind:f	line:54	language:C++	class:TokenStream	signature:()
+TokenStream::MoveToNextToken	.\Lexer\TokenStream.h	/^    const Token* MoveToNextToken();$/;"	kind:p	line:20	language:C++	class:TokenStream	access:public	signature:()
+TokenStream::MoveToPrevToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::MoveToPrevToken()$/;"	kind:f	line:60	language:C++	class:TokenStream	signature:()
+TokenStream::MoveToPrevToken	.\Lexer\TokenStream.h	/^    const Token* MoveToPrevToken();$/;"	kind:p	line:21	language:C++	class:TokenStream	access:public	signature:()
+TokenStream::ParseFile	.\Lexer\TokenStream.cpp	/^void TokenStream::ParseFile()$/;"	kind:f	line:66	language:C++	class:TokenStream	signature:()
+TokenStream::ParseFile	.\Lexer\TokenStream.h	/^    void ParseFile();$/;"	kind:p	line:15	language:C++	class:TokenStream	access:public	signature:()
+TokenStream::SkipWhitespaces	.\Lexer\TokenStream.cpp	/^void TokenStream::SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount)$/;"	kind:f	line:121	language:C++	class:TokenStream	signature:(const wstring &stream, int &pos, int &spaceCount, int &tabCount)
+TokenStream::SkipWhitespaces	.\Lexer\TokenStream.h	/^    void SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount);$/;"	kind:p	line:24	language:C++	class:TokenStream	access:private	signature:(const wstring &stream, int &pos, int &spaceCount, int &tabCount)
+TokenStream::TokenStream	.\Lexer\TokenStream.cpp	/^TokenStream::TokenStream(const wstring path)$/;"	kind:f	line:7	language:C++	class:TokenStream	signature:(const wstring path)
+TokenStream::TokenStream	.\Lexer\TokenStream.h	/^	TokenStream(const wstring path);$/;"	kind:p	line:12	language:C++	class:TokenStream	access:public	signature:(const wstring path)
+TokenStream::currentIndex	.\Lexer\TokenStream.h	/^    int currentIndex;$/;"	kind:m	line:28	language:C++	class:TokenStream	access:private
+TokenStream::path	.\Lexer\TokenStream.h	/^    const wstring path;$/;"	kind:m	line:26	language:C++	class:TokenStream	access:private
+TokenStream::tokens	.\Lexer\TokenStream.h	/^    vector<Token*> tokens;$/;"	kind:m	line:27	language:C++	class:TokenStream	access:private
+TokenStream::~TokenStream	.\Lexer\TokenStream.cpp	/^TokenStream::~TokenStream(void)$/;"	kind:f	line:13	language:C++	class:TokenStream	signature:(void)
+TokenStream::~TokenStream	.\Lexer\TokenStream.h	/^	~TokenStream();$/;"	kind:p	line:13	language:C++	class:TokenStream	access:public	signature:()
+TopLevelStmt	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^TopLevelStmt::TopLevelStmt(TokenStream &tokenStream)$/;"	kind:f	line:3	language:C++	class:TopLevelStmt	signature:(TokenStream &tokenStream)
+TopLevelStmt	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    TopLevelStmt(TokenStream &TokenStream);$/;"	kind:p	line:9	language:C++	class:TopLevelStmt	access:public	signature:(TokenStream &TokenStream)
+TopLevelStmt	.\SyntaxParser\Stmt\TopLevelStmt.h	/^class TopLevelStmt : public Stmt$/;"	kind:c	line:6	language:C++	inherits:Stmt
+TopLevelStmt.cpp	.\SyntaxParser\Stmt\TopLevelStmt.cpp	1;"	kind:F	line:1	language:C++
+TopLevelStmt.h	.\SyntaxParser\Stmt\TopLevelStmt.h	1;"	kind:F	line:1	language:C++
+TopLevelStmt::AddChild	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^void TopLevelStmt::AddChild(Stmt* child)$/;"	kind:f	line:15	language:C++	class:TopLevelStmt	signature:(Stmt* child)
+TopLevelStmt::AddChild	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    void AddChild(Stmt *);$/;"	kind:p	line:11	language:C++	class:TopLevelStmt	access:public	signature:(Stmt *)
+TopLevelStmt::Print	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^const wstring TopLevelStmt::Print(int level) const$/;"	kind:f	line:20	language:C++	class:TopLevelStmt	signature:(int level) const
+TopLevelStmt::Print	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    virtual const wstring Print(int level) const;$/;"	kind:p	line:14	language:C++	class:TopLevelStmt	access:public	implementation:virtual	signature:(int level) const
+TopLevelStmt::ToString	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^const wstring TopLevelStmt::ToString() const$/;"	kind:f	line:34	language:C++	class:TopLevelStmt	signature:() const
+TopLevelStmt::ToString	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    virtual const wstring ToString() const;$/;"	kind:p	line:15	language:C++	class:TopLevelStmt	access:public	implementation:virtual	signature:() const
+TopLevelStmt::TopLevelStmt	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^TopLevelStmt::TopLevelStmt(TokenStream &tokenStream)$/;"	kind:f	line:3	language:C++	class:TopLevelStmt	signature:(TokenStream &tokenStream)
+TopLevelStmt::TopLevelStmt	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    TopLevelStmt(TokenStream &TokenStream);$/;"	kind:p	line:9	language:C++	class:TopLevelStmt	access:public	signature:(TokenStream &TokenStream)
+TopLevelStmt::children	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    vector<Stmt*> children;$/;"	kind:m	line:18	language:C++	class:TopLevelStmt	access:private
+TopLevelStmt::~TopLevelStmt	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^TopLevelStmt::~TopLevelStmt()$/;"	kind:f	line:7	language:C++	class:TopLevelStmt	signature:()
+TopLevelStmt::~TopLevelStmt	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    ~TopLevelStmt();$/;"	kind:p	line:10	language:C++	class:TopLevelStmt	access:public	signature:()
+Type	.\SyntaxParser\Symbol\Symbol.h	/^    Type();$/;"	kind:p	line:7	language:C++	class:Type	access:public	signature:()
+Type	.\SyntaxParser\Symbol\Symbol.h	/^class Type$/;"	kind:c	line:4	language:C++
+Type::GetId	.\SyntaxParser\Symbol\Symbol.h	/^    const wstring GetId();$/;"	kind:p	line:10	language:C++	class:Type	access:public	signature:()
+Type::GetName	.\SyntaxParser\Symbol\Symbol.h	/^    const wstring GetName();$/;"	kind:p	line:9	language:C++	class:Type	access:public	signature:()
+Type::Type	.\SyntaxParser\Symbol\Symbol.h	/^    Type();$/;"	kind:p	line:7	language:C++	class:Type	access:public	signature:()
+Type::name	.\SyntaxParser\Symbol\Symbol.h	/^    wstring name;$/;"	kind:m	line:14	language:C++	class:Type	access:private
+Type::parentScope	.\SyntaxParser\Symbol\Symbol.h	/^    Type *parentScope;$/;"	kind:m	line:13	language:C++	class:Type	access:private
+Type::~Type	.\SyntaxParser\Symbol\Symbol.h	/^    ~Type();$/;"	kind:p	line:8	language:C++	class:Type	access:public	signature:()
+TypeTable	.\SyntaxParser\Symbol\SymbolTable.h	/^    TypeTable();$/;"	kind:p	line:11	language:C++	class:TypeTable	access:private	signature:()
+TypeTable	.\SyntaxParser\Symbol\SymbolTable.h	/^class TypeTable$/;"	kind:c	line:4	language:C++
+TypeTable::GetMe	.\SyntaxParser\Symbol\SymbolTable.h	/^    static TypeTable& GetMe();$/;"	kind:p	line:7	language:C++	class:TypeTable	access:public	signature:()
+TypeTable::Release	.\SyntaxParser\Symbol\SymbolTable.h	/^    static void Release();$/;"	kind:p	line:8	language:C++	class:TypeTable	access:public	signature:()
+TypeTable::TypeTable	.\SyntaxParser\Symbol\SymbolTable.h	/^    TypeTable();$/;"	kind:p	line:11	language:C++	class:TypeTable	access:private	signature:()
+TypeTable::table	.\SyntaxParser\Symbol\SymbolTable.h	/^    map<wstring, Type> table;$/;"	kind:m	line:12	language:C++	class:TypeTable	access:private
 Typedef	.\Lexer\TokenKind.h	/^    Typedef,$/;"	kind:e	line:34	language:C++	enum:TokenKind
 Ushort	.\Lexer\TokenKind.h	/^    Ushort,$/;"	kind:e	line:38	language:C++	enum:TokenKind
 VaDebug	.\Test\LexerTest.cpp	11;"	kind:d	line:11	language:C++	file:
 While	.\Lexer\TokenKind.h	/^    While,$/;"	kind:e	line:15	language:C++	enum:TokenKind
-__AST_PARSER_H__	.\AstParser\Ast\AstParser.h	2;"	kind:d	line:2	language:C++
-__AST_TREE_H__	.\AstParser\Ast\AstTree.h	2;"	kind:d	line:2	language:C++
+__AST_PARSER_H__	.\SyntaxParser\Ast\AstParser.h	2;"	kind:d	line:2	language:C++
 __COMMON_H__	.\Basic\Common.h	2;"	kind:d	line:2	language:C++
-__INCLUDE_STMT_H__	.\AstParser\Stmt\IncludeStmt.h	2;"	kind:d	line:2	language:C++
-__SOURCE_FILE_H__	.\Lexer\SourceFile.h	2;"	kind:d	line:2	language:C++
-__SOURCE_LOCATION_H__	.\Lexer\SourceLocation.h	2;"	kind:d	line:2	language:C++
-__STMT_H__	.\AstParser\Stmt\Stmt.h	2;"	kind:d	line:2	language:C++
+__INCLUDE_STMT_H__	.\SyntaxParser\Stmt\IncludeStmt.h	2;"	kind:d	line:2	language:C++
+__SOURCE_FILE_H__	.\Lexer\TokenStream.h	2;"	kind:d	line:2	language:C++
+__SOURCE_LOCATION_H__	.\Basic\Location.h	2;"	kind:d	line:2	language:C++
+__STMT_H__	.\SyntaxParser\Stmt\Stmt.h	2;"	kind:d	line:2	language:C++
 __TOKEN_H__	.\Lexer\Token.h	2;"	kind:d	line:2	language:C++
 __TOKEN_KIND_H__	.\Lexer\TokenKind.h	2;"	kind:d	line:2	language:C++
-__TYPE_H__	.\AstParser\TypeModule\Type.h	2;"	kind:d	line:2	language:C++
-__TYPE_TABLE_H__	.\AstParser\TypeModule\TypeTable.h	2;"	kind:d	line:2	language:C++
-_tmain	.\Lexer\Lexer.cpp	/^int _tmain(int argc, _TCHAR* argv[])$/;"	kind:f	line:7	language:C++	signature:(int argc, _TCHAR* argv[])
-_tmain	.\Test\Test.cpp	/^int _tmain(int argc, _TCHAR* argv[])$/;"	kind:f	line:10	language:C++	signature:(int argc, _TCHAR* argv[])
-beginPosTokenKind	.\Lexer\SourceFile.cpp	/^        TokenKind beginPosTokenKind = tokenMatcher.GetTokenKind(fileStr[beginPos]);$/;"	kind:l	line:78	language:C++
-children	.\AstParser\Ast\AstTree.h	/^    vector<Stmt*> children;$/;"	kind:m	line:11	language:C++	class:AstTree	access:private
-content	.\Lexer\Token.h	/^    wstring content;$/;"	kind:m	line:22	language:C++	class:Token	access:private
-copy	.\Lexer\SourceFile.cpp	/^        fileStr.copy(tokenChars, endPos - beginPos, beginPos);$/;"	kind:p	line:99	language:C++	file:	signature:(tokenChars, endPos - beginPos, beginPos)
-currentIndex	.\Lexer\SourceFile.h	/^    int currentIndex;$/;"	kind:m	line:27	language:C++	class:SourceFile	access:private
-endl	.\Lexer\SourceFile.cpp	/^        wcout <<"[" << tokenRow <<", " <<tokenColumn <<"]" <<"\\t\\t" <<tokenChars <<endl;$/;"	kind:l	line:103	language:C++
+__TOP_LEVEL_STMT_H__	.\SyntaxParser\Stmt\TopLevelStmt.h	2;"	kind:d	line:2	language:C++
+__TYPE_H__	.\SyntaxParser\Symbol\Symbol.h	2;"	kind:d	line:2	language:C++
+__TYPE_TABLE_H__	.\SyntaxParser\Symbol\SymbolTable.h	2;"	kind:d	line:2	language:C++
+_tmain	.\Test\Test.cpp	/^int _tmain(int argc, _TCHAR* argv[])$/;"	kind:f	line:6	language:C++	signature:(int argc, _TCHAR* argv[])
+beginPosTokenKind	.\Lexer\TokenStream.cpp	/^        TokenKind beginPosTokenKind = tokenMatcher.GetTokenKind(fileStr[beginPos]);$/;"	kind:l	line:84	language:C++
+children	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    vector<Stmt*> children;$/;"	kind:m	line:18	language:C++	class:TopLevelStmt	access:private
+content	.\Lexer\Token.h	/^    wstring content;$/;"	kind:m	line:21	language:C++	class:Token	access:private
+copy	.\Lexer\TokenStream.cpp	/^        fileStr.copy(tokenChars, endPos - beginPos, beginPos);$/;"	kind:p	line:105	language:C++	file:	signature:(tokenChars, endPos - beginPos, beginPos)
+currentIndex	.\Lexer\TokenStream.h	/^    int currentIndex;$/;"	kind:m	line:28	language:C++	class:TokenStream	access:private
+endl	.\Lexer\TokenStream.cpp	/^        wcout <<"[" << tokenRow <<", " <<tokenColumn <<"]" <<"\\t\\t" <<tokenChars <<endl;$/;"	kind:l	line:109	language:C++
 errMsg	.\Lexer\TokenKind.cpp	/^            char errMsg[128] = { 0 };$/;"	kind:l	line:92	language:C++
-fileStream	.\Lexer\SourceFile.cpp	/^    wifstream fileStream(this->path);$/;"	kind:p	line:62	language:C++	file:	signature:(this->path)
-isNewLineHit	.\Lexer\SourceFile.cpp	/^        bool isNewLineHit = false;$/;"	kind:l	line:79	language:C++
+fileStream	.\Lexer\TokenStream.cpp	/^    wifstream fileStream(this->path);$/;"	kind:p	line:68	language:C++	file:	signature:(this->path)
+isNewLineHit	.\Lexer\TokenStream.cpp	/^        bool isNewLineHit = false;$/;"	kind:l	line:85	language:C++
 it	.\Lexer\TokenKind.cpp	/^    map<wstring, TokenKind>::const_iterator it = this->token2TokenKindMap.find(token);$/;"	kind:l	line:102	language:C++
-kind	.\Lexer\Token.h	/^    TokenKind kind;$/;"	kind:m	line:21	language:C++	class:Token	access:private
-maxCharCountInToken	.\Lexer\SourceFile.cpp	/^        const int maxCharCountInToken = 128;$/;"	kind:l	line:97	language:C++
-name	.\AstParser\TypeModule\Type.h	/^    wstring name;$/;"	kind:m	line:14	language:C++	class:Type	access:private
-newToken	.\Lexer\SourceFile.cpp	/^        Token *newToken = new Token(tokenChars, SourceLocation(tokenRow, tokenColumn));$/;"	kind:l	line:100	language:C++
-parentScope	.\AstParser\TypeModule\Type.h	/^    Type *parentScope;$/;"	kind:m	line:13	language:C++	class:Type	access:private
-path	.\Lexer\SourceFile.h	/^    const string path;$/;"	kind:m	line:25	language:C++	class:SourceFile	access:private
+kind	.\Lexer\Token.h	/^    TokenKind kind;$/;"	kind:m	line:19	language:C++	class:Token	access:private
+loc	.\Test\Test.cpp	/^	Location loc;$/;"	kind:l	line:8	language:C++
+location	.\Lexer\Token.h	/^    Location location;$/;"	kind:m	line:20	language:C++	class:Token	access:private
+maxCharCountInToken	.\Lexer\TokenStream.cpp	/^        const int maxCharCountInToken = 128;$/;"	kind:l	line:103	language:C++
+name	.\SyntaxParser\Symbol\Symbol.h	/^    wstring name;$/;"	kind:m	line:14	language:C++	class:Type	access:private
+newToken	.\Lexer\TokenStream.cpp	/^        Token *newToken = new Token(tokenChars, Location(tokenRow, tokenColumn));$/;"	kind:l	line:106	language:C++
+parentScope	.\SyntaxParser\Symbol\Symbol.h	/^    Type *parentScope;$/;"	kind:m	line:13	language:C++	class:Type	access:private
+path	.\Lexer\TokenStream.h	/^    const wstring path;$/;"	kind:m	line:26	language:C++	class:TokenStream	access:private
+printChild	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^        wstring printChild = this->children[index]->Print(level + 1);$/;"	kind:l	line:27	language:C++
+printSelf	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^    wstring printSelf = this->ToString() + NewLineStr;$/;"	kind:l	line:23	language:C++
 proj.vim	.\proj.vim	1;"	kind:F	line:1	language:Vim
-push_back	.\Lexer\SourceFile.cpp	/^        this->tokens.push_back(newToken);$/;"	kind:p	line:101	language:C++	file:	signature:(newToken)
+push_back	.\Lexer\TokenStream.cpp	/^        this->tokens.push_back(newToken);$/;"	kind:p	line:107	language:C++	file:	signature:(newToken)
+push_back	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^    this->children.push_back(child);$/;"	kind:p	line:17	language:C++	file:	signature:(child)
+result	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^    wstring result = NULL;$/;"	kind:l	line:22	language:C++
 s:cdpathexpr	.\proj.vim	/^let s:cdpathexpr = 'cd '.s:projpath$/;"	kind:v	line:11	language:Vim
 s:csaddexpr	.\proj.vim	/^let s:csaddexpr = 'cs add '.s:projpath.'cscope.out'$/;"	kind:v	line:9	language:Vim
 s:projpath	.\proj.vim	/^let s:projpath = 'D:\\Projects\\Compilers\\VimAssist\\'$/;"	kind:v	line:2	language:Vim
 s_TokenMatcher	.\Lexer\TokenKind.cpp	/^TokenMatcher* TokenMatcher::s_TokenMatcher = NULL;$/;"	kind:m	line:3	language:C++	class:TokenMatcher	file:
 s_TokenMatcher	.\Lexer\TokenKind.h	/^    static TokenMatcher* s_TokenMatcher;$/;"	kind:m	line:90	language:C++	class:TokenMatcher	access:public
-sourceFile	.\AstParser\Ast\AstParser.h	/^    SourceFile sourceFile;$/;"	kind:m	line:13	language:C++	class:AstParser	access:private
-spaceCount	.\Lexer\SourceFile.cpp	/^        int spaceCount, tabCount = 0;$/;"	kind:l	line:72	language:C++
-spaceWidth	.\Lexer\SourceFile.cpp	/^    const int spaceWidth = 1;$/;"	kind:l	line:67	language:C++
-tabCount	.\Lexer\SourceFile.cpp	/^        int spaceCount, tabCount = 0;$/;"	kind:l	line:72	language:C++
-tabWidth	.\Lexer\SourceFile.cpp	/^    const int tabWidth = 4;$/;"	kind:l	line:68	language:C++
-table	.\AstParser\TypeModule\TypeTable.h	/^    map<wstring, Type> table;$/;"	kind:m	line:12	language:C++	class:TypeTable	access:private
-token	.\AstParser\Ast\AstParser.cpp	/^    Token *token = sourceFile.GetCurrentToken();$/;"	kind:l	line:11	language:C++
+spaceCount	.\Lexer\TokenStream.cpp	/^        int spaceCount, tabCount = 0;$/;"	kind:l	line:78	language:C++
+spaceWidth	.\Lexer\TokenStream.cpp	/^    const int spaceWidth = 1;$/;"	kind:l	line:73	language:C++
+tabCount	.\Lexer\TokenStream.cpp	/^        int spaceCount, tabCount = 0;$/;"	kind:l	line:78	language:C++
+tabWidth	.\Lexer\TokenStream.cpp	/^    const int tabWidth = 4;$/;"	kind:l	line:74	language:C++
+table	.\SyntaxParser\Symbol\SymbolTable.h	/^    map<wstring, Type> table;$/;"	kind:m	line:12	language:C++	class:TypeTable	access:private
 token	.\Lexer\TokenKind.cpp	/^        wstring token = this->tokenKind2TokenMap[kind];$/;"	kind:l	line:89	language:C++
+token	.\SyntaxParser\Ast\AstParser.cpp	/^    const Token *token = TokenStream.GetCurrentToken();$/;"	kind:l	line:17	language:C++
 token2TokenKindMap	.\Lexer\TokenKind.h	/^    map<wstring, TokenKind> token2TokenKindMap;$/;"	kind:m	line:105	language:C++	class:TokenMatcher	access:private
-tokenChars	.\Lexer\SourceFile.cpp	/^        _TCHAR tokenChars[maxCharCountInToken] = { 0 };$/;"	kind:l	line:98	language:C++
-tokenColumn	.\Lexer\SourceFile.cpp	/^    int tokenColumn = 1;$/;"	kind:l	line:66	language:C++
-tokenKind	.\Lexer\SourceFile.cpp	/^    TokenKind tokenKind = tokenMatcher.GetTokenKind(stream[pos]);$/;"	kind:l	line:121	language:C++
+tokenChars	.\Lexer\TokenStream.cpp	/^        _TCHAR tokenChars[maxCharCountInToken] = { 0 };$/;"	kind:l	line:104	language:C++
+tokenColumn	.\Lexer\TokenStream.cpp	/^    int tokenColumn = 1;$/;"	kind:l	line:72	language:C++
+tokenKind	.\Lexer\TokenStream.cpp	/^    TokenKind tokenKind = tokenMatcher.GetTokenKind(stream[pos]);$/;"	kind:l	line:127	language:C++
 tokenKind2TokenMap	.\Lexer\TokenKind.h	/^    wstring tokenKind2TokenMap[TokenKindEnd];$/;"	kind:m	line:104	language:C++	class:TokenMatcher	access:private
-tokenMatcher	.\Lexer\SourceFile.cpp	/^    const TokenMatcher &tokenMatcher = TokenMatcher::GetMe();$/;"	kind:l	line:120	language:C++
-tokenMatcher	.\Lexer\SourceFile.cpp	/^    const TokenMatcher& tokenMatcher = TokenMatcher::GetMe();$/;"	kind:l	line:64	language:C++
-tokenRow	.\Lexer\SourceFile.cpp	/^    int tokenRow = 1;$/;"	kind:l	line:65	language:C++
+tokenMatcher	.\Lexer\TokenStream.cpp	/^    const TokenMatcher &tokenMatcher = TokenMatcher::GetMe();$/;"	kind:l	line:126	language:C++
+tokenMatcher	.\Lexer\TokenStream.cpp	/^    const TokenMatcher& tokenMatcher = TokenMatcher::GetMe();$/;"	kind:l	line:70	language:C++
+tokenRow	.\Lexer\TokenStream.cpp	/^    int tokenRow = 1;$/;"	kind:l	line:71	language:C++
 tokenStr	.\Lexer\TokenKind.cpp	/^    TCHAR tokenStr[2] = { token, 0 };$/;"	kind:l	line:115	language:C++
-tokens	.\Lexer\SourceFile.h	/^    vector<Token*> tokens;$/;"	kind:m	line:26	language:C++	class:SourceFile	access:private
-wstring	.\Lexer\SourceFile.cpp	/^    wstring fileStr((istreambuf_iterator<_TCHAR>(fileStream)), istreambuf_iterator<_TCHAR>());$/;"	kind:p	line:63	language:C++	file:	signature:(istreambuf_iterator<_TCHAR>(fileStream)), istreambuf_iterator<_TCHAR>()
-~AstParser	.\AstParser\Ast\AstParser.h	/^    ~AstParser();$/;"	kind:p	line:8	language:C++	class:AstParser	access:public	signature:()
-~AstTree	.\AstParser\Ast\AstTree.h	/^    ~AstTree();$/;"	kind:p	line:8	language:C++	class:AstTree	access:public	signature:()
-~SourceFile	.\Lexer\SourceFile.cpp	/^SourceFile::~SourceFile(void)$/;"	kind:f	line:13	language:C++	class:SourceFile	signature:(void)
-~SourceFile	.\Lexer\SourceFile.h	/^	~SourceFile();$/;"	kind:p	line:13	language:C++	class:SourceFile	access:public	signature:()
-~Token	.\Lexer\Token.cpp	/^Token::~Token()$/;"	kind:f	line:17	language:C++	class:Token	signature:()
-~Token	.\Lexer\Token.h	/^	~Token();$/;"	kind:p	line:13	language:C++	class:Token	access:public	signature:()
+tokens	.\Lexer\TokenStream.h	/^    vector<Token*> tokens;$/;"	kind:m	line:27	language:C++	class:TokenStream	access:private
+topLevelStmt	.\SyntaxParser\Ast\AstParser.h	/^    TopLevelStmt* topLevelStmt;$/;"	kind:m	line:15	language:C++	class:AstParser	access:private
+wstring	.\Lexer\TokenStream.cpp	/^    wstring fileStr((istreambuf_iterator<_TCHAR>(fileStream)), istreambuf_iterator<_TCHAR>());$/;"	kind:p	line:69	language:C++	file:	signature:(istreambuf_iterator<_TCHAR>(fileStream)), istreambuf_iterator<_TCHAR>()
+~AstParser	.\SyntaxParser\Ast\AstParser.cpp	/^AstParser::~AstParser()$/;"	kind:f	line:11	language:C++	class:AstParser	signature:()
+~AstParser	.\SyntaxParser\Ast\AstParser.h	/^    ~AstParser();$/;"	kind:p	line:9	language:C++	class:AstParser	access:public	signature:()
+~Token	.\Lexer\Token.cpp	/^Token::~Token()$/;"	kind:f	line:18	language:C++	class:Token	signature:()
+~Token	.\Lexer\Token.h	/^	~Token();$/;"	kind:p	line:12	language:C++	class:Token	access:public	signature:()
 ~TokenMatcher	.\Lexer\TokenKind.cpp	/^TokenMatcher::~TokenMatcher()$/;"	kind:f	line:26	language:C++	class:TokenMatcher	signature:()
 ~TokenMatcher	.\Lexer\TokenKind.h	/^    ~TokenMatcher();$/;"	kind:p	line:94	language:C++	class:TokenMatcher	access:public	signature:()
-~Type	.\AstParser\TypeModule\Type.h	/^    ~Type();$/;"	kind:p	line:8	language:C++	class:Type	access:public	signature:()
+~TokenStream	.\Lexer\TokenStream.cpp	/^TokenStream::~TokenStream(void)$/;"	kind:f	line:13	language:C++	class:TokenStream	signature:(void)
+~TokenStream	.\Lexer\TokenStream.h	/^	~TokenStream();$/;"	kind:p	line:13	language:C++	class:TokenStream	access:public	signature:()
+~TopLevelStmt	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^TopLevelStmt::~TopLevelStmt()$/;"	kind:f	line:7	language:C++	class:TopLevelStmt	signature:()
+~TopLevelStmt	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    ~TopLevelStmt();$/;"	kind:p	line:10	language:C++	class:TopLevelStmt	access:public	signature:()
+~Type	.\SyntaxParser\Symbol\Symbol.h	/^    ~Type();$/;"	kind:p	line:8	language:C++	class:Type	access:public	signature:()

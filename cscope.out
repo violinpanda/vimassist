@@ -1,181 +1,23 @@
-cscope 15 D:\Projects\Compilers\VimAssist"               0000012073
-	@AstParser\Ast\AstParser.h
+cscope 15 D:\Projects\Compilers\VimAssist"               0000016065
+	@Basic\Common.cpp
 
-1 #iâdeà
-__AST_PARSER_H__
+1 
+	~"CommÚ.h
+"
 
-
-2 
-	#__AST_PARSER_H__
-
-
-	)
-
-4 şas 
-	cA¡P¬£r
-
-
-6 
-	mpublic
-:
-
-7 
-A¡P¬£r
-();
-
-8 ~
-A¡P¬£r
-();
-
-9 cÚ¡ 
-A¡T»e
+3 cÚ¡ 
+_TCHAR
 * 
-P¬£
-(
-w¡ršg
+	gNewLšeSŒ
+ = 
+_T
+("\n");
+
+4 cÚ¡ 
+_TCHAR
  
-fe
-);
-
-	@AstParser\Stmt\IncludeStmt.h
-
-1 #iâdeà
-__INCLUDE_STMT_H__
-
-
-2 
-	#__INCLUDE_STMT_H__
-
-
-	)
-
-4 şas 
-	cInşudeStmt
- : 
-public
- 
-Stmt
-
-
-	@AstParser\Stmt\Stmt.h
-
-1 #iâdeà
-__STMT_H__
-
-
-2 
-	#__STMT_H__
-
-
-	)
-
-4 şas 
-	cStmt
-
-
-	@AstParser\TypeModule\Type.h
-
-1 #iâdeà
-__TYPE_H__
-
-
-2 
-	#__TYPE_H__
-
-
-	)
-
-4 şas 
-	cTy³
-
-
-6 
-	mpublic
-:
-
-7 
-Ty³
-();
-
-8 ~
-Ty³
-();
-
-9 cÚ¡ 
-w¡ršg
- 
-G‘Name
-();
-
-10 cÚ¡ 
-w¡ršg
- 
-G‘Id
-();
-
-12 
-	m´iv©e
-:
-
-13 
-Ty³
- *
-·»ÁScİe
-;
-
-14 
-w¡ršg
- 
-	mÇme
-;
-
-	@AstParser\TypeModule\TypeTable.h
-
-1 #iâdeà
-__TYPE_TABLE_H__
-
-
-2 
-	#__TYPE_TABLE_H__
-
-
-	)
-
-4 şas 
-	cTy³TabË
-
-
-6 
-	mpublic
-:
-
-7 
-Ty³TabË
-& 
-G‘Me
-();
-
-8 
-R–—£
-();
-
-10 
-	m´iv©e
-:
-
-11 
-Ty³TabË
-();
-
-12 
-	mm­
-<
-	mw¡ršg
-, 
-	mTy³
-> 
-	mbË
-;
+	gNewLšeCh¬
+ = '\n';
 
 	@Basic\Common.h
 
@@ -207,7 +49,11 @@ di§bË
 	~<as£¹.h
 >
 
-9 
+8 
+	~<¡ršg
+>
+
+10 
 usšg
  
 Çme¥aû
@@ -215,551 +61,19 @@ usšg
 	g¡d
 ;
 
-	@Lexer\Lexer.cpp
-
-4 
-	~"Basic\CommÚ.h
-"
-
-7 
-	$_tmaš
-(
-¬gc
-, 
+12 cÚ¡ 
 _TCHAR
 * 
-¬gv
-[])
-
-10 
-	}
-}
-
-	@Lexer\SourceFile.cpp
-
-1 
-	~"SourûFe.h
-"
-
-2 
-	~<f¡»am
->
-
-3 
-	~<¡»ambuf
->
-
-4 
-	~"Tok’Kšd.h
-"
-
-5 
-	~"SourûLoÿtiÚ.h
-"
-
-7 
-	gSourûFe
-::
-	$SourûFe
-(cÚ¡ 
-¡ršg
- 
-·th
-)
-
-8 :
-	$·th
-(
-·th
-)
-
-10 
-this
--> 
-	`P¬£Fe
-();
-
-11 
-	}
-}
-
-13 
-	gSourûFe
-::~
-	$SourûFe
-()
-
-15 
-i
- = 0; i < 
-this
-->
-tok’s
-.
-	`size
-(); i++)
-
-17 
-d–‘e
- 
-this
-->
-tok’s
-[
-i
-];
-
-19 
-	}
-}
-
-21 
-	gSourûFe
-::
-	$P¬£Fe
-()
-
-23 
-wif¡»am
- 
-	`feSŒ—m
-(
-this
-->
-·th
-);
-
-24 
-w¡ršg
- 
-	`feSŒ
-((
-i¡»ambuf_™”©Ü
-<
-_TCHAR
->(
-feSŒ—m
-)), istreambuf_iterator<_TCHAR>());
-
-25 cÚ¡ 
-Tok’M©ch”
-& 
-tok’M©ch”
- = Tok’M©ch”::
-	`G‘Me
-();
-
-26 
-tok’Row
- = 1;
-
-27 
-tok’CŞumn
- = 1;
-
-28 cÚ¡ 
-¥aûWidth
- = 1;
-
-29 cÚ¡ 
-bWidth
- = 4;
-
-30 
-begšPos
-, 
-’dPos
- = 0;ƒndPo < 
-feSŒ
-.
-	`size
-();ƒndPos < fileStr.size())
-
-33 
-¥aûCouÁ
-, 
-bCouÁ
- = 0;
-
-34 
-this
-->
-	`SkWh™e¥aûs
-(
-feSŒ
-, 
-’dPos
-, 
-¥aûCouÁ
-, 
-bCouÁ
-);
-
-35 
-tok’CŞumn
- =ok’CŞumÀ+ 
-¥aûCouÁ
- * 
-¥aûWidth
- + 
-bCouÁ
- * 
-bWidth
+NewLšeSŒ
 ;
 
-38 
-begšPos
- = 
-’dPos
-;
-
-39 
-Tok’Kšd
- 
-begšPosTok’Kšd
- = 
-tok’M©ch”
-.
-	`G‘Tok’Kšd
-(
-feSŒ
-[
-begšPos
-]);
-
-40 
-boŞ
- 
-isNewLšeH™
- = 
-çl£
-;
-
-41 ià(
-tok’M©ch”
-.
-	`IsD–im™”Tok’
-(
-begšPosTok’Kšd
-))
-
-43 
-’dPos
-++;
-
-44 ià(
-begšPosTok’Kšd
- =ğ
-NewLše
-)
-
-46 
-isNewLšeH™
- = 
-Œue
-;
-
-51 !
-tok’M©ch”
-.
-	`IsD–im™”Tok’
-Ñok’M©ch”.
-	`G‘Tok’Kšd
-(
-feSŒ
-[
-’dPos
-])))
-
-53 
-’dPos
-++;
-
-58 cÚ¡ 
-maxCh¬CouÁInTok’
- = 128;
-
-59 
+13 cÚ¡ 
 _TCHAR
  
-tok’Ch¬s
-[
-maxCh¬CouÁInTok’
-] = { 0 };
-
-60 
-feSŒ
-.
-	`cİy
-(
-tok’Ch¬s
-, 
-’dPos
- - 
-begšPos
-, beginPos);
-
-61 
-Tok’
- *
-ÃwTok’
- = 
-Ãw
- 
-	`Tok’
-(
-tok’Ch¬s
-, 
-	`SourûLoÿtiÚ
-(
-tok’Row
-, 
-tok’CŞumn
-));
-
-62 
-this
-->
-tok’s
-.
-	`push_back
-(
-ÃwTok’
-);
-
-63 
-wcout
- <<"[" << 
-tok’Row
- <<", " <<
-tok’CŞumn
- <<"]" <<"\t" <<
-tok’Ch¬s
- <<
-’dl
+NewLšeCh¬
 ;
 
-64 
-tok’CŞumn
- =ok’CŞumÀ+ (
-’dPos
- - 
-begšPos
-);
-
-66 ià(
-isNewLšeH™
-)
-
-68 
-tok’Row
-++;
-
-69 
-tok’CŞumn
- = 1;
-
-72 
-	}
-}
-
-74 
-	gSourûFe
-::
-	$SkWh™e¥aûs
-(cÚ¡ 
-w¡ršg
- &
-¡»am
-, &
-pos
-, &
-¥aûCouÁ
-, &
-bCouÁ
-)
-
-76 
-¥aûCouÁ
- = 0;
-
-77 
-bCouÁ
- = 0;
-
-79 cÚ¡ 
-Tok’M©ch”
- &
-tok’M©ch”
- = Tok’M©ch”::
-	`G‘Me
-();
-
-80 
-Tok’Kšd
- 
-tok’Kšd
- = 
-tok’M©ch”
-.
-	`G‘Tok’Kšd
-(
-¡»am
-[
-pos
-]);
-
-81 
-tok’Kšd
- =ğ
-S·û
- ||ok’Kšd =ğ
-Tab
-)
-
-83 ià(
-tok’Kšd
- =ğ
-S·û
-)
-
-85 
-¥aûCouÁ
-++;
-
-87 ià(
-tok’Kšd
- =ğ
-Tab
-)
-
-89 
-bCouÁ
-++;
-
-91 
-pos
-++;
-
-92 
-tok’Kšd
- = 
-tok’M©ch”
-.
-	`G‘Tok’Kšd
-(
-¡»am
-[
-pos
-]);
-
-94 
-	}
-}
-
-	@Lexer\SourceFile.h
-
-1 #iâdeà
-__SOURCE_FILE_H__
-
-
-2 
-	#__SOURCE_FILE_H__
-
-
-	)
-
-3 
-	~"Basic\CommÚ.h
-"
-
-4 
-	~<veùÜ
->
-
-5 
-	~<¡ršg
->
-
-7 
-şass
- 
-	gTok’
-;
-
-9 şas 
-	cSourûFe
-
-
-11 
-	mpublic
-:
-
-12 
-SourûFe
-(cÚ¡ 
-¡ršg
- 
-·th
-);
-
-13 ~
-SourûFe
-();
-
-15 
-P¬£Fe
-();
-
-16 cÚ¡ 
-Tok’
-* 
-MoveToNext
-();
-
-17 cÚ¡ 
-Tok’
-* 
-MoveToP»v
-();
-
-19 
-	m´iv©e
-:
-
-20 
-SkWh™e¥aûs
-(cÚ¡ 
-w¡ršg
- &
-¡»am
-, &
-pos
-, &
-¥aûCouÁ
-, &
-bCouÁ
-);
-
-21 cÚ¡ 
-¡ršg
- 
-	m·th
-;
-
-22 
-	mveùÜ
-<
-	mTok’
-*> 
-	mtok’s
-;
-
-23 
-	mcu¼’tIndex
-;
-
-	@Lexer\SourceLocation.h
+	@Basic\Location.h
 
 1 #iâdeà
 __SOURCE_LOCATION_H__
@@ -772,7 +86,7 @@ __SOURCE_LOCATION_H__
 	)
 
 4 şas 
-	cSourûLoÿtiÚ
+	cLoÿtiÚ
 
 
 6 
@@ -780,7 +94,7 @@ __SOURCE_LOCATION_H__
 :
 
 7 
-	$SourûLoÿtiÚ
+	$LoÿtiÚ
 (
 row
 , 
@@ -800,7 +114,7 @@ cŞumn
 )
 
 13 
-	$SourûLoÿtiÚ
+	$LoÿtiÚ
 ()
 
 14 : 
@@ -824,14 +138,18 @@ cŞumn
 	@Lexer\Token.cpp
 
 1 
-	~"Tok’.h
+	~"Lex”\Tok’Kšd.h
 "
 
 2 
-	~"Tok’Kšd.h
+	~"Lex”\Tok’SŒ—m.h
 "
 
-4 
+3 
+	~"Lex”\Tok’.h
+"
+
+5 
 	gTok’
 ::
 	$Tok’
@@ -841,23 +159,23 @@ _TCHAR
 cÚ‹Á
 )
 
-5 : 
+6 : 
 	$cÚ‹Á
 (
 cÚ‹Á
 )
 
-7 
+8 
 this
 ->
 	`P¬£Kšd
 ();
 
-8 
+9 
 	}
 }
 
-10 
+11 
 	gTok’
 ::
 	$Tok’
@@ -866,52 +184,50 @@ _TCHAR
  *
 cÚ‹Á
 , 
-SourûLoÿtiÚ
+LoÿtiÚ
  
 loÿtiÚ
 )
 
-11 : 
+12 : 
 	$cÚ‹Á
 (
 cÚ‹Á
 )
 
-13 
+14 
 this
 ->
 	`P¬£Kšd
 ();
 
-14 
+15 
 this
 ->
-LoÿtiÚ
- = 
 loÿtiÚ
-;
+ =†ocation;
 
-15 
+16 
 	}
 }
 
-17 
+18 
 	gTok’
 ::~
 	$Tok’
 ()
 
-19 
+20 
 	}
 }
 
-21 
+22 
 Tok’
 ::
 	$P¬£Kšd
 ()
 
-23 
+24 
 this
 ->
 kšd
@@ -927,7 +243,25 @@ cÚ‹Á
 	`c_¡r
 ());
 
-24 
+25 
+	}
+}
+
+27 
+Tok’Kšd
+ 
+	gTok’
+::
+	$G‘Kšd
+() const
+
+29  
+this
+->
+kšd
+;
+
+30 
 	}
 }
 
@@ -944,91 +278,81 @@ __TOKEN_H__
 	)
 
 3 
-	~<Basic\CommÚ.h
->
-
-4 
-	~<¡ršg
->
-
-5 
-	~"SourûLoÿtiÚ.h
+	~"Basic\CommÚ.h
 "
 
-6 
+4 
+	~"Basic\LoÿtiÚ.h
+"
+
+5 
 	gTok’Kšd
 ;
 
-8 şas 
+7 şas 
 	cTok’
 
 
-10 
+9 
 	mpublic
 :
 
-11 
+10 
 Tok’
 (cÚ¡ 
 _TCHAR
 *);
 
-12 
+11 
 Tok’
 (cÚ¡ 
 _TCHAR
  *
 cÚ‹Á
 , 
-SourûLoÿtiÚ
+LoÿtiÚ
  
 loÿtiÚ
 );
 
-13 ~
+12 ~
 Tok’
 ();
 
-14 
-SourûLoÿtiÚ
+13 
+Tok’Kšd
  
-	mLoÿtiÚ
-;
+	$G‘Kšd
+() const;
 
-16 
-	m´iv©e
+15 
+´iv©e
 :
 
-17 
-P¬£Kšd
+16 
+	`P¬£Kšd
 ();
+
+18 
+´iv©e
+:
 
 19 
-	m´iv©e
-:
+Tok’Kšd
+ 
+kšd
+;
 
 20 
-Tok’
-* 
-Ãxt
+LoÿtiÚ
+ 
+loÿtiÚ
 ;
 
 21 
-Tok’
-* 
-	m´ev
-;
-
-22 
-Tok’Kšd
- 
-	mkšd
-;
-
-23 
 w¡ršg
  
-	mcÚ‹Á
+cÚ‹Á
 ;
 
 	@Lexer\TokenKind.cpp
@@ -1640,16 +964,26 @@ SšgËQuÙa
 ("\'");
 
 82 
+this
+->
+tok’Kšd2Tok’M­
+[
+Inşude
+] = 
+	`_T
+("include");
+
+83 
 	}
 }
 
-84 
+85 
 	gTok’M©ch”
 ::
 	$BudTok’2Tok’KšdM­
 ()
 
-86 
+87 
 kšd
  = 
 Tok’KšdS¹
@@ -1657,7 +991,7 @@ Tok’KšdS¹
 Tok’KšdEnd
 ; kind++)
 
-88 
+89 
 w¡ršg
  
 tok’
@@ -1669,7 +1003,7 @@ tok’Kšd2Tok’M­
 kšd
 ];
 
-89 ià(
+90 ià(
 tok’
 .
 	`Ëngth
@@ -1679,11 +1013,11 @@ kšd
 Id’tif›r
 )
 
-91 
+92 
 ”rMsg
 [128] = { 0 };
 
-92 
+93 
 	`¥rštf
 (
 ”rMsg
@@ -1691,7 +1025,7 @@ Id’tif›r
 kšd
 );
 
-93 
+94 
 	`as£¹
 (
 çl£
@@ -1699,7 +1033,7 @@ kšd
 ”rMsg
 );
 
-95 
+96 
 this
 ->
 tok’2Tok’KšdM­
@@ -1711,11 +1045,11 @@ Tok’Kšd
 kšd
 ;
 
-97 
+98 
 	}
 }
 
-99 
+100 
 Tok’Kšd
  
 	gTok’M©ch”
@@ -1727,7 +1061,7 @@ _TCHAR
 tok’
 ) const
 
-101 
+102 
 m­
 <
 w¡ršg
@@ -1747,7 +1081,7 @@ tok’2Tok’KšdM­
 tok’
 );
 
-102 ià(
+103 ià(
 ™
  !ğ
 this
@@ -1757,21 +1091,21 @@ tok’2Tok’KšdM­
 	`ûnd
 ())
 
-104  
+105  
 ™
 ->
 £cÚd
 ;
 
-108  
+109  
 Id’tif›r
 ;
 
-110 
+111 
 	}
 }
 
-112 
+113 
 Tok’Kšd
  
 	gTok’M©ch”
@@ -1783,7 +1117,7 @@ _TCHAR
 tok’
 ) const
 
-114 
+115 
 TCHAR
  
 tok’SŒ
@@ -1791,7 +1125,7 @@ tok’SŒ
 tok’
 , 0 };
 
-115  
+116  
 this
 ->
 	`G‘Tok’Kšd
@@ -1799,11 +1133,11 @@ this
 tok’SŒ
 );
 
-116 
+117 
 	}
 }
 
-118 
+119 
 boŞ
  
 	gTok’M©ch”
@@ -1815,7 +1149,7 @@ Tok’Kšd
 tok’Kšd
 ) const
 
-120  (
+121  (
 tok’Kšd
  >ğ
 D–im™”S¹
@@ -1823,7 +1157,7 @@ D–im™”S¹
 D–im™”End
 );
 
-121 
+122 
 	}
 }
 
@@ -1911,211 +1245,215 @@ __TOKEN_KIND_H__
 	mEndIf
 ,
 
-33 
-	mTy³def
+31 
+	mInşude
 ,
 
 34 
-	mIÁ
+	mTy³def
 ,
 
 35 
-	mLÚg
+	mIÁ
 ,
 
 36 
-	mShÜt
+	mLÚg
 ,
 
 37 
-	mUshÜt
+	mShÜt
 ,
 
 38 
-	mCÏss
+	mUshÜt
 ,
 
 39 
+	mCÏss
+,
+
+40 
 	mSŒuù
 ,
 
-42 
+43 
 	mD–im™”S¹
 ,
 
-43 
+44 
 	mComma
  = 
 D–im™”S¹
 ,
 
-44 
+45 
 	mSemicŞÚ
 ,
 
-45 
+46 
 	mDÙ
 ,
 
-46 
+47 
 	mS·û
 ,
 
-47 
+48 
 	mTab
 ,
 
-48 
+49 
 	mNewLše
 ,
 
-49 
+50 
 	mLSm®lB¿û
 ,
 
-50 
+51 
 	mRSm®lB¿û
 ,
 
-51 
+52 
 	mLMiddËB¿û
 ,
 
-52 
+53 
 	mRMiddËB¿û
 ,
 
-53 
+54 
 	mLL¬geB¿û
 ,
 
-54 
+55 
 	mRL¬geB¿û
 ,
 
-55 
+56 
 	mSh¬p
 ,
 
-56 
+57 
 	mBackSÏsh
 ,
 
-57 
+58 
 	mCŞÚ
 ,
 
-58 
+59 
 	mDoubËQuÙa
 ,
 
-59 
+60 
 	mSšgËQuÙa
 ,
 
-61 
+62 
 	mLšeComm’‹r
 ,
 
-62 
+63 
 	mBlockComm’‹rBegš
 ,
 
-63 
+64 
 	mBlockComm’‹rEnd
 ,
 
-65 
+66 
 	mPlus
 ,
 
-66 
+67 
 	mMšus
 ,
 
-67 
+68 
 	mMuÉË
 ,
 
-68 
+69 
 	mDivisiÚ
 ,
 
-69 
+70 
 	mGt
 ,
 
-70 
+71 
 	mLt
 ,
 
-71 
+72 
 	mQue¡iÚM¬k
 ,
 
-72 
+73 
 	mBªg
 ,
 
-73 
+74 
 	mAnd
 ,
 
-74 
+75 
 	mOr
 ,
 
-75 
+76 
 	mD–im™”End
  = 
 Or
 ,
 
-78 
+79 
 	mAndAnd
 ,
 
-79 
+80 
 	mOrOr
 ,
 
-81 
+82 
 	mId’tif›r
 ,
 
-83 
+84 
 	mTok’KšdEnd
 ,
 
-86 şas 
+87 şas 
 	cTok’M©ch”
 
 
-88 
+89 
 	mpublic
 :
 
-89 
+90 
 Tok’M©ch”
 * 
 s_Tok’M©ch”
 ;
 
-90 cÚ¡ 
+91 cÚ¡ 
 	mTok’M©ch”
 & 
 G‘Me
 ();
 
-91 
+92 
 R–—£
 ();
 
-93 ~
+94 ~
 Tok’M©ch”
 ();
 
-94 
+95 
 Tok’Kšd
  
 	$G‘Tok’Kšd
@@ -2125,7 +1463,7 @@ _TCHAR
 tok’
 ) const;
 
-95 
+96 
 Tok’Kšd
  
 	$G‘Tok’Kšd
@@ -2135,7 +1473,7 @@ _TCHAR
 tok’
 ) const;
 
-96 
+97 
 boŞ
  
 	$IsD–im™”Tok’
@@ -2145,23 +1483,23 @@ Tok’Kšd
 tok’Kšd
 ) const;
 
-98 
+99 
 ´iv©e
 :
 
-99 
+100 
 	`Tok’M©ch”
 ();
 
-100 
+101 
 	`BudTok’Kšd2Tok’M­
 ();
 
-101 
+102 
 	`BudTok’2Tok’KšdM­
 ();
 
-103 
+104 
 w¡ršg
  
 tok’Kšd2Tok’M­
@@ -2169,7 +1507,7 @@ tok’Kšd2Tok’M­
 Tok’KšdEnd
 ];
 
-104 
+105 
 m­
 <
 w¡ršg
@@ -2179,13 +1517,1459 @@ Tok’Kšd
 tok’2Tok’KšdM­
 ;
 
-	@Test\DefineInt.h
+	@Lexer\TokenStream.cpp
 
-2 
-	gi
+1 
+	~<f¡»am
+>
+
+2 
+	~<¡»ambuf
+>
+
+3 
+	~"Lex”\Tok’SŒ—m.h
+"
+
+4 
+	~"Tok’Kšd.h
+"
+
+5 
+	~"Basic\LoÿtiÚ.h
+"
+
+7 
+	gTok’SŒ—m
+::
+	$Tok’SŒ—m
+(cÚ¡ 
+w¡ršg
+ 
+·th
+)
+
+8 :
+	`·th
+(
+·th
+), 
+	$cu¼’tIndex
+(0)
+
+10 
+this
+->
+	`P¬£Fe
+();
+
+11 
+	}
+}
+
+13 
+	gTok’SŒ—m
+::~
+	$Tok’SŒ—m
+()
+
+15 
+i
+ = 0; i < 
+this
+->
+tok’s
+.
+	`size
+(); i++)
+
+17 
+d–‘e
+ 
+this
+->
+tok’s
+[
+i
+];
+
+19 
+	}
+}
+
+21 cÚ¡ 
+Tok’
+* 
+	gTok’SŒ—m
+::
+	$GÙoS¹
+()
+
+23 
+this
+->
+cu¼’tIndex
+ = 0;
+
+24  
+this
+->
+	`G‘Tok’
+Ñhis->
+cu¼’tIndex
+);
+
+25 
+	}
+}
+
+27 cÚ¡ 
+Tok’
+* 
+	gTok’SŒ—m
+::
+	$G‘Cu¼’tTok’
+()
+
+29  
+this
+->
+	`G‘Tok’
+Ñhis->
+cu¼’tIndex
+);
+
+30 
+	}
+}
+
+32 cÚ¡ 
+Tok’
+* 
+	gTok’SŒ—m
+::
+	$G‘NextTok’
+()
+
+34  
+this
+->
+	`G‘Tok’
+Ñhis->
+cu¼’tIndex
+ + 1);
+
+35 
+	}
+}
+
+37 cÚ¡ 
+Tok’
+* 
+	gTok’SŒ—m
+::
+	$G‘P»vTok’
+()
+
+39  
+this
+->
+	`G‘Tok’
+Ñhis->
+cu¼’tIndex
+ - 1);
+
+40 
+	}
+}
+
+42 cÚ¡ 
+Tok’
+* 
+	gTok’SŒ—m
+::
+	$G‘Tok’
+(
+šdex
+)
+
+44 ià(
+šdex
+ < 0 || index >ğ
+this
+->
+tok’s
+.
+	`size
+())
+
+46  
+NULL
+;
+
+50  
+this
+->
+tok’s
+[
+šdex
+];
+
+52 
+	}
+}
+
+54 cÚ¡ 
+Tok’
+* 
+	gTok’SŒ—m
+::
+	$MoveToNextTok’
+()
+
+56 
+this
+->
+cu¼’tIndex
+++;
+
+57  
+this
+->
+	`G‘Cu¼’tTok’
+();
+
+58 
+	}
+}
+
+60 cÚ¡ 
+Tok’
+* 
+	gTok’SŒ—m
+::
+	$MoveToP»vTok’
+()
+
+62 
+this
+->
+cu¼’tIndex
+--;
+
+63  
+this
+->
+	`G‘Cu¼’tTok’
+();
+
+64 
+	}
+}
+
+66 
+	gTok’SŒ—m
+::
+	$P¬£Fe
+()
+
+68 
+wif¡»am
+ 
+	`feSŒ—m
+(
+this
+->
+·th
+);
+
+69 
+w¡ršg
+ 
+	`feSŒ
+((
+i¡»ambuf_™”©Ü
+<
+_TCHAR
+>(
+feSŒ—m
+)), istreambuf_iterator<_TCHAR>());
+
+70 cÚ¡ 
+Tok’M©ch”
+& 
+tok’M©ch”
+ = Tok’M©ch”::
+	`G‘Me
+();
+
+71 
+tok’Row
  = 1;
 
-	@Test\Test.cpp
+72 
+tok’CŞumn
+ = 1;
+
+73 cÚ¡ 
+¥aûWidth
+ = 1;
+
+74 cÚ¡ 
+bWidth
+ = 4;
+
+75 
+begšPos
+, 
+’dPos
+ = 0;ƒndPo < 
+feSŒ
+.
+	`size
+();ƒndPos < fileStr.size())
+
+78 
+¥aûCouÁ
+, 
+bCouÁ
+ = 0;
+
+79 
+this
+->
+	`SkWh™e¥aûs
+(
+feSŒ
+, 
+’dPos
+, 
+¥aûCouÁ
+, 
+bCouÁ
+);
+
+80 
+tok’CŞumn
+ =ok’CŞumÀ+ 
+¥aûCouÁ
+ * 
+¥aûWidth
+ + 
+bCouÁ
+ * 
+bWidth
+;
+
+83 
+begšPos
+ = 
+’dPos
+;
+
+84 
+Tok’Kšd
+ 
+begšPosTok’Kšd
+ = 
+tok’M©ch”
+.
+	`G‘Tok’Kšd
+(
+feSŒ
+[
+begšPos
+]);
+
+85 
+boŞ
+ 
+isNewLšeH™
+ = 
+çl£
+;
+
+86 ià(
+tok’M©ch”
+.
+	`IsD–im™”Tok’
+(
+begšPosTok’Kšd
+))
+
+88 
+’dPos
+++;
+
+89 ià(
+begšPosTok’Kšd
+ =ğ
+NewLše
+)
+
+91 
+isNewLšeH™
+ = 
+Œue
+;
+
+96 !
+tok’M©ch”
+.
+	`IsD–im™”Tok’
+Ñok’M©ch”.
+	`G‘Tok’Kšd
+(
+feSŒ
+[
+’dPos
+])))
+
+98 
+’dPos
+++;
+
+103 cÚ¡ 
+maxCh¬CouÁInTok’
+ = 128;
+
+104 
+_TCHAR
+ 
+tok’Ch¬s
+[
+maxCh¬CouÁInTok’
+] = { 0 };
+
+105 
+feSŒ
+.
+	`cİy
+(
+tok’Ch¬s
+, 
+’dPos
+ - 
+begšPos
+, beginPos);
+
+106 
+Tok’
+ *
+ÃwTok’
+ = 
+Ãw
+ 
+	`Tok’
+(
+tok’Ch¬s
+, 
+	`LoÿtiÚ
+(
+tok’Row
+, 
+tok’CŞumn
+));
+
+107 
+this
+->
+tok’s
+.
+	`push_back
+(
+ÃwTok’
+);
+
+108 #ifdeà
+VaDebug
+
+
+109 
+wcout
+ <<"[" << 
+tok’Row
+ <<", " <<
+tok’CŞumn
+ <<"]" <<"\t\t" <<
+tok’Ch¬s
+ <<
+’dl
+;
+
+111 
+tok’CŞumn
+ =ok’CŞumÀ+ (
+’dPos
+ - 
+begšPos
+);
+
+113 ià(
+isNewLšeH™
+)
+
+115 
+tok’Row
+++;
+
+116 
+tok’CŞumn
+ = 1;
+
+119 
+	}
+}
+
+121 
+	gTok’SŒ—m
+::
+	$SkWh™e¥aûs
+(cÚ¡ 
+w¡ršg
+ &
+¡»am
+, &
+pos
+, &
+¥aûCouÁ
+, &
+bCouÁ
+)
+
+123 
+¥aûCouÁ
+ = 0;
+
+124 
+bCouÁ
+ = 0;
+
+126 cÚ¡ 
+Tok’M©ch”
+ &
+tok’M©ch”
+ = Tok’M©ch”::
+	`G‘Me
+();
+
+127 
+Tok’Kšd
+ 
+tok’Kšd
+ = 
+tok’M©ch”
+.
+	`G‘Tok’Kšd
+(
+¡»am
+[
+pos
+]);
+
+128 
+tok’Kšd
+ =ğ
+S·û
+ ||ok’Kšd =ğ
+Tab
+)
+
+130 ià(
+tok’Kšd
+ =ğ
+S·û
+)
+
+132 
+¥aûCouÁ
+++;
+
+134 ià(
+tok’Kšd
+ =ğ
+Tab
+)
+
+136 
+bCouÁ
+++;
+
+138 
+pos
+++;
+
+139 
+tok’Kšd
+ = 
+tok’M©ch”
+.
+	`G‘Tok’Kšd
+(
+¡»am
+[
+pos
+]);
+
+141 
+	}
+}
+
+	@Lexer\TokenStream.h
+
+1 #iâdeà
+__SOURCE_FILE_H__
+
+
+2 
+	#__SOURCE_FILE_H__
+
+
+	)
+
+3 
+	~"Basic\CommÚ.h
+"
+
+4 
+	~<veùÜ
+>
+
+5 
+	~<¡ršg
+>
+
+7 
+şass
+ 
+	gTok’
+;
+
+9 şas 
+	cTok’SŒ—m
+
+
+11 
+	mpublic
+:
+
+12 
+Tok’SŒ—m
+(cÚ¡ 
+w¡ršg
+ 
+·th
+);
+
+13 ~
+Tok’SŒ—m
+();
+
+15 
+P¬£Fe
+();
+
+16 cÚ¡ 
+Tok’
+* 
+GÙoS¹
+();
+
+17 cÚ¡ 
+Tok’
+* 
+G‘Cu¼’tTok’
+();
+
+18 cÚ¡ 
+Tok’
+* 
+G‘NextTok’
+();
+
+19 cÚ¡ 
+Tok’
+* 
+G‘P»vTok’
+();
+
+20 cÚ¡ 
+Tok’
+* 
+MoveToNextTok’
+();
+
+21 cÚ¡ 
+Tok’
+* 
+MoveToP»vTok’
+();
+
+23 
+	m´iv©e
+:
+
+24 
+SkWh™e¥aûs
+(cÚ¡ 
+w¡ršg
+ &
+¡»am
+, &
+pos
+, &
+¥aûCouÁ
+, &
+bCouÁ
+);
+
+25 cÚ¡ 
+Tok’
+* 
+G‘Tok’
+(
+šdex
+);
+
+26 cÚ¡ 
+w¡ršg
+ 
+	m·th
+;
+
+27 
+	mveùÜ
+<
+	mTok’
+*> 
+	mtok’s
+;
+
+28 
+	mcu¼’tIndex
+;
+
+	@SyntaxParser\Ast\AstParser.cpp
+
+1 
+	~"Lex”\Tok’.h
+"
+
+2 
+	~"Lex”\Tok’Kšd.h
+"
+
+3 
+	~"Lex”\Tok’SŒ—m.h
+"
+
+4 
+	~"A¡P¬£r.h
+"
+
+5 
+	~"SyÁaxP¬£r\Stmt\InşudeStmt.h
+"
+
+7 
+	gA¡P¬£r
+::
+	$A¡P¬£r
+(cÚ¡ 
+w¡ršg
+ 
+fe
+)
+
+8 : 
+	$Tok’SŒ—m
+(
+fe
+)
+
+9 {
+	}
+}
+
+11 
+A¡P¬£r
+::~
+	$A¡P¬£r
+()
+
+12 {
+	}
+}
+
+14 cÚ¡ 
+TİLev–Stmt
+& 
+A¡P¬£r
+::
+	$P¬£
+()
+
+16 
+this
+->
+Tok’SŒ—m
+.
+	`GÙoS¹
+();
+
+17 cÚ¡ 
+Tok’
+ *
+tok’
+ = 
+Tok’SŒ—m
+.
+	`G‘Cu¼’tTok’
+();
+
+18 
+tok’
+ !ğ
+NULL
+)
+
+21 
+tok’
+->
+	`G‘Kšd
+())
+
+23 
+Sh¬p
+:
+
+24 
+this
+->
+	`OnSh¬pM‘
+();
+
+26 
+LSm®lB¿û
+:
+
+36 
+tok’
+ = 
+Tok’SŒ—m
+.
+	`MoveToNextTok’
+();
+
+39  *(
+this
+->
+tİLev–Stmt
+);
+
+40 
+	}
+}
+
+42 cÚ¡ 
+Stmt
+* 
+	gA¡P¬£r
+::
+	$OnSh¬pM‘
+()
+
+44 ià(
+Tok’SŒ—m
+.
+	`G‘NextTok’
+()->
+	`G‘Kšd
+(è=ğ
+Inşude
+)
+
+46  
+Ãw
+ 
+	`InşudeStmt
+(
+Tok’SŒ—m
+);
+
+48 
+	}
+}
+
+	@SyntaxParser\Ast\AstParser.h
+
+1 #iâdeà
+__AST_PARSER_H__
+
+
+2 
+	#__AST_PARSER_H__
+
+
+	)
+
+3 
+	~"SyÁaxP¬£r\Stmt\TİLev–Stmt.h
+"
+
+5 şas 
+	cA¡P¬£r
+
+
+7 
+	mpublic
+:
+
+8 
+A¡P¬£r
+(cÚ¡ 
+w¡ršg
+ 
+fe
+);
+
+9 ~
+A¡P¬£r
+();
+
+10 cÚ¡ 
+	mTİLev–Stmt
+& 
+P¬£
+();
+
+12 
+	m´iv©e
+:
+
+13 cÚ¡ 
+Stmt
+* 
+OnSh¬pM‘
+();
+
+14 
+Tok’SŒ—m
+ 
+	mTok’SŒ—m
+;
+
+15 
+TİLev–Stmt
+* 
+	mtİLev–Stmt
+;
+
+	@SyntaxParser\Stmt\IncludeStmt.cpp
+
+1 
+	~"InşudeStmt.h
+"
+
+3 
+	gInşudeStmt
+::
+	$InşudeStmt
+(
+Tok’SŒ—m
+& 
+tok’SŒ—m
+)
+
+4 : 
+	$Stmt
+(
+tok’SŒ—m
+)
+
+6 
+	}
+}
+
+	@SyntaxParser\Stmt\IncludeStmt.h
+
+1 #iâdeà
+__INCLUDE_STMT_H__
+
+
+2 
+	#__INCLUDE_STMT_H__
+
+
+	)
+
+3 
+	~"Stmt.h
+"
+
+4 
+	~"Lex”\Tok’SŒ—m.h
+"
+
+6 şas 
+	cInşudeStmt
+ : 
+public
+ 
+Stmt
+
+
+8 
+public
+:
+
+9 
+InşudeStmt
+(
+Tok’SŒ—m
+ &TokenStream);
+
+	@SyntaxParser\Stmt\Stmt.cpp
+
+1 
+	~"Stmt.h
+"
+
+3 
+	gStmt
+::
+	$Stmt
+(
+Tok’SŒ—m
+ &TokenStream)
+
+4 {
+	}
+}
+
+	@SyntaxParser\Stmt\Stmt.h
+
+1 #iâdeà
+__STMT_H__
+
+
+2 
+	#__STMT_H__
+
+
+	)
+
+3 
+	~"Lex”\Tok’SŒ—m.h
+"
+
+5 şas 
+	cStmt
+
+
+7 
+	mpublic
+:
+
+8 
+Stmt
+(
+Tok’SŒ—m
+ &TokenStream);
+
+10 
+	mpublic
+:
+
+12 
+vœtu®
+ cÚ¡ 
+w¡ršg
+ 
+	$Pršt
+(
+Ëv–
+) const
+
+14  
+	`_T
+("");
+
+17 
+vœtu®
+ cÚ¡ 
+w¡ršg
+ 
+	$ToSŒšg
+() const
+
+19  
+	`_T
+("");
+
+20 
+	}
+}
+
+	@SyntaxParser\Stmt\TopLevelStmt.cpp
+
+1 
+	~"TİLev–Stmt.h
+"
+
+3 
+	gTİLev–Stmt
+::
+	$TİLev–Stmt
+(
+Tok’SŒ—m
+ &
+tok’SŒ—m
+)
+
+4 : 
+	$Stmt
+(
+tok’SŒ—m
+)
+
+5 {
+	}
+}
+
+7 
+TİLev–Stmt
+::~
+	$TİLev–Stmt
+()
+
+9 
+šdex
+ = 0; index < 
+this
+->
+chd»n
+.
+	`size
+(); index++)
+
+11 
+d–‘e
+ 
+this
+->
+chd»n
+[
+šdex
+];
+
+13 
+	}
+}
+
+15 
+	gTİLev–Stmt
+::
+	$AddChd
+(
+Stmt
+* 
+chd
+)
+
+17 
+this
+->
+chd»n
+.
+	`push_back
+(
+chd
+);
+
+18 
+	}
+}
+
+20 cÚ¡ 
+w¡ršg
+ 
+	gTİLev–Stmt
+::
+	$Pršt
+(
+Ëv–
+) const
+
+22 
+w¡ršg
+ 
+»suÉ
+ = 
+NULL
+;
+
+23 
+w¡ršg
+ 
+´štS–f
+ = 
+this
+->
+	`ToSŒšg
+(è+ 
+NewLšeSŒ
+;
+
+24 
+»suÉ
+ = 
+´štS–f
+;
+
+25 
+šdex
+ = 0; index < 
+this
+->
+chd»n
+.
+	`size
+(); index++)
+
+27 
+w¡ršg
+ 
+´štChd
+ = 
+this
+->
+chd»n
+[
+šdex
+]->
+	`Pršt
+(
+Ëv–
+ + 1);
+
+28 
+»suÉ
+ +ğ
+´štChd
+;
+
+31  
+»suÉ
+;
+
+32 
+	}
+}
+
+34 cÚ¡ 
+w¡ršg
+ 
+	gTİLev–Stmt
+::
+	$ToSŒšg
+() const
+
+36  
+	`_T
+("TopLevelStmt");
+
+37 
+	}
+}
+
+	@SyntaxParser\Stmt\TopLevelStmt.h
+
+1 #iâdeà
+__TOP_LEVEL_STMT_H__
+
+
+2 
+	#__TOP_LEVEL_STMT_H__
+
+
+	)
+
+3 
+	~"Stmt.h
+"
+
+4 
+	~"Lex”\Tok’SŒ—m.h
+"
+
+6 şas 
+	cTİLev–Stmt
+ : 
+public
+ 
+Stmt
+
+
+8 
+public
+:
+
+9 
+TİLev–Stmt
+(
+Tok’SŒ—m
+ &TokenStream);
+
+10 ~
+TİLev–Stmt
+();
+
+11 
+AddChd
+(
+Stmt
+ *);
+
+13 
+	mpublic
+:
+
+14 
+vœtu®
+ cÚ¡ 
+w¡ršg
+ 
+	$Pršt
+(
+Ëv–
+) const;
+
+15 
+vœtu®
+ cÚ¡ 
+w¡ršg
+ 
+	$ToSŒšg
+() const;
+
+17 
+´iv©e
+:
+
+18 
+veùÜ
+<
+Stmt
+*> 
+chd»n
+;
+
+	@SyntaxParser\Symbol\Symbol.h
+
+1 #iâdeà
+__TYPE_H__
+
+
+2 
+	#__TYPE_H__
+
+
+	)
+
+4 şas 
+	cTy³
+
+
+6 
+	mpublic
+:
+
+7 
+Ty³
+();
+
+8 ~
+Ty³
+();
+
+9 cÚ¡ 
+w¡ršg
+ 
+G‘Name
+();
+
+10 cÚ¡ 
+w¡ršg
+ 
+G‘Id
+();
+
+12 
+	m´iv©e
+:
+
+13 
+Ty³
+ *
+·»ÁScİe
+;
+
+14 
+w¡ršg
+ 
+	mÇme
+;
+
+	@SyntaxParser\Symbol\SymbolTable.h
+
+1 #iâdeà
+__TYPE_TABLE_H__
+
+
+2 
+	#__TYPE_TABLE_H__
+
+
+	)
+
+4 şas 
+	cTy³TabË
+
+
+6 
+	mpublic
+:
+
+7 
+Ty³TabË
+& 
+G‘Me
+();
+
+8 
+R–—£
+();
+
+10 
+	m´iv©e
+:
+
+11 
+Ty³TabË
+();
+
+12 
+	mm­
+<
+	mw¡ršg
+, 
+	mTy³
+> 
+	mbË
+;
+
+	@Test\AstParserTest.cpp
 
 4 
 	~<¡ršg
@@ -2200,10 +2984,76 @@ tok’2Tok’KšdM­
 >
 
 7 
-	~"Lex”\SourûFe.h
+	~"SyÁaxP¬£r\A¡\A¡P¬£r.h
 "
 
-9 
+9 
+	$A¡P¬£rTe¡
+()
+
+11 
+A¡P¬£r
+ 
+	`a¡P¬£r
+(
+	`_T
+("Test.cpp"));
+
+14 
+	}
+}
+
+	@Test\LexerTest.cpp
+
+4 
+	~<¡ršg
+>
+
+5 
+	~<f¡»am
+>
+
+6 
+	~<¡»ambuf
+>
+
+7 
+	~"Lex”\Tok’SŒ—m.h
+"
+
+9 
+	$Lex”Te¡
+()
+
+11 
+	#VaDebug
+
+
+	)
+
+12 
+Tok’SŒ—m
+ 
+	`¤cFe
+(
+	`_T
+("Test.cpp"));
+
+13 
+	}
+}
+
+	@Test\Test.cpp
+
+3 
+	~"Basic\CommÚ.h
+"
+
+4 
+	~"Basic\LoÿtiÚ.h
+"
+
+6 
 	$_tmaš
 (
 ¬gc
@@ -2213,97 +3063,15 @@ _TCHAR
 ¬gv
 [])
 
-20 
-SourûFe
- 
-	`¤cFe
-("Test.cpp");
-
-22 
-	}
-}
-
-	@Test\Token.cpp
-
-	@Test\Token.h
-
-1 #iâdeà
-__TOKEN_H__
-
-
-2 
-	#__TOKEN_H__
-
-
-	)
-
-3 
-	~<tch¬.h
->
-
-4 
-	~<¡ršg
->
-
-6 
-	eTok’Kšd
-
-
 8 
-	mTok’1
-,
+LoÿtiÚ
+ 
+loc
+;
 
 9 
-	mTok’2
-,
-
-10 
-	mTok’3
-,
-
-11 
-	mTok’KšdEnd
-,
-
-14 
-	sTok’Kšd2Tok’M­
-
-
-16 
-Tok’Kšd
- 
-	mKšd
-;
-
-17 
-w¡ršg
- 
-	mtok’
-;
-
-20 
-Tok’Kšd2Tok’M­
- 
-	gTok’Kšd2Tok’M­TabË
-[] =
-
-22 {
-Tok’1
-, 
-_T
-("token1")},
-
-23 {
-Tok’2
-, 
-_T
-("token2")},
-
-24 {
-Tok’3
-, 
-_T
-("token3")},
+	}
+}
 
 	@proj.vim
 
@@ -2401,24 +3169,28 @@ com¶‘eİt
 1
 .
 0
-19
-368
-AstParser\Ast\AstParser.h
-AstParser\Stmt\IncludeStmt.h
-AstParser\Stmt\Stmt.h
-AstParser\TypeModule\Type.h
-AstParser\TypeModule\TypeTable.h
+23
+533
+Basic\Common.cpp
 Basic\Common.h
-Lexer\Lexer.cpp
-Lexer\SourceFile.cpp
-Lexer\SourceFile.h
-Lexer\SourceLocation.h
+Basic\Location.h
 Lexer\Token.cpp
 Lexer\Token.h
 Lexer\TokenKind.cpp
 Lexer\TokenKind.h
-Test\DefineInt.h
+Lexer\TokenStream.cpp
+Lexer\TokenStream.h
+SyntaxParser\Ast\AstParser.cpp
+SyntaxParser\Ast\AstParser.h
+SyntaxParser\Stmt\IncludeStmt.cpp
+SyntaxParser\Stmt\IncludeStmt.h
+SyntaxParser\Stmt\Stmt.cpp
+SyntaxParser\Stmt\Stmt.h
+SyntaxParser\Stmt\TopLevelStmt.cpp
+SyntaxParser\Stmt\TopLevelStmt.h
+SyntaxParser\Symbol\Symbol.h
+SyntaxParser\Symbol\SymbolTable.h
+Test\AstParserTest.cpp
+Test\LexerTest.cpp
 Test\Test.cpp
-Test\Token.cpp
-Test\Token.h
 proj.vim
