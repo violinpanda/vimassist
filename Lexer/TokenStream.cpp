@@ -24,22 +24,22 @@ const Token* TokenStream::GotoStart()
     return this->GetToken(this->currentIndex);
 }
 
-const Token* TokenStream::GetCurrentToken()
+const Token* TokenStream::GetCurrentToken() const
 {
     return this->GetToken(this->currentIndex);
 }
 
-const Token* TokenStream::GetNextToken()
+const Token* TokenStream::GetNextToken() const
 {
     return this->GetToken(this->currentIndex + 1);
 }
 
-const Token* TokenStream::GetPrevToken()
+const Token* TokenStream::GetPrevToken() const
 {
     return this->GetToken(this->currentIndex - 1);
 }
 
-const Token* TokenStream::GetToken(int index)
+const Token* TokenStream::GetToken(int index) const
 {
     if (index < 0 || index >= this->tokens.size())
     {
@@ -81,9 +81,9 @@ void TokenStream::ParseFile()
 
         // match a token;
         beginPos = endPos;
-        TokenKind beginPosTokenKind = tokenMatcher.GetTokenKind(fileStr[beginPos]);
+        TokenKind beginPosTokenKind = tokenMatcher.GetKind(fileStr[beginPos]);
         bool isNewLineHit = false;
-        if (tokenMatcher.IsDelimiterToken(beginPosTokenKind))
+        if (tokenMatcher.IsDelimiter(beginPosTokenKind))
         {
             endPos++;
             if (beginPosTokenKind == NewLine)
@@ -93,7 +93,7 @@ void TokenStream::ParseFile()
         }
         else
         {
-            while (!tokenMatcher.IsDelimiterToken(tokenMatcher.GetTokenKind(fileStr[endPos])))
+            while (!tokenMatcher.IsDelimiter(tokenMatcher.GetKind(fileStr[endPos])))
             {
                 endPos++;
             }
@@ -124,7 +124,7 @@ void TokenStream::SkipWhitespaces(const wstring &stream, int &pos, int &spaceCou
     tabCount = 0;
 
     const TokenMatcher &tokenMatcher = TokenMatcher::GetMe();
-    TokenKind tokenKind = tokenMatcher.GetTokenKind(stream[pos]);
+    TokenKind tokenKind = tokenMatcher.GetKind(stream[pos]);
     while (tokenKind == Space || tokenKind == Tab)
     {
         if (tokenKind == Space)
@@ -136,6 +136,6 @@ void TokenStream::SkipWhitespaces(const wstring &stream, int &pos, int &spaceCou
             tabCount++;
         }
         pos++;
-        tokenKind = tokenMatcher.GetTokenKind(stream[pos]);
+        tokenKind = tokenMatcher.GetKind(stream[pos]);
     }
 }

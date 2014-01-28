@@ -1,5 +1,6 @@
 #include "Stmt.h"
 
-Stmt::Stmt(TokenStream &TokenStream)
+Stmt::Stmt(TokenStream &tokenStream)
+    : tokenStream(tokenStream)
 {}
 

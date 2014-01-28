@@ -6,6 +6,8 @@
 !_TAG_PROGRAM_VERSION	5.8	//
 AddChild	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^void TopLevelStmt::AddChild(Stmt* child)$/;"	kind:f	line:15	language:C++	class:TopLevelStmt	signature:(Stmt* child)
 AddChild	.\SyntaxParser\Stmt\TopLevelStmt.h	/^    void AddChild(Stmt *);$/;"	kind:p	line:11	language:C++	class:TopLevelStmt	access:public	signature:(Stmt *)
+Analyze	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h	/^    virtual const Stmt& Analyze(const TokenStream&) = 0;$/;"	kind:p	line:7	language:C++	class:DelimiterAnalyser	access:public	implementation:pure virtual	signature:(const TokenStream&)
+Analyze	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h	/^    virtual const Stmt& Analyze(const TokenStream&);$/;"	kind:p	line:7	language:C++	class:DelimiterAnalyser_Sharp	access:private	implementation:virtual	signature:(const TokenStream&)
 And	.\Lexer\TokenKind.h	/^    And,$/;"	kind:e	line:74	language:C++	enum:TokenKind
 AndAnd	.\Lexer\TokenKind.h	/^    AndAnd,$/;"	kind:e	line:79	language:C++	enum:TokenKind
 AstParser	.\SyntaxParser\Ast\AstParser.cpp	/^AstParser::AstParser(const wstring file)$/;"	kind:f	line:7	language:C++	class:AstParser	signature:(const wstring file)
@@ -41,6 +43,23 @@ Common.cpp	.\Basic\Common.cpp	1;"	kind:F	line:1	language:C++
 Common.h	.\Basic\Common.h	1;"	kind:F	line:1	language:C++
 Const	.\Lexer\TokenKind.h	/^    Const,$/;"	kind:e	line:24	language:C++	enum:TokenKind
 Define	.\Lexer\TokenKind.h	/^    Define,$/;"	kind:e	line:29	language:C++	enum:TokenKind
+DelimiterAnalyser	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h	/^class DelimiterAnalyser$/;"	kind:c	line:4	language:C++
+DelimiterAnalyser.h	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h	1;"	kind:F	line:1	language:C++
+DelimiterAnalyser::Analyze	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h	/^    virtual const Stmt& Analyze(const TokenStream&) = 0;$/;"	kind:p	line:7	language:C++	class:DelimiterAnalyser	access:public	implementation:pure virtual	signature:(const TokenStream&)
+DelimiterAnalyserFactory	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.cpp	/^DelimiterAnalyserFactory::DelimiterAnalyserFactory()$/;"	kind:f	line:3	language:C++	class:DelimiterAnalyserFactory	signature:()
+DelimiterAnalyserFactory	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^    DelimiterAnalyserFactory();$/;"	kind:p	line:14	language:C++	class:DelimiterAnalyserFactory	access:private	signature:()
+DelimiterAnalyserFactory	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^class DelimiterAnalyserFactory$/;"	kind:c	line:6	language:C++
+DelimiterAnalyserFactory.cpp	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.cpp	1;"	kind:F	line:1	language:C++
+DelimiterAnalyserFactory.h	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	1;"	kind:F	line:1	language:C++
+DelimiterAnalyserFactory::DelimiterAnalyserFactory	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.cpp	/^DelimiterAnalyserFactory::DelimiterAnalyserFactory()$/;"	kind:f	line:3	language:C++	class:DelimiterAnalyserFactory	signature:()
+DelimiterAnalyserFactory::DelimiterAnalyserFactory	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^    DelimiterAnalyserFactory();$/;"	kind:p	line:14	language:C++	class:DelimiterAnalyserFactory	access:private	signature:()
+DelimiterAnalyserFactory::GetMe	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^    static const DelimiterAnalyserFactory& GetMe();$/;"	kind:p	line:9	language:C++	class:DelimiterAnalyserFactory	access:public	signature:()
+DelimiterAnalyserFactory::Release	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^    static void Release();$/;"	kind:p	line:10	language:C++	class:DelimiterAnalyserFactory	access:public	signature:()
+DelimiterAnalyserFactory::factory	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^    map<TokenKind, DelimiterAnalyser> factory;$/;"	kind:m	line:15	language:C++	class:DelimiterAnalyserFactory	access:private
+DelimiterAnalyserFactory::s_DelimiterAnalserFactory	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^    static DelimiterAnalyserFactory* s_DelimiterAnalserFactory;$/;"	kind:m	line:13	language:C++	class:DelimiterAnalyserFactory	access:private
+DelimiterAnalyser_Sharp	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h	/^class DelimiterAnalyser_Sharp$/;"	kind:c	line:5	language:C++
+DelimiterAnalyser_Sharp.h	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h	1;"	kind:F	line:1	language:C++
+DelimiterAnalyser_Sharp::Analyze	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h	/^    virtual const Stmt& Analyze(const TokenStream&);$/;"	kind:p	line:7	language:C++	class:DelimiterAnalyser_Sharp	access:private	implementation:virtual	signature:(const TokenStream&)
 DelimiterEnd	.\Lexer\TokenKind.h	/^    DelimiterEnd = Or,$/;"	kind:e	line:76	language:C++	enum:TokenKind
 DelimiterStart	.\Lexer\TokenKind.h	/^    DelimiterStart,$/;"	kind:e	line:43	language:C++	enum:TokenKind
 Division	.\Lexer\TokenKind.h	/^    Division,$/;"	kind:e	line:69	language:C++	enum:TokenKind
@@ -56,6 +75,7 @@ GetKind	.\Lexer\Token.cpp	/^TokenKind Token::GetKind() const$/;"	kind:f	line:27	
 GetKind	.\Lexer\Token.h	/^    TokenKind GetKind() const;$/;"	kind:p	line:13	language:C++	class:Token	access:public	signature:() const
 GetMe	.\Lexer\TokenKind.cpp	/^const TokenMatcher& TokenMatcher::GetMe()$/;"	kind:f	line:5	language:C++	class:TokenMatcher	signature:()
 GetMe	.\Lexer\TokenKind.h	/^    static const TokenMatcher& GetMe();$/;"	kind:p	line:91	language:C++	class:TokenMatcher	access:public	signature:()
+GetMe	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^    static const DelimiterAnalyserFactory& GetMe();$/;"	kind:p	line:9	language:C++	class:DelimiterAnalyserFactory	access:public	signature:()
 GetMe	.\SyntaxParser\Symbol\SymbolTable.h	/^    static TypeTable& GetMe();$/;"	kind:p	line:7	language:C++	class:TypeTable	access:public	signature:()
 GetName	.\SyntaxParser\Symbol\Symbol.h	/^    const wstring GetName();$/;"	kind:p	line:9	language:C++	class:Type	access:public	signature:()
 GetNextToken	.\Lexer\TokenStream.cpp	/^const Token* TokenStream::GetNextToken()$/;"	kind:f	line:32	language:C++	class:TokenStream	signature:()
@@ -136,6 +156,7 @@ RMiddleBrace	.\Lexer\TokenKind.h	/^    RMiddleBrace,$/;"	kind:e	line:53	language
 RSmallBrace	.\Lexer\TokenKind.h	/^    RSmallBrace,$/;"	kind:e	line:51	language:C++	enum:TokenKind
 Release	.\Lexer\TokenKind.cpp	/^void TokenMatcher::Release()$/;"	kind:f	line:15	language:C++	class:TokenMatcher	signature:()
 Release	.\Lexer\TokenKind.h	/^    static void Release();$/;"	kind:p	line:92	language:C++	class:TokenMatcher	access:public	signature:()
+Release	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^    static void Release();$/;"	kind:p	line:10	language:C++	class:DelimiterAnalyserFactory	access:public	signature:()
 Release	.\SyntaxParser\Symbol\SymbolTable.h	/^    static void Release();$/;"	kind:p	line:8	language:C++	class:TypeTable	access:public	signature:()
 Row	.\Basic\Location.h	/^    int Row;$/;"	kind:m	line:18	language:C++	class:Location	access:public
 Semicolon	.\Lexer\TokenKind.h	/^    Semicolon,$/;"	kind:e	line:45	language:C++	enum:TokenKind
@@ -282,6 +303,9 @@ VaDebug	.\Test\LexerTest.cpp	11;"	kind:d	line:11	language:C++	file:
 While	.\Lexer\TokenKind.h	/^    While,$/;"	kind:e	line:15	language:C++	enum:TokenKind
 __AST_PARSER_H__	.\SyntaxParser\Ast\AstParser.h	2;"	kind:d	line:2	language:C++
 __COMMON_H__	.\Basic\Common.h	2;"	kind:d	line:2	language:C++
+__DELIMITER_ANALYSER_FACTORY_H__	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	2;"	kind:d	line:2	language:C++
+__DELIMITER_ANALYSER_H__	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h	2;"	kind:d	line:2	language:C++
+__DELIMITER_ANALYSER_SHARP_H__	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h	2;"	kind:d	line:2	language:C++
 __INCLUDE_STMT_H__	.\SyntaxParser\Stmt\IncludeStmt.h	2;"	kind:d	line:2	language:C++
 __SOURCE_FILE_H__	.\Lexer\TokenStream.h	2;"	kind:d	line:2	language:C++
 __SOURCE_LOCATION_H__	.\Basic\Location.h	2;"	kind:d	line:2	language:C++
@@ -299,6 +323,7 @@ copy	.\Lexer\TokenStream.cpp	/^        fileStr.copy(tokenChars, endPos - beginPo
 currentIndex	.\Lexer\TokenStream.h	/^    int currentIndex;$/;"	kind:m	line:28	language:C++	class:TokenStream	access:private
 endl	.\Lexer\TokenStream.cpp	/^        wcout <<"[" << tokenRow <<", " <<tokenColumn <<"]" <<"\\t\\t" <<tokenChars <<endl;$/;"	kind:l	line:109	language:C++
 errMsg	.\Lexer\TokenKind.cpp	/^            char errMsg[128] = { 0 };$/;"	kind:l	line:92	language:C++
+factory	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^    map<TokenKind, DelimiterAnalyser> factory;$/;"	kind:m	line:15	language:C++	class:DelimiterAnalyserFactory	access:private
 fileStream	.\Lexer\TokenStream.cpp	/^    wifstream fileStream(this->path);$/;"	kind:p	line:68	language:C++	file:	signature:(this->path)
 isNewLineHit	.\Lexer\TokenStream.cpp	/^        bool isNewLineHit = false;$/;"	kind:l	line:85	language:C++
 it	.\Lexer\TokenKind.cpp	/^    map<wstring, TokenKind>::const_iterator it = this->token2TokenKindMap.find(token);$/;"	kind:l	line:102	language:C++
@@ -319,6 +344,7 @@ result	.\SyntaxParser\Stmt\TopLevelStmt.cpp	/^    wstring result = NULL;$/;"	kin
 s:cdpathexpr	.\proj.vim	/^let s:cdpathexpr = 'cd '.s:projpath$/;"	kind:v	line:11	language:Vim
 s:csaddexpr	.\proj.vim	/^let s:csaddexpr = 'cs add '.s:projpath.'cscope.out'$/;"	kind:v	line:9	language:Vim
 s:projpath	.\proj.vim	/^let s:projpath = 'D:\\Projects\\Compilers\\VimAssist\\'$/;"	kind:v	line:2	language:Vim
+s_DelimiterAnalserFactory	.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h	/^    static DelimiterAnalyserFactory* s_DelimiterAnalserFactory;$/;"	kind:m	line:13	language:C++	class:DelimiterAnalyserFactory	access:private
 s_TokenMatcher	.\Lexer\TokenKind.cpp	/^TokenMatcher* TokenMatcher::s_TokenMatcher = NULL;$/;"	kind:m	line:3	language:C++	class:TokenMatcher	file:
 s_TokenMatcher	.\Lexer\TokenKind.h	/^    static TokenMatcher* s_TokenMatcher;$/;"	kind:m	line:90	language:C++	class:TokenMatcher	access:public
 spaceCount	.\Lexer\TokenStream.cpp	/^        int spaceCount, tabCount = 0;$/;"	kind:l	line:78	language:C++

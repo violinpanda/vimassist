@@ -13,16 +13,16 @@ public:
 	~TokenStream();
 
     void ParseFile();
+    const Token* GetCurrentToken() const;
+    const Token* GetNextToken() const;
+    const Token* GetPrevToken() const;
     const Token* GotoStart();
-    const Token* GetCurrentToken();
-    const Token* GetNextToken();
-    const Token* GetPrevToken();
     const Token* MoveToNextToken();
     const Token* MoveToPrevToken();
 
 private:
     void SkipWhitespaces(const wstring &stream, int &pos, int &spaceCount, int &tabCount);
-    const Token* GetToken(int index);
+    const Token* GetToken(int index) const;
     const wstring path;
     vector<Token*> tokens;
     int currentIndex;

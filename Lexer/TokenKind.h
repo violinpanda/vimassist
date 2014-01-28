@@ -20,9 +20,10 @@ enum TokenKind
     Private,
     Protected,
 
-    // 
+    // modifiers;
     Const,
     Static,
+    Virtual,
 
     // pre-processors;
     IfnDef,
@@ -92,9 +93,9 @@ public:
     static void Release();
 
     ~TokenMatcher();
-    TokenKind GetTokenKind(const _TCHAR* token) const;
-    TokenKind GetTokenKind(_TCHAR token) const;
-    bool IsDelimiterToken(TokenKind tokenKind) const;
+    TokenKind GetKind(const _TCHAR* token) const;
+    TokenKind GetKind(_TCHAR token) const;
+    bool IsDelimiter(TokenKind tokenKind) const;
 
 private:
     TokenMatcher();

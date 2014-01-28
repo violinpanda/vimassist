@@ -10,8 +10,7 @@ public:
     const TopLevelStmt& Parse();
 
 private:
-    const Stmt* OnSharpMet();
-    TokenStream TokenStream;
+    TokenStream tokenStream;
     TopLevelStmt* topLevelStmt;
 };
 

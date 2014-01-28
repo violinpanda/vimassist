@@ -9,10 +9,7 @@ public:
     TopLevelStmt(TokenStream &TokenStream);
     ~TopLevelStmt();
     void AddChild(Stmt *);
-
-public:
-    virtual const wstring Print(int level) const;
-    virtual const wstring ToString() const;
+    virtual const wstring GetName() const;
 
 private:
     vector<Stmt*> children;

@@ -7,6 +7,7 @@ class IncludeStmt : public Stmt
 {
 public:
     IncludeStmt(TokenStream &TokenStream);
+    virtual const wstring GetName() const;
 };
 
 #endif

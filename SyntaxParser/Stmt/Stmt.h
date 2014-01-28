@@ -7,17 +7,10 @@ class Stmt
 public:
     Stmt(TokenStream &TokenStream);
 
-public:
-    // debug interfaces;
-    virtual const wstring Print(int level) const
-    {
-        return _T("");
-    }
+    virtual const wstring GetName() const = 0;
 
-    virtual const wstring ToString() const
-    {
-        return _T("");
-    }
+protected:
+    TokenStream &tokenStream;
 };
 
 #endif

@@ -12,6 +12,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\SyntaxParser\Ast\AstParser.h" />
+    <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h" />
+    <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h" />
+    <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h" />
     <ClInclude Include="..\..\..\SyntaxParser\Stmt\IncludeStmt.h" />
     <ClInclude Include="..\..\..\SyntaxParser\Stmt\Stmt.h" />
     <ClInclude Include="..\..\..\SyntaxParser\Stmt\TopLevelStmt.h" />
@@ -20,6 +23,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\SyntaxParser\Ast\AstParser.cpp" />
+    <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.cpp" />
+    <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.cpp" />
+    <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\Stmt\IncludeStmt.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\Stmt\Stmt.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\Stmt\TopLevelStmt.cpp" />

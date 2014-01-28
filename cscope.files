@@ -10,6 +10,10 @@
 .\Lexer\TokenStream.h
 .\SyntaxParser\Ast\AstParser.cpp
 .\SyntaxParser\Ast\AstParser.h
+.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h
+.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.cpp
+.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h
+.\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h
 .\SyntaxParser\Stmt\IncludeStmt.cpp
 .\SyntaxParser\Stmt\IncludeStmt.h
 .\SyntaxParser\Stmt\Stmt.cpp

@@ -4,7 +4,7 @@
 
 class DelimiterAnalyser_Sharp
 {
-    virtual const Stmt& Analyze(const TokenStream&);
+    virtual const Stmt* InnerAnalyze(const TokenStream&);
 }
 
 #endif

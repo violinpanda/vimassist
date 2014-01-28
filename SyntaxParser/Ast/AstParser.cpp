@@ -3,9 +3,10 @@
 #include "Lexer\TokenStream.h"
 #include "AstParser.h"
 #include "SyntaxParser\Stmt\IncludeStmt.h"
+#include "SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h"
 
 AstParser::AstParser(const wstring file)
-    : TokenStream(file)
+    : tokenStream(file)
 {}
 
 AstParser::~AstParser()
@@ -13,37 +14,15 @@ AstParser::~AstParser()
 
 const TopLevelStmt& AstParser::Parse()
 {
-    this->TokenStream.GotoStart();
-    const Token *token = TokenStream.GetCurrentToken();
+    this->tokenStream.GotoStart();
+    const Token *token = this->tokenStream.GetCurrentToken();
     while (token != NULL)
     {
-        // process token;
-        switch (token->GetKind())
-        {
-            case Sharp:
-                this->OnSharpMet();
-                break;
-            case LSmallBrace:
-                {
-
-                }
-                break;
-            default:
-                break;
-        }
-
-        // get next token;
-        token = TokenStream.MoveToNextToken();
+		const Stmt& stmt = DelimiterAnalyserFactory::GetMe().Analyze(token->GetKind());
+        this->topLevelStmt.AddChild(stmt);
+        token = this->tokenStream.MoveToNextToken();
     }
 
     return *(this->topLevelStmt);
-}
-
-const Stmt* AstParser::OnSharpMet()
-{
-    if (TokenStream.GetNextToken()->GetKind() == Include)
-    {
-        return new IncludeStmt(TokenStream);
-    }
 }
 

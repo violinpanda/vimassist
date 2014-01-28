@@ -36,6 +36,7 @@ void TokenMatcher::BuildTokenKind2TokenMap()
     this->tokenKind2TokenMap[Private] = _T("private");
     this->tokenKind2TokenMap[Protected] = _T("protected");
     this->tokenKind2TokenMap[Const] = _T("const");
+    this->tokenKind2TokenMap[Virtual] = _T("virtual");
     this->tokenKind2TokenMap[Typedef] = _T("typedef");
     this->tokenKind2TokenMap[Int] = _T("int");
     this->tokenKind2TokenMap[Long] = _T("long");
@@ -97,7 +98,7 @@ void TokenMatcher::BuildToken2TokenKindMap()
     }
 }
 
-TokenKind TokenMatcher::GetTokenKind(const _TCHAR* token) const
+TokenKind TokenMatcher::GetKind(const _TCHAR* token) const
 {
     map<wstring, TokenKind>::const_iterator it = this->token2TokenKindMap.find(token);
     if (it != this->token2TokenKindMap.cend())
@@ -110,13 +111,13 @@ TokenKind TokenMatcher::GetTokenKind(const _TCHAR* token) const
     }
 }
 
-TokenKind TokenMatcher::GetTokenKind(_TCHAR token) const
+TokenKind TokenMatcher::GetKind(_TCHAR token) const
 {
     TCHAR tokenStr[2] = { token, 0 };
-    return this->GetTokenKind(tokenStr);
+    return this->GetKind(tokenStr);
 }
 
-bool TokenMatcher::IsDelimiterToken(TokenKind tokenKind) const
+bool TokenMatcher::IsDelimiter(TokenKind tokenKind) const
 {
     return (tokenKind >= DelimiterStart && tokenKind <= DelimiterEnd);
 }

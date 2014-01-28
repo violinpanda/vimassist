@@ -17,21 +17,21 @@ void TopLevelStmt::AddChild(Stmt* child)
     this->children.push_back(child);
 }
 
-const wstring TopLevelStmt::Print(int level) const
-{
-    wstring result = NULL;
-    wstring printSelf = this->ToString() + NewLineStr;
-    result = printSelf;
-    for (int index = 0; index < this->children.size(); index++)
-    {
-        wstring printChild = this->children[index]->Print(level + 1);
-        result += printChild;
-    }
+//const wstring TopLevelStmt::Print(int level) const
+//{
+//    wstring result = NULL;
+//    wstring printSelf = this->ToString() + NewLineStr;
+//    result = printSelf;
+//    for (int index = 0; index < this->children.size(); index++)
+//    {
+//        wstring printChild = this->children[index]->Print(level + 1);
+//        result += printChild;
+//    }
+//
+//    return result;
+//}
 
-    return result;
-}
-
-const wstring TopLevelStmt::ToString() const
+const wstring TopLevelStmt::GetName() const
 {
     return _T("TopLevelStmt");
 }

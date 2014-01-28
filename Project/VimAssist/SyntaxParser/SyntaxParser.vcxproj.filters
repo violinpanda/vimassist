@@ -33,6 +33,15 @@
     <ClInclude Include="..\..\..\SyntaxParser\Symbol\SymbolTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\SyntaxParser\Stmt\IncludeStmt.cpp">
@@ -45,6 +54,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\SyntaxParser\Ast\AstParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

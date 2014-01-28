@@ -8,10 +8,12 @@ class DelimiterAnalyserFactory
 public:
     static const DelimiterAnalyserFactory& GetMe();
     static void Release();
+    const Stmt& Analyze(TokenKind tokenKind);
 
 private:
-    static DelimiterAnalyserFactory* s_DelimiterAnalserFactory;
     DelimiterAnalyserFactory();
+
+    static DelimiterAnalyserFactory* s_DelimiterAnalserFactory;
     map<TokenKind, DelimiterAnalyser> factory;
 }
 

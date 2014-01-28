@@ -1,4 +1,4 @@
-cscope 15 D:\Projects\Compilers\VimAssist"               0000016065
+cscope 15 D:\Projects\Compilers\VimAssist"               0000017181
 	@Basic\Common.cpp
 
 1 
@@ -2465,6 +2465,154 @@ TÝLev–Stmt
 	mtÝLev–Stmt
 ;
 
+	@SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h
+
+1 #iâdeà
+__DELIMITER_ANALYSER_H__
+
+
+2 
+	#__DELIMITER_ANALYSER_H__
+
+
+	)
+
+4 þas 
+	cD–im™”AÇly£r
+
+
+6 
+	mpublic
+:
+
+7 
+vœtu®
+ cÚ¡ 
+Stmt
+& 
+AÇlyze
+(cÚ¡ 
+Tok’SŒ—m
+&) = 0;
+
+	@SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.cpp
+
+1 
+	~"D–im™”AÇly£rFaùÜy.h
+"
+
+3 
+	gD–im™”AÇly£rFaùÜy
+::
+	$D–im™”AÇly£rFaùÜy
+()
+
+5 
+this
+->
+çùÜy
+[
+Sh¬p
+] = 
+	`D–im™”AÇly£r_Sh¬p
+();
+
+6 
+	}
+}
+
+	@SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h
+
+1 #iâdeà
+__DELIMITER_ANALYSER_FACTORY_H__
+
+
+2 
+	#__DELIMITER_ANALYSER_FACTORY_H__
+
+
+	)
+
+3 
+	~"Basic\CommÚ.h
+"
+
+4 
+	~"Lex”\Tok’Kšd.h
+"
+
+6 þas 
+	cD–im™”AÇly£rFaùÜy
+
+
+8 
+	mpublic
+:
+
+9 cÚ¡ 
+D–im™”AÇly£rFaùÜy
+& 
+G‘Me
+();
+
+10 
+R–—£
+();
+
+12 
+	m´iv©e
+:
+
+13 
+D–im™”AÇly£rFaùÜy
+* 
+s_D–im™”AÇl£rFaùÜy
+;
+
+14 
+D–im™”AÇly£rFaùÜy
+();
+
+15 
+	mm­
+<
+	mTok’Kšd
+, 
+	mD–im™”AÇly£r
+> 
+	mçùÜy
+;
+
+	@SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h
+
+1 #iâdeà
+__DELIMITER_ANALYSER_SHARP_H__
+
+
+2 
+	#__DELIMITER_ANALYSER_SHARP_H__
+
+
+	)
+
+3 
+	~"D–im™”AÇly£r.h
+"
+
+5 þas 
+	cD–im™”AÇly£r_Sh¬p
+
+
+7 
+vœtu®
+ cÚ¡ 
+	mStmt
+& 
+AÇlyze
+(cÚ¡ 
+Tok’SŒ—m
+&);
+
 	@SyntaxParser\Stmt\IncludeStmt.cpp
 
 1 
@@ -3169,8 +3317,8 @@ com¶‘eÝt
 1
 .
 0
-23
-533
+27
+759
 Basic\Common.cpp
 Basic\Common.h
 Basic\Location.h
@@ -3182,6 +3330,10 @@ Lexer\TokenStream.cpp
 Lexer\TokenStream.h
 SyntaxParser\Ast\AstParser.cpp
 SyntaxParser\Ast\AstParser.h
+SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h
+SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.cpp
+SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h
+SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h
 SyntaxParser\Stmt\IncludeStmt.cpp
 SyntaxParser\Stmt\IncludeStmt.h
 SyntaxParser\Stmt\Stmt.cpp
