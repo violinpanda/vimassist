@@ -1,10 +1,11 @@
 #include "DelimiterAnalyser_Sharp.h"
+#include "SyntaxParser\Stmt\IncludeStmt.h"
 
-virtual const Stmt* DelimiterAnalyser_Sharp::InnerAnalyze(const TokenStream& stream)
+Stmt* DelimiterAnalyser_Sharp::InnerAnalyze(TokenStream& stream)
 {
-    const Token& nextToken = stream.GetNextToken();
+    const Token* nextToken = stream.GetNextToken();
     Stmt* stmt = NULL;
-    switch (nextToken.GetTokenKind())
+    switch (nextToken->GetKind())
     {
         case Include:
             {

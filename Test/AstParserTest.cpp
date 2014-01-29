@@ -9,6 +9,5 @@
 void AstParserTest()
 {
     AstParser astParser(_T("Test.cpp"));
-    //const AstTree& astTree = astParser.Parse();
-    //astTree.Print();
+    ComposedStmt* topLevelStmt = astParser.Parse();
 }

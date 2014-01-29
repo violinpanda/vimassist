@@ -1,28 +1,30 @@
 #include "DelimiterAnalyserFactory.h"
+#include "SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h"
+#include "Lexer\TokenKind.h"
 
-static DelimiterAnalyserFactory* DelimiterAnalyserFactory::s_DelimiterAnalserFactory = NULL;
+DelimiterAnalyserFactory* DelimiterAnalyserFactory::s_DelimiterAnalyserFactory = NULL;
 
-static const DelimiterAnalyserFactory& GetMe()
+DelimiterAnalyserFactory& DelimiterAnalyserFactory::GetMe()
 {
-    if (s_DelimiterAnalserFactory == NULL)
+    if (s_DelimiterAnalyserFactory == NULL)
     {
-        s_DelimiterAnalserFactory = new DelimiterAnalyserFactory();
+        s_DelimiterAnalyserFactory = new DelimiterAnalyserFactory();
     }
 
-    return *s_DelimiterAnalserFactory;
+    return *s_DelimiterAnalyserFactory;
 }
 
-static const void Release()
+void DelimiterAnalyserFactory::Release()
 {
-    delete s_DelimiterAnalserFactory;
+    delete s_DelimiterAnalyserFactory;
 }
 
 DelimiterAnalyserFactory::DelimiterAnalyserFactory()
 {
-    this->factory[Sharp] = DelimiterAnalyser_Sharp();
+    this->factory[Sharp] = new DelimiterAnalyser(Sharp);
 }
 
-const Stmt& DelimiterAnalyserFactory::Analyze(TokenKind tokenKind)
+Stmt* DelimiterAnalyserFactory::Analyze(TokenKind tokenKind, TokenStream &tokenStream)
 {
-    return this->factory[tokenKind].Analyze();
+    return this->factory[tokenKind]->Analyze(tokenStream);
 }

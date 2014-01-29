@@ -5,12 +5,13 @@
 class Stmt
 {
 public:
-    Stmt(TokenStream &TokenStream);
+    Stmt(TokenStream& TokenStream, const Stmt* parent);
 
     virtual const wstring GetName() const = 0;
 
 protected:
     TokenStream &tokenStream;
+    const Stmt* parent;
 };
 
 #endif

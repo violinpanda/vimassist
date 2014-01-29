@@ -2,19 +2,21 @@
 #define __DELIMITER_ANALYSER_FACTORY_H__
 #include "Basic\Common.h"
 #include "Lexer\TokenKind.h"
+#include "SyntaxParser\Stmt\Stmt.h"
+#include "SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h"
 
 class DelimiterAnalyserFactory
 {
 public:
-    static const DelimiterAnalyserFactory& GetMe();
+    static DelimiterAnalyserFactory& GetMe();
     static void Release();
-    const Stmt& Analyze(TokenKind tokenKind);
+    Stmt* Analyze(TokenKind tokenKind, TokenStream &tokenStream);
 
 private:
     DelimiterAnalyserFactory();
 
-    static DelimiterAnalyserFactory* s_DelimiterAnalserFactory;
-    map<TokenKind, DelimiterAnalyser> factory;
-}
+    static DelimiterAnalyserFactory* s_DelimiterAnalyserFactory;
+    map<TokenKind, DelimiterAnalyser*> factory;
+};
 
 #endif

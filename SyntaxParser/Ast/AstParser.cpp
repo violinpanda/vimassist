@@ -12,17 +12,17 @@ AstParser::AstParser(const wstring file)
 AstParser::~AstParser()
 {}
 
-const TopLevelStmt& AstParser::Parse()
+ComposedStmt* AstParser::Parse()
 {
     this->tokenStream.GotoStart();
     const Token *token = this->tokenStream.GetCurrentToken();
     while (token != NULL)
     {
-		const Stmt& stmt = DelimiterAnalyserFactory::GetMe().Analyze(token->GetKind());
-        this->topLevelStmt.AddChild(stmt);
+		Stmt* stmt = DelimiterAnalyserFactory::GetMe().Analyze(token->GetKind(), this->tokenStream);
+        this->topLevelStmt->AddChild(stmt);
         token = this->tokenStream.MoveToNextToken();
     }
 
-    return *(this->topLevelStmt);
+    return this->topLevelStmt;
 }
 
