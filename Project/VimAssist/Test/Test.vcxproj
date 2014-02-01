@@ -11,11 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\Test\ArrayTest.cpp" />
     <ClCompile Include="..\..\..\Test\AstParserTest.cpp" />
     <ClCompile Include="..\..\..\Test\LexerTest.cpp" />
+    <ClCompile Include="..\..\..\Test\StlTest.cpp" />
     <ClCompile Include="..\..\..\Test\Test.cpp" />
-    <ClCompile Include="ArrayTest.cpp" />
-    <ClCompile Include="StlTest.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A1FF4697-6CE9-4A65-B3AE-F3F353C3E1AD}</ProjectGuid>

@@ -24,11 +24,11 @@
     <ClCompile Include="..\..\..\Test\Test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StlTest.cpp">
+    <ClCompile Include="..\..\..\Test\ArrayTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ArrayTest.cpp">
-      <Filter>Resource Files</Filter>
+    <ClCompile Include="..\..\..\Test\StlTest.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
