@@ -11,6 +11,10 @@ public:
     Token(const _TCHAR *content, Location location);
 	~Token();
     TokenKind GetKind() const;
+    const wstring GetContent() const
+    {
+        return this->content;
+    }
 
 private:
     void ParseKind();

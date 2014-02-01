@@ -29,14 +29,9 @@ const Token* TokenStream::GetCurrentToken() const
     return this->GetToken(this->currentIndex);
 }
 
-const Token* TokenStream::GetNextToken() const
+const Token* TokenStream::GetTokenByRelativePos(int pos) const
 {
-    return this->GetToken(this->currentIndex + 1);
-}
-
-const Token* TokenStream::GetPrevToken() const
-{
-    return this->GetToken(this->currentIndex - 1);
+    return this->GetToken(this->currentIndex + pos);
 }
 
 const Token* TokenStream::GetToken(int index) const
@@ -51,15 +46,21 @@ const Token* TokenStream::GetToken(int index) const
     }
 }
 
-const Token* TokenStream::MoveToNextToken()
+const Token* TokenStream::GotoNextToken()
 {
     this->currentIndex++;
     return this->GetCurrentToken();
 }
 
-const Token* TokenStream::MoveToPrevToken()
+const Token* TokenStream::GotoPrevToken()
 {
     this->currentIndex--;
+    return this->GetCurrentToken();
+}
+
+const Token* TokenStream::GotoTokenByRelativePos(int pos)
+{
+    this->currentIndex += pos;
     return this->GetCurrentToken();
 }
 
@@ -70,14 +71,12 @@ void TokenStream::ParseFile()
     const TokenMatcher& tokenMatcher = TokenMatcher::GetMe();
     int tokenRow = 1;
     int tokenColumn = 1;
-    const int spaceWidth = 1;
-    const int tabWidth = 4;
     for (int beginPos, endPos = 0; endPos < fileStr.size(); endPos < fileStr.size())
     {
         // skip whitespaces;
         int spaceCount, tabCount = 0;
         this->SkipWhitespaces(fileStr, endPos, spaceCount, tabCount);
-        tokenColumn = tokenColumn + spaceCount * spaceWidth + tabCount * tabWidth;
+        tokenColumn = tokenColumn + spaceCount * SpaceWidth + tabCount * TabWidth;
 
         // match a token;
         beginPos = endPos;
@@ -137,5 +136,76 @@ void TokenStream::SkipWhitespaces(const wstring &stream, int &pos, int &spaceCou
         }
         pos++;
         tokenKind = tokenMatcher.GetKind(stream[pos]);
+    }
+}
+
+
+const Token* TokenStream::FindNextTargetTokenInSameStmt(TokenKind tokenKind, int& steps) const
+{
+    return this->FindTargetTokenInScope(tokenKind, steps, Forward, SameStmt);
+}
+
+const Token* TokenStream::FindNextTargetTokenInSameLine(TokenKind tokenKind, int& steps) const
+{
+    return this->FindTargetTokenInScope(tokenKind, steps, Forward, SameLine);
+}
+
+const Token* TokenStream::FindTargetTokenInScope(TokenKind kind, int& steps, TokenSearchDirection direction, TokenSearchScope scope) const
+{
+    const Token* currentToken = this->GetCurrentToken();
+    steps = 0;
+    do
+    {
+        if (direction == Forward)
+        {
+            currentToken = this->GetTokenByRelativePos(steps + 1);
+        }
+        else if (direction == Backward)
+        {
+            currentToken = this->GetTokenByRelativePos(-1 * (steps + 1));
+        }
+        steps++;
+    }
+    while (currentToken->GetKind() != kind
+        && (scope != SameLine || currentToken->GetKind() != NewLine)
+        && (scope != SameStmt || currentToken->GetKind() != RLargeBrace)
+        && (scope != SameStmt || currentToken->GetKind() != Semicolon));
+
+    if (currentToken->GetKind() == kind)
+    {
+        return currentToken;
+    }
+    else
+    {
+        return NULL;
+    }
+}
+
+
+const Token* TokenStream::MoveToNextTargetTokenInSameStmt(TokenKind tokenKind)
+{
+    int steps = 0;
+    const Token* target = this->FindNextTargetTokenInSameStmt(tokenKind, steps);
+    if (target != NULL)
+    {
+        return this->GotoTokenByRelativePos(steps);
+    }
+    else
+    {
+        return NULL;
+    }
+}
+
+const Token* TokenStream::MoveToNextTargetTokenInSameLine(TokenKind tokenKind)
+{
+    int steps = 0;
+    const Token* target = this->FindNextTargetTokenInSameLine(tokenKind, steps);
+    if (target != NULL)
+    {
+        return this->GotoTokenByRelativePos(steps);
+    }
+    else
+    {
+        return NULL;
     }
 }

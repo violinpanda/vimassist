@@ -8,10 +8,10 @@ class DelimiterAnalyser
 {
 public:
     DelimiterAnalyser(TokenKind delimiter);
-    Stmt* Analyze(TokenStream&);
+    Stmt* Analyze(TokenStream& tokenStream, const Stmt* parent);
 
 protected:
-    virtual Stmt* InnerAnalyze(TokenStream&);
+    virtual Stmt* InnerAnalyze(TokenStream& tokenStream, const Stmt* parent);
     TokenKind delimiter;
 };
 

@@ -6,7 +6,7 @@ DelimiterAnalyser::DelimiterAnalyser(TokenKind delimiter)
 {
 }
 
-Stmt* DelimiterAnalyser::Analyze(TokenStream& tokenStream)
+Stmt* DelimiterAnalyser::Analyze(TokenStream& tokenStream, const Stmt* parent)
 {
     if (tokenStream.GetCurrentToken()->GetKind() != this->delimiter)
     {
@@ -14,10 +14,10 @@ Stmt* DelimiterAnalyser::Analyze(TokenStream& tokenStream)
         sprintf(errMsg, "DelimiterAnalyser can only analyze the specified delimiter, TokenKind = %d", this->delimiter);
     }
 
-    return this->InnerAnalyze(tokenStream);
+    return this->InnerAnalyze(tokenStream, parent);
 }
 
-Stmt* DelimiterAnalyser::InnerAnalyze(TokenStream&)
+Stmt* DelimiterAnalyser::InnerAnalyze(TokenStream& tokenStream, const Stmt* parent)
 {
 	return NULL;
 }

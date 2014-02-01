@@ -81,6 +81,12 @@ void TokenMatcher::BuildTokenKind2TokenMap()
     this->tokenKind2TokenMap[DoubleQuota] = _T("\"");
     this->tokenKind2TokenMap[SingleQuota] = _T("\'");
     this->tokenKind2TokenMap[Include] = _T("include");
+    this->tokenKind2TokenMap[StaticCast] = _T("static_cast");
+    this->tokenKind2TokenMap[DynamicCast] = _T("dynamic_cast");
+    this->tokenKind2TokenMap[ReinterpretCast] = _T("reinterpret_cast");
+    this->tokenKind2TokenMap[ConstCast] = _T("const_cast");
+    this->tokenKind2TokenMap[TypeOf] = _T("typeof");
+    this->tokenKind2TokenMap[Extern] = _T("extern");
 }
 
 void TokenMatcher::BuildToken2TokenKindMap()

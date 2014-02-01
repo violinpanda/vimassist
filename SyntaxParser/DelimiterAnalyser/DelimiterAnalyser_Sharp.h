@@ -2,7 +2,7 @@
 #define __DELIMITER_ANALYSER_SHARP_H__
 #include "DelimiterAnalyser.h"
 
-class DelimiterAnalyser_Sharp : DelimiterAnalyser
+class DelimiterAnalyser_Sharp : public DelimiterAnalyser
 {
 public:
 	DelimiterAnalyser_Sharp(TokenKind tokenKind)
@@ -11,7 +11,7 @@ public:
 	}
 
 protected:
-    virtual Stmt* InnerAnalyze(TokenStream&);
+    virtual Stmt* InnerAnalyze(TokenStream& tokenStream, const Stmt* parent);
 };
 
 #endif

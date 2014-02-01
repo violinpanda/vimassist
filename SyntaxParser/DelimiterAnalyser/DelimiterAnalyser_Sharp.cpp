@@ -1,21 +1,14 @@
 #include "DelimiterAnalyser_Sharp.h"
 #include "SyntaxParser\Stmt\IncludeStmt.h"
 
-Stmt* DelimiterAnalyser_Sharp::InnerAnalyze(TokenStream& stream)
+Stmt* DelimiterAnalyser_Sharp::InnerAnalyze(TokenStream& stream, const Stmt* parent)
 {
-    const Token* nextToken = stream.GetNextToken();
     Stmt* stmt = NULL;
-    switch (nextToken->GetKind())
+    if (IncludeStmt(stream, parent).IsMe())
     {
-        case Include:
-            {
-                stmt = new IncludeStmt(stream);
-            }
-            break;
-        default:
-            
-            break;
+        stmt = new IncludeStmt(stream, parent, true);
     }
 
     return stmt;
 }
+

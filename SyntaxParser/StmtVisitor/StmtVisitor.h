@@ -7,11 +7,13 @@
 class StmtVisitor
 {
 public:
-    void Visit(Stmt *);
+    void Visit(const Stmt *);
 
 protected:
-    virtual void Visit(IncludeStmt *);
-    virtual void Visit(ComposedStmt *);
+    int GetDepth(const Stmt&) const;
+
+    virtual void Visit(const IncludeStmt &) = 0;
+    virtual void Visit(const ComposedStmt &) = 0;
 };
 
 #endif

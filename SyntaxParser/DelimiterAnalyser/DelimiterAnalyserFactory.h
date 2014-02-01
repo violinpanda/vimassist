@@ -10,10 +10,11 @@ class DelimiterAnalyserFactory
 public:
     static DelimiterAnalyserFactory& GetMe();
     static void Release();
-    Stmt* Analyze(TokenKind tokenKind, TokenStream &tokenStream);
+    Stmt* Analyze(TokenKind tokenKind, TokenStream &tokenStream, const Stmt* parent);
 
 private:
     DelimiterAnalyserFactory();
+    ~DelimiterAnalyserFactory();
 
     static DelimiterAnalyserFactory* s_DelimiterAnalyserFactory;
     map<TokenKind, DelimiterAnalyser*> factory;

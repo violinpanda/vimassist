@@ -24,6 +24,7 @@ enum TokenKind
     Const,
     Static,
     Virtual,
+    Extern,
 
     // pre-processors;
     IfnDef,
@@ -39,6 +40,13 @@ enum TokenKind
     Ushort,
     Class,
     Struct,
+
+    // type casting;
+    StaticCast,
+    DynamicCast,
+    ReinterpretCast,
+    ConstCast,
+    TypeOf,
 
     // delimiter start;
     DelimiterStart,

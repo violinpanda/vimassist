@@ -21,10 +21,25 @@ void DelimiterAnalyserFactory::Release()
 
 DelimiterAnalyserFactory::DelimiterAnalyserFactory()
 {
-    this->factory[Sharp] = new DelimiterAnalyser(Sharp);
+    this->factory[Sharp] = new DelimiterAnalyser_Sharp(Sharp);
 }
 
-Stmt* DelimiterAnalyserFactory::Analyze(TokenKind tokenKind, TokenStream &tokenStream)
+DelimiterAnalyserFactory::~DelimiterAnalyserFactory()
 {
-    return this->factory[tokenKind]->Analyze(tokenStream);
+    map<TokenKind, DelimiterAnalyser*>::const_iterator it = this->factory.begin();
+    while (it != this->factory.end())
+    {
+        delete it->second;
+    }
+    this->factory.clear();
+}
+
+Stmt* DelimiterAnalyserFactory::Analyze(TokenKind tokenKind, TokenStream &tokenStream, const Stmt* parent)
+{
+    map<TokenKind, DelimiterAnalyser*>::const_iterator it = this->factory.find(tokenKind);
+    if (it != this->factory.cend())
+    {
+        return this->factory[tokenKind]->Analyze(tokenStream, parent);
+    }
+    return NULL;
 }

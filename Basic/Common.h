@@ -11,4 +11,6 @@ using namespace std;
 
 extern const _TCHAR* NewLineStr;
 extern const _TCHAR NewLineChar;
+extern const int SpaceWidth;
+extern const int TabWidth;
 #endif

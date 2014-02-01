@@ -6,11 +6,14 @@
 #include "SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h"
 
 AstParser::AstParser(const wstring file)
-    : tokenStream(file)
+    : tokenStream(file),
+    topLevelStmt(new ComposedStmt(tokenStream, NULL))
 {}
 
 AstParser::~AstParser()
-{}
+{
+    delete this->topLevelStmt;
+}
 
 ComposedStmt* AstParser::Parse()
 {
@@ -18,11 +21,13 @@ ComposedStmt* AstParser::Parse()
     const Token *token = this->tokenStream.GetCurrentToken();
     while (token != NULL)
     {
-		Stmt* stmt = DelimiterAnalyserFactory::GetMe().Analyze(token->GetKind(), this->tokenStream);
-        this->topLevelStmt->AddChild(stmt);
-        token = this->tokenStream.MoveToNextToken();
+        Stmt* stmt = DelimiterAnalyserFactory::GetMe().Analyze(token->GetKind(), this->tokenStream, this->topLevelStmt);
+        if (stmt != NULL)
+        {
+            this->topLevelStmt->AddChild(stmt);
+        }
+        token = this->tokenStream.GotoNextToken();
     }
 
     return this->topLevelStmt;
 }
-
