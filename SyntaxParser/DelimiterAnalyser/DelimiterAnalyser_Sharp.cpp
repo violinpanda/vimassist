@@ -6,7 +6,7 @@ Stmt* DelimiterAnalyser_Sharp::InnerAnalyze(TokenStream& stream, const Stmt* par
     Stmt* stmt = NULL;
     if (IncludeStmt(stream, parent).IsMe())
     {
-        stmt = new IncludeStmt(stream, parent, true);
+        stmt = (new IncludeStmt(stream, parent))->Parse();
     }
 
     return stmt;

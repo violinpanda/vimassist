@@ -1,12 +1,8 @@
 #include "IncludeStmt.h"
 
-IncludeStmt::IncludeStmt(TokenStream& tokenStream, const Stmt* parent, bool parse)
+IncludeStmt::IncludeStmt(TokenStream& tokenStream, const Stmt* parent)
     : Stmt(tokenStream, parent)
 {
-    if (parse)
-    {
-        this->Parse();
-    }
 }
 
 const wstring IncludeStmt::GetName() const
@@ -22,7 +18,7 @@ bool IncludeStmt::IsMe() const
     return this->tokenStream.FindNextTargetTokenInSameLine(Include, steps) != NULL;
 }
 
-void IncludeStmt::Parse()
+Stmt* IncludeStmt::Parse()
 {
     this->includedFile.clear();
     bool isIncludedFileInQuota = false;
@@ -43,4 +39,6 @@ void IncludeStmt::Parse()
         this->includedFile += currentToken->GetContent();
         currentToken = this->tokenStream.GotoNextToken();
     }
+
+    return this;
 }

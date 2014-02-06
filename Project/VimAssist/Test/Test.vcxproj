@@ -17,6 +17,17 @@
     <ClCompile Include="..\..\..\Test\StlTest.cpp" />
     <ClCompile Include="..\..\..\Test\Test.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Basic\Basic.vcxproj">
+      <Project>{360b668f-7dc1-489d-93f5-7de853797dae}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Lexer\Lexer.vcxproj">
+      <Project>{c28137df-8f12-432b-836a-39938406baa7}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\SyntaxParser\SyntaxParser.vcxproj">
+      <Project>{3cd9c1ae-18a5-4b7a-b8f4-0bb3a036c883}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{A1FF4697-6CE9-4A65-B3AE-F3F353C3E1AD}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>

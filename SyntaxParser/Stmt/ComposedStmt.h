@@ -1,31 +1,36 @@
-#ifndef __TOP_LEVEL_STMT_H__
-#define __TOP_LEVEL_STMT_H__
+#ifndef __COMPOSED_STMT_H__
+#define __COMPOSED_STMT_H__
 #include "Stmt.h"
 #include "Lexer\TokenStream.h"
 
 class ComposedStmt : public Stmt
 {
 public:
-    ComposedStmt(TokenStream &TokenStream, const Stmt* parent);
+    ComposedStmt(TokenStream &tokenStream, const Stmt* parent, StmtKind kind)
+        : Stmt(tokenStream, parent),
+        kind(kind)
+    {}
     ~ComposedStmt();
+
     virtual const StmtKind GetKind() const
     {
-        return SK_ComposedStmt;
+        return this->kind;
     }
     virtual const wstring GetName() const;
     virtual bool IsMe() const
     {
         return false;
     }
+    virtual Stmt* Parse();
 
     void AddChild(Stmt *);
     const vector<Stmt*> GetChildren() const;
 
 protected:
-    virtual void Parse();
+    vector<Stmt*> children;
 
 private:
-    vector<Stmt*> children;
+    StmtKind kind;
 };
 
 #endif

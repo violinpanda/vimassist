@@ -14,12 +14,19 @@
     <ClInclude Include="..\..\..\SyntaxParser\Ast\AstParser.h" />
     <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.h" />
     <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h" />
+    <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Division.h" />
+    <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_LSmallBrace.h" />
     <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h" />
     <ClInclude Include="..\..\..\SyntaxParser\StmtVisitor\AstPrinter.h" />
     <ClInclude Include="..\..\..\SyntaxParser\StmtVisitor\StmtVisitor.h" />
+    <ClInclude Include="..\..\..\SyntaxParser\Stmt\Expr\Expr.h" />
+    <ClInclude Include="..\..\..\SyntaxParser\Stmt\Expr\VarDefExpr.h" />
+    <ClInclude Include="..\..\..\SyntaxParser\Stmt\FuncDefStmt.h" />
     <ClInclude Include="..\..\..\SyntaxParser\Stmt\IncludeStmt.h" />
+    <ClInclude Include="..\..\..\SyntaxParser\Stmt\LineCommentStmt.h" />
     <ClInclude Include="..\..\..\SyntaxParser\Stmt\Stmt.h" />
     <ClInclude Include="..\..\..\SyntaxParser\Stmt\ComposedStmt.h" />
+    <ClInclude Include="..\..\..\SyntaxParser\Stmt\TopLevelStmt.h" />
     <ClInclude Include="..\..\..\SyntaxParser\Symbol\Symbol.h" />
     <ClInclude Include="..\..\..\SyntaxParser\Symbol\SymbolTable.h" />
   </ItemGroup>
@@ -27,12 +34,24 @@
     <ClCompile Include="..\..\..\SyntaxParser\Ast\AstParser.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.cpp" />
+    <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Division.cpp" />
+    <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_LSmallBrace.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\StmtVisitor\AstPrinter.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\StmtVisitor\StmtVisitor.cpp" />
+    <ClCompile Include="..\..\..\SyntaxParser\Stmt\FuncDefStmt.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\Stmt\IncludeStmt.cpp" />
+    <ClCompile Include="..\..\..\SyntaxParser\Stmt\LineCommentStmt.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\Stmt\Stmt.cpp" />
     <ClCompile Include="..\..\..\SyntaxParser\Stmt\ComposedStmt.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Basic\Basic.vcxproj">
+      <Project>{360b668f-7dc1-489d-93f5-7de853797dae}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Lexer\Lexer.vcxproj">
+      <Project>{c28137df-8f12-432b-836a-39938406baa7}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{3CD9C1AE-18A5-4B7A-B8F4-0BB3A036C883}</ProjectGuid>

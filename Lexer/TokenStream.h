@@ -25,20 +25,29 @@ public:
 	~TokenStream();
 
     void ParseFile();
+    const wstring GetFilePath() const
+    {
+        return this->path;
+    }
+
+    // public query apis;
     const Token* GetCurrentToken() const;
     const Token* GetTokenByRelativePos(int pos) const;
+
+    // public search apis;
+    const Token* FindNextTargetTokenInSameStmt(TokenKind tokenKind, int& steps) const;
+    const Token* FindNextTargetTokenInSameLine(TokenKind tokenKind, int& steps) const;
+    const Token* FindMatchingBrace(TokenKind tokenKind, int& steps) const;
+
+    // public move apis;
     const Token* GotoStart();
     const Token* GotoNextToken();
     const Token* GotoPrevToken();
     const Token* GotoTokenByRelativePos(int pos);
-
-    // public search apis for external parsers like SyntaxParser/SementicParser;
-    const Token* FindNextTargetTokenInSameStmt(TokenKind tokenKind, int& steps) const;
-    const Token* FindNextTargetTokenInSameLine(TokenKind tokenKind, int& steps) const;
-
-    // public move apis for external parsers like SyntaxParser/SementicParser;
-    const Token* MoveToNextTargetTokenInSameStmt(TokenKind tokenKind);
-    const Token* MoveToNextTargetTokenInSameLine(TokenKind tokenKind);
+    const Token* GotoNextTargetTokenInSameStmt(TokenKind tokenKind);
+    const Token* GotoNextTargetTokenInSameLine(TokenKind tokenKind);
+    const Token* GotoEol();
+    const Token* GotoMatchingBrace(TokenKind kind);
 
 private:
     const Token* FindTargetTokenInScope(TokenKind kind, int& steps, TokenSearchDirection direction, TokenSearchScope scope) const;

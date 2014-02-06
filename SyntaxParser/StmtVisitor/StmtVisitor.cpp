@@ -14,7 +14,7 @@ void StmtVisitor::Visit(const Stmt* stmt)
                 }
             }
             break;
-        case SK_ComposedStmt:
+        case SK_FuncBodyStmt:
             {
                 const ComposedStmt* composedStmt = dynamic_cast<const ComposedStmt*>(stmt);
                 if (composedStmt != NULL)

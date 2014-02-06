@@ -4,10 +4,11 @@
 #include "AstParser.h"
 #include "SyntaxParser\Stmt\IncludeStmt.h"
 #include "SyntaxParser\DelimiterAnalyser\DelimiterAnalyserFactory.h"
+#include "SyntaxParser\Stmt\TopLevelStmt.h"
 
 AstParser::AstParser(const wstring file)
     : tokenStream(file),
-    topLevelStmt(new ComposedStmt(tokenStream, NULL))
+    topLevelStmt(new TopLevelStmt(tokenStream, NULL))
 {}
 
 AstParser::~AstParser()

@@ -32,14 +32,20 @@ enum TokenKind
     EndIf,
     Include,
 
-    // types;
+    // udt;
     Typedef,
-    Int,
-    Long,
-    Short,
-    Ushort,
     Class,
     Struct,
+    
+    // types;
+    BuiltInTypeStart,
+    Void = BuiltInTypeStart,
+    Short,
+    Ushort,
+    Bool,
+    Int,
+    Long,
+    BuiltInTypeEnd = Long,
 
     // type casting;
     StaticCast,
@@ -103,7 +109,18 @@ public:
     ~TokenMatcher();
     TokenKind GetKind(const _TCHAR* token) const;
     TokenKind GetKind(_TCHAR token) const;
-    bool IsDelimiter(TokenKind tokenKind) const;
+    bool IsDelimiter(TokenKind tokenKind) const
+    {
+        return (tokenKind >= DelimiterStart && tokenKind <= DelimiterEnd);
+    }
+    bool IsBuiltInType(TokenKind kind) const
+    {
+        return (kind >= BuiltInTypeStart && kind <= BuiltInTypeEnd);
+    }
+    bool IsIdentifier(TokenKind kind) const
+    {
+        return kind == Identifier;
+    }
 
 private:
     TokenMatcher();

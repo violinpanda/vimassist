@@ -1,6 +1,9 @@
+#include "Lexer\TokenKind.h"
 #include "DelimiterAnalyserFactory.h"
 #include "SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Sharp.h"
-#include "Lexer\TokenKind.h"
+#include "SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Division.h"
+#include "SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_LSmallBrace.h"
+
 
 DelimiterAnalyserFactory* DelimiterAnalyserFactory::s_DelimiterAnalyserFactory = NULL;
 
@@ -22,6 +25,8 @@ void DelimiterAnalyserFactory::Release()
 DelimiterAnalyserFactory::DelimiterAnalyserFactory()
 {
     this->factory[Sharp] = new DelimiterAnalyser_Sharp(Sharp);
+    this->factory[Division] = new DelimiterAnalyser_Division(Division);
+    this->factory[LSmallBrace] = new DelimiterAnalyser_LSmallBrace(LSmallBrace);
 }
 
 DelimiterAnalyserFactory::~DelimiterAnalyserFactory()

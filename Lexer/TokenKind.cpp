@@ -87,6 +87,8 @@ void TokenMatcher::BuildTokenKind2TokenMap()
     this->tokenKind2TokenMap[ConstCast] = _T("const_cast");
     this->tokenKind2TokenMap[TypeOf] = _T("typeof");
     this->tokenKind2TokenMap[Extern] = _T("extern");
+    this->tokenKind2TokenMap[Bool] = _T("bool");
+    this->tokenKind2TokenMap[Void] = _T("void");
 }
 
 void TokenMatcher::BuildToken2TokenKindMap()
@@ -121,10 +123,5 @@ TokenKind TokenMatcher::GetKind(_TCHAR token) const
 {
     TCHAR tokenStr[2] = { token, 0 };
     return this->GetKind(tokenStr);
-}
-
-bool TokenMatcher::IsDelimiter(TokenKind tokenKind) const
-{
-    return (tokenKind >= DelimiterStart && tokenKind <= DelimiterEnd);
 }
 

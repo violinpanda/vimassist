@@ -74,20 +74,20 @@ void TokenStream::ParseFile()
     for (int beginPos, endPos = 0; endPos < fileStr.size(); endPos < fileStr.size())
     {
         // skip whitespaces;
-        int spaceCount, tabCount = 0;
+        int spaceCount = 0;
+        int tabCount = 0;
         this->SkipWhitespaces(fileStr, endPos, spaceCount, tabCount);
-        tokenColumn = tokenColumn + spaceCount * SpaceWidth + tabCount * TabWidth;
 
         // match a token;
         beginPos = endPos;
         TokenKind beginPosTokenKind = tokenMatcher.GetKind(fileStr[beginPos]);
-        bool isNewLineHit = false;
+        bool isNewLine = false;
         if (tokenMatcher.IsDelimiter(beginPosTokenKind))
         {
             endPos++;
             if (beginPosTokenKind == NewLine)
             {
-                isNewLineHit = true;
+                isNewLine = true;
             }
         }
         else
@@ -109,7 +109,7 @@ void TokenStream::ParseFile()
 #endif
         tokenColumn = tokenColumn + (endPos - beginPos);
 
-        if (isNewLineHit)
+        if (isNewLine)
         {
             tokenRow++;
             tokenColumn = 1;
@@ -134,6 +134,7 @@ void TokenStream::SkipWhitespaces(const wstring &stream, int &pos, int &spaceCou
         {
             tabCount++;
         }
+
         pos++;
         tokenKind = tokenMatcher.GetKind(stream[pos]);
     }
@@ -148,6 +149,97 @@ const Token* TokenStream::FindNextTargetTokenInSameStmt(TokenKind tokenKind, int
 const Token* TokenStream::FindNextTargetTokenInSameLine(TokenKind tokenKind, int& steps) const
 {
     return this->FindTargetTokenInScope(tokenKind, steps, Forward, SameLine);
+}
+
+const Token* TokenStream::FindMatchingBrace(TokenKind originKind, int& steps) const
+{
+    const int rowCount = 3;
+    const int columnCount = 2;
+    TokenKind matchingBraceTable[3][2] = 
+    {
+        { LSmallBrace, RSmallBrace, },
+        { LMiddleBrace, RMiddleBrace, },
+        { LLargeBrace, RLargeBrace, },
+    };
+
+    TokenKind targetKind = TokenKindStart;
+    int targetRow = -1;
+    int targetColumn = -1;
+    TokenSearchDirection direction = Forward;
+    bool found = false;
+    for (int row = 0; row < rowCount; row++)
+    {
+        if (found)
+        {
+            break;
+        }
+
+        for (int column = 0; column < columnCount; column++)
+        {
+            if (matchingBraceTable[row][column] == originKind)
+            {
+                targetRow = row;
+                targetColumn = columnCount - 1 - column;
+                targetKind = matchingBraceTable[targetRow][targetColumn];
+                if (column == 0)
+                {
+                    direction = Forward;
+                }
+                else if (column ==1)
+                {
+                    direction = Backward;
+                }
+                found = true;
+                break;
+            }
+        }
+    }
+    if (!found)
+    {
+        return NULL;
+    }
+
+    int stackSize = 1;
+    steps = 0;
+    const Token* currentToken = this->GetTokenByRelativePos(steps);
+    while (currentToken->GetKind() != Semicolon
+            && (originKind == LLargeBrace || originKind == RLargeBrace || (currentToken->GetKind() != LLargeBrace && currentToken->GetKind() != RLargeBrace)))
+    {
+        if (direction == Forward)
+        {
+            steps++;
+        }
+        else if (direction == Backward)
+        {
+            steps--;
+        }
+        currentToken = this->GetTokenByRelativePos(steps);
+        if (currentToken->GetKind() == originKind)
+        {
+            stackSize++;
+        }
+        else if (currentToken->GetKind() == targetKind)
+        {
+            stackSize--;
+        }
+        if (stackSize == 0)
+        {
+            return currentToken;
+        }
+    }
+
+    return NULL;
+}
+
+const Token* TokenStream::GotoMatchingBrace(TokenKind kind)
+{
+    int steps = 0;
+    const Token* matchingBrace = this->FindMatchingBrace(kind, steps);
+    if (matchingBrace != NULL && steps != 0)
+    {
+        this->GotoTokenByRelativePos(steps);
+    }
+    return matchingBrace;
 }
 
 const Token* TokenStream::FindTargetTokenInScope(TokenKind kind, int& steps, TokenSearchDirection direction, TokenSearchScope scope) const
@@ -182,7 +274,7 @@ const Token* TokenStream::FindTargetTokenInScope(TokenKind kind, int& steps, Tok
 }
 
 
-const Token* TokenStream::MoveToNextTargetTokenInSameStmt(TokenKind tokenKind)
+const Token* TokenStream::GotoNextTargetTokenInSameStmt(TokenKind tokenKind)
 {
     int steps = 0;
     const Token* target = this->FindNextTargetTokenInSameStmt(tokenKind, steps);
@@ -196,7 +288,7 @@ const Token* TokenStream::MoveToNextTargetTokenInSameStmt(TokenKind tokenKind)
     }
 }
 
-const Token* TokenStream::MoveToNextTargetTokenInSameLine(TokenKind tokenKind)
+const Token* TokenStream::GotoNextTargetTokenInSameLine(TokenKind tokenKind)
 {
     int steps = 0;
     const Token* target = this->FindNextTargetTokenInSameLine(tokenKind, steps);
@@ -208,4 +300,14 @@ const Token* TokenStream::MoveToNextTargetTokenInSameLine(TokenKind tokenKind)
     {
         return NULL;
     }
+}
+
+const Token* TokenStream::GotoEol()
+{
+    const Token* currentToken = this->GetCurrentToken();
+    while (currentToken->GetKind() != NewLine)
+    {
+        currentToken = this->GotoNextToken();
+    }
+    return currentToken;
 }

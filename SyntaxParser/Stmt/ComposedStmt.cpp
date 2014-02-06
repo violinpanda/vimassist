@@ -1,9 +1,5 @@
 #include "ComposedStmt.h"
 
-ComposedStmt::ComposedStmt(TokenStream &tokenStream, const Stmt* parent)
-	: Stmt(tokenStream, parent)
-{}
-
 ComposedStmt::~ComposedStmt()
 {
     for (int index = 0; index < this->children.size(); index++)
@@ -28,7 +24,8 @@ const wstring ComposedStmt::GetName() const
     return _T("ComposedStmt");
 }
 
-void ComposedStmt::Parse()
+Stmt* ComposedStmt::Parse()
 {
+    return NULL;
 }
 

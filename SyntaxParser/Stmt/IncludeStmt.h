@@ -6,16 +6,16 @@
 class IncludeStmt : public Stmt
 {
 public:
-    IncludeStmt(TokenStream &TokenStream, const Stmt* parent, bool parse = false);
+    IncludeStmt(TokenStream &tokenStream, const Stmt* parent);
     virtual const StmtKind GetKind() const
     {
         return SK_IncludeStmt;
     }
     virtual const wstring GetName() const;
     virtual bool IsMe() const;
+    virtual Stmt* Parse();
 
 protected:
-    virtual void Parse();
     wstring includedFile;
 };
 

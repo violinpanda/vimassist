@@ -48,6 +48,27 @@
     <ClInclude Include="..\..\..\SyntaxParser\StmtVisitor\StmtVisitor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\SyntaxParser\Stmt\FuncDefStmt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_LSmallBrace.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Division.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SyntaxParser\Stmt\LineCommentStmt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SyntaxParser\Stmt\TopLevelStmt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SyntaxParser\Stmt\Expr\Expr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SyntaxParser\Stmt\Expr\VarDefExpr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\SyntaxParser\Stmt\IncludeStmt.cpp">
@@ -75,6 +96,18 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\SyntaxParser\StmtVisitor\StmtVisitor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SyntaxParser\Stmt\FuncDefStmt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_LSmallBrace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SyntaxParser\DelimiterAnalyser\DelimiterAnalyser_Division.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SyntaxParser\Stmt\LineCommentStmt.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

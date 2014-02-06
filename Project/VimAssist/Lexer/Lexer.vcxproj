@@ -20,6 +20,11 @@
     <ClCompile Include="..\..\..\Lexer\TokenKind.cpp" />
     <ClCompile Include="..\..\..\Lexer\TokenStream.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Basic\Basic.vcxproj">
+      <Project>{360b668f-7dc1-489d-93f5-7de853797dae}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{C28137DF-8F12-432B-836A-39938406BAA7}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
